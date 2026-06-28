@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:primekey_loan_app/core/constants/app_strings.dart';
 import 'package:primekey_loan_app/shared/widgets/custom_text_field.dart';
+import 'package:primekey_loan_app/core/utils/formatters.dart';
 import '../providers/loan_form_provider.dart';
 
 class EmploymentStep extends ConsumerStatefulWidget {
@@ -62,7 +63,8 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                   children: [
                     Text(
                       'Work & Income',
-                      style: TextStyle(fontFamily: 'Ubuntu', 
+                      style: TextStyle(
+                        fontFamily: 'Ubuntu',
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -74,7 +76,8 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                 SizedBox(height: 8),
                 Text(
                   'Your employment information helps us understand your ability to repay.',
-                  style: TextStyle(fontFamily: 'Ubuntu', 
+                  style: TextStyle(
+                    fontFamily: 'Ubuntu',
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -101,11 +104,28 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                 ),
                 SizedBox(height: 20),
                 CustomTextField(
-                  label: 'MONTHLY NET INCOME (${widget.currencyCode})',
+                  label: 'MONTHLY NET INCOME ',
                   controller: _monthlyIncomeController,
                   hint: '0.00',
-                  prefixIcon: Icon(Icons.payments_outlined, size: 20),
-                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          Formatters.getCurrencyCode(widget.currencyCode),
+                          style: TextStyle(
+                            fontFamily: 'Ubuntu',
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.textSecondary,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  keyboardType:
+                      const TextInputType.numberWithOptions(decimal: true),
                   onChanged: (v) {
                     final amount = double.tryParse(v) ?? 0.0;
                     notifier.updateMonthlyIncome(amount);
@@ -127,7 +147,8 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label,
-      style: TextStyle(fontFamily: 'Ubuntu', 
+      style: TextStyle(
+        fontFamily: 'Ubuntu',
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,
@@ -163,7 +184,8 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide.none,
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       ),
     );
   }
