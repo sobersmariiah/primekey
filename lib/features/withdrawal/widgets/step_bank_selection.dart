@@ -350,7 +350,7 @@ class StepBankSelection extends ConsumerWidget {
                   ),
                   SizedBox(height: 8),
                   DropdownButtonFormField<String>(
-                    initialValue: selectedBank.isEmpty ? null : selectedBank,
+                    value: selectedBank.isEmpty ? null : selectedBank,
                     style: TextStyle(fontFamily: 'Ubuntu', 
                       color: AppColors.textPrimary,
                       fontSize: 15,

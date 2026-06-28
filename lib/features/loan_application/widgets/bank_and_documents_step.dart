@@ -182,11 +182,19 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 SizedBox(height: 15),
                 _buildFieldLabel('BANK NAME'),
                 SizedBox(height: 8),
-                _buildDropdown(
-                  value: loanState.selectedBank.isNotEmpty ? loanState.selectedBank : null,
-                  hint: 'Select bank',
-                  items: AppStrings.banksByCountry[widget.countryCode] ?? [],
-                  onChanged: (v) => notifier.updateBank(v!),
+                Builder(
+                  builder: (context) {
+                    final bankItems = AppStrings.banksByCountry[widget.countryCode] ?? <String>[];
+                    final selectedBankValue = (loanState.selectedBank.isNotEmpty && bankItems.contains(loanState.selectedBank)) 
+                        ? loanState.selectedBank 
+                        : null;
+                    return _buildDropdown(
+                      value: selectedBankValue,
+                      hint: 'Select bank',
+                      items: bankItems,
+                      onChanged: (v) => notifier.updateBank(v!),
+                    );
+                  }
                 ),
                 SizedBox(height: 16),
                 CustomTextField(
@@ -321,7 +329,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
     required void Function(String?) onChanged,
   }) {
     return DropdownButtonFormField<String>(
-      initialValue: value,
+      value: value,
       hint: Text(hint),
       onChanged: onChanged,
       items: items.map((item) {
