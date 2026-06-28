@@ -193,7 +193,7 @@ class _DesktopCalculator extends StatelessWidget {
                           children: [
                             Text(
                               'Loan Calculator',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 32,
                                 fontWeight: FontWeight.w900,
                                 color: AppColors.primary,
@@ -250,7 +250,7 @@ class _DesktopCalculator extends StatelessWidget {
         children: [
           Text(
             'FINANCIAL PARAMETERS',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 12,
               fontWeight: FontWeight.w800,
               letterSpacing: 1.2,
@@ -293,7 +293,7 @@ class _DesktopCalculator extends StatelessWidget {
                         children: [
                           Text(
                             interestRate.toStringAsFixed(2),
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                               color: AppColors.primary,
@@ -302,7 +302,7 @@ class _DesktopCalculator extends StatelessWidget {
                           const Spacer(),
                           Text(
                             '%',
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontWeight: FontWeight.bold,
                               color: AppColors.textSecondary,
                             ),
@@ -331,7 +331,7 @@ class _DesktopCalculator extends StatelessWidget {
                         children: [
                           Text(
                             Formatters.date(DateTime.now()),
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
                               color: AppColors.primary,
@@ -366,7 +366,7 @@ class _DesktopCalculator extends StatelessWidget {
                 children: [
                   Text(
                     'Proceed to Application',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
@@ -401,7 +401,7 @@ class _DesktopCalculator extends StatelessWidget {
               Text(
                 'Enter an amount to see your projection',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   color: AppColors.textSecondary,
                   fontWeight: FontWeight.w500,
                 ),
@@ -442,7 +442,7 @@ class _DesktopCalculator extends StatelessWidget {
                   ),
                   child: Text(
                     'MONTHLY COMMITMENT',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
                       color: Colors.white.withValues(alpha: 0.9),
@@ -456,7 +456,7 @@ class _DesktopCalculator extends StatelessWidget {
                   children: [
                     Text(
                       Formatters.currency(monthlyPayment!, countryCode),
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 80,
                         fontWeight: FontWeight.w900,
                         color: Colors.white,
@@ -469,7 +469,7 @@ class _DesktopCalculator extends StatelessWidget {
                 SizedBox(height: 16),
                 Text(
                   'Your estimated monthly repayment based on current interest rates.',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     color: Colors.white.withValues(alpha: 0.7),
                     height: 1.5,
                   ),
@@ -510,7 +510,7 @@ class _DesktopCalculator extends StatelessWidget {
                 SizedBox(width: 8),
                 Text(
                   'Verified Specialists Available',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
@@ -519,7 +519,7 @@ class _DesktopCalculator extends StatelessWidget {
                 const Spacer(),
                 Text(
                   'Lock in this rate',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
@@ -539,7 +539,7 @@ class _DesktopCalculator extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 10,
             fontWeight: FontWeight.w800,
             color: Colors.white.withValues(alpha: 0.5),
@@ -549,7 +549,7 @@ class _DesktopCalculator extends StatelessWidget {
         SizedBox(height: 8),
         Text(
           value,
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.white,
@@ -562,7 +562,7 @@ class _DesktopCalculator extends StatelessWidget {
   Widget _buildInputLabel(String label) {
     return Text(
       label,
-      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+      style: TextStyle(fontFamily: 'PlusJakartaSans', 
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,
@@ -585,7 +585,7 @@ class _DesktopCalculator extends StatelessWidget {
               : availableRates.keys.first,
           isExpanded: true,
           icon: Icon(Icons.keyboard_arrow_down_rounded),
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontWeight: FontWeight.bold,
             color: AppColors.primary,
             fontSize: 16,
@@ -627,7 +627,7 @@ class _DesktopCalculator extends StatelessWidget {
             SizedBox(height: 16),
             Text(
               title,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textSecondary,
@@ -636,7 +636,7 @@ class _DesktopCalculator extends StatelessWidget {
             SizedBox(height: 4),
             Text(
               val,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 16,
                 fontWeight: FontWeight.w900,
                 color: AppColors.primary,
@@ -645,7 +645,7 @@ class _DesktopCalculator extends StatelessWidget {
             SizedBox(height: 4),
             Text(
               sub,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 11,
                 color: AppColors.textSecondary,
                 height: 1.4,
@@ -671,7 +671,7 @@ class _DesktopCalculator extends StatelessWidget {
               children: [
                 Text(
                   'Loan Portal',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -754,7 +754,7 @@ class _DesktopCalculator extends StatelessWidget {
                       currentUser?.fullName.isNotEmpty ?? false
                           ? currentUser!.fullName[0].toUpperCase()
                           : '?',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontWeight: FontWeight.bold),
                     ),
                   )
@@ -810,7 +810,7 @@ class _MobileCalculator extends StatelessWidget {
         ),
         title: Text(
           'Loan Calculator',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: AppColors.textPrimary,
@@ -848,7 +848,7 @@ class _MobileCalculator extends StatelessWidget {
                           children: [
                             Text(
                               'Proceed to Application',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
                               ),
@@ -883,7 +883,7 @@ class _MobileCalculator extends StatelessWidget {
         children: [
           Text(
             'MONTHLY REPAYMENT',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 10,
               fontWeight: FontWeight.w800,
               color: Colors.white.withValues(alpha: 0.5),
@@ -896,7 +896,7 @@ class _MobileCalculator extends StatelessWidget {
             children: [
               // Text(
               //   Formatters.getCurrencySymbol(countryCode),
-              //   style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              //   style: TextStyle(fontFamily: 'PlusJakartaSans', 
               //     fontSize: 24,
               //     fontWeight: FontWeight.w400,
               //     color: Colors.white,
@@ -908,7 +908,7 @@ class _MobileCalculator extends StatelessWidget {
                     // .replaceAll(RegExp(r'[^\d,]'), '')
                     // .split('.')[0]
                     : '0',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 48,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -919,7 +919,7 @@ class _MobileCalculator extends StatelessWidget {
               //   padding: const EdgeInsets.only(top: 8, left: 4),
               //   child: Text(
               //     '.${monthlyPayment != null ? Formatters.currency(monthlyPayment!, countryCode).split('.')[1] : '00'}',
-              //     style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              //     style: TextStyle(fontFamily: 'PlusJakartaSans', 
               //       fontSize: 18,
               //       fontWeight: FontWeight.w600,
               //       color: Colors.white.withValues(alpha: 0.5),
@@ -937,7 +937,7 @@ class _MobileCalculator extends StatelessWidget {
                   children: [
                     Text(
                       'TOTAL INTEREST',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 9,
                         fontWeight: FontWeight.w800,
                         color: Colors.white.withValues(alpha: 0.5),
@@ -948,7 +948,7 @@ class _MobileCalculator extends StatelessWidget {
                       totalInterest != null
                           ? Formatters.currency(totalInterest!, countryCode)
                           : Formatters.currency(0, countryCode),
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -963,7 +963,7 @@ class _MobileCalculator extends StatelessWidget {
                   children: [
                     Text(
                       'TOTAL PAYBACK',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 9,
                         fontWeight: FontWeight.w800,
                         color: Colors.white.withValues(alpha: 0.5),
@@ -974,7 +974,7 @@ class _MobileCalculator extends StatelessWidget {
                       totalPayment != null
                           ? Formatters.currency(totalPayment!, countryCode)
                           : Formatters.currency(0, countryCode),
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -996,7 +996,7 @@ class _MobileCalculator extends StatelessWidget {
       children: [
         Text(
           'LOAN AMOUNT',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: AppColors.textSecondary,
@@ -1015,7 +1015,7 @@ class _MobileCalculator extends StatelessWidget {
         SizedBox(height: 32),
         Text(
           'DURATION',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: AppColors.textSecondary,
@@ -1027,7 +1027,7 @@ class _MobileCalculator extends StatelessWidget {
         SizedBox(height: 32),
         Text(
           'INTEREST RATE',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: AppColors.textSecondary,
@@ -1048,7 +1048,7 @@ class _MobileCalculator extends StatelessWidget {
               SizedBox(width: 12),
               Text(
                 interestRate.toStringAsFixed(1),
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                   color: AppColors.primary,
@@ -1080,7 +1080,7 @@ class _MobileCalculator extends StatelessWidget {
               value: months,
               child: Text(
                 '${Formatters.duration(months)} — ${availableRates[months]}%',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
@@ -1133,7 +1133,7 @@ class _SidebarItem extends StatelessWidget {
               SizedBox(width: 16),
               Text(
                 label,
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 13,
                   fontWeight: isActive ? FontWeight.w800 : FontWeight.w600,
                   color: isActive
@@ -1175,7 +1175,7 @@ Widget _buildSharedDrawer(
                           user?.fullName.isNotEmpty ?? false
                               ? user!.fullName[0].toUpperCase()
                               : '?',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary))
@@ -1183,12 +1183,12 @@ Widget _buildSharedDrawer(
                 ),
                 SizedBox(height: 12),
                 Text(user?.fullName ?? '',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user?.email ?? '',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         color: Colors.white60, fontSize: 13)),
               ],
             ),
@@ -1212,7 +1212,7 @@ Widget _buildSharedDrawer(
           ListTile(
             leading: Icon(Icons.calculate_outlined, color: AppColors.primary),
             title: Text('Calculator',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     color: AppColors.primary, fontWeight: FontWeight.bold)),
             onTap: () => Navigator.pop(context),
           ),
@@ -1231,7 +1231,7 @@ Widget _buildSharedDrawer(
           ListTile(
             leading: Icon(Icons.logout, color: AppColors.error),
             title: Text('Log Out',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.error)),
+                style: TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.error)),
             onTap: onLogout,
           ),
           SizedBox(height: 16),

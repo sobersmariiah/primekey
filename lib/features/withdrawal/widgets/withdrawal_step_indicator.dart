@@ -44,7 +44,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
                                     color: Colors.white, size: 16)
                                 : Text(
                                     '${i + 1}',
-                                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                       fontSize: 13,
                                       fontWeight: FontWeight.w700,
                                       color: isActive
@@ -57,7 +57,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
                         SizedBox(height: 6),
                         Text(
                           steps[i].toUpperCase(),
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 9,
                             fontWeight: FontWeight.w700,
                             color: isActive || isComplete
@@ -69,7 +69,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
                         if (isComplete)
                           Text(
                             'Verified',
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 9,
                               color: Color(0xFF16A34A),
                             ),
@@ -98,7 +98,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
               'BANK VERIFICATION',
               'CONFIRM WITHDRAWAL'
             ][currentStep]}',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 10,
               fontWeight: FontWeight.w700,
               color: AppColors.textSecondary,

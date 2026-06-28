@@ -71,7 +71,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
         ),
         title: Text(
           'Withdraw Funds',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 17,
             fontWeight: FontWeight.w600,
             color: AppColors.primary,
@@ -212,7 +212,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
                       state.currentStep == 2
                           ? 'CONFIRM WITHDRAWAL'
                           : 'CONTINUE',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 1.2,

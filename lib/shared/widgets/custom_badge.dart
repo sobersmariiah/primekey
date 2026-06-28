@@ -30,7 +30,7 @@ class CustomBadge extends StatelessWidget {
       child: Text(
         label,
         style: textStyle ??
-            TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 12,
               fontWeight: FontWeight.w600,
               color: textColor,

@@ -35,7 +35,7 @@ class NotificationBell extends ConsumerWidget {
               ),
               child: Text(
                 unreadCount > 9 ? '9+' : '$unreadCount',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   color: Colors.white,
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
@@ -104,7 +104,7 @@ class NotificationSheet extends ConsumerWidget {
         children: [
           Text(
             'Notifications',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 18, fontWeight: FontWeight.bold),
           ),
           TextButton(
             onPressed: () => ref.read(notificationNotifierProvider.notifier).markAllAsRead(),
@@ -122,7 +122,7 @@ class NotificationSheet extends ConsumerWidget {
         children: [
           Icon(Icons.notifications_off_outlined, size: 64, color: Colors.grey),
           SizedBox(height: 16),
-          Text('No notifications yet', style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: Colors.grey)),
+          Text('No notifications yet', style: TextStyle(fontFamily: 'PlusJakartaSans', color: Colors.grey)),
         ],
       ),
     );
@@ -164,20 +164,20 @@ class NotificationTile extends ConsumerWidget {
                     children: [
                       Text(
                         notification.title,
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontWeight: notification.isRead ? FontWeight.w500 : FontWeight.bold,
                         ),
                       ),
                       Text(
                         DateFormat('MMM d, HH:mm').format(notification.createdAt),
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 10, color: Colors.grey.shade600),
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 10, color: Colors.grey.shade600),
                       ),
                     ],
                   ),
                   SizedBox(height: 4),
                   Text(
                     notification.message,
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 13, color: Colors.grey.shade800),
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 13, color: Colors.grey.shade800),
                   ),
                 ],
               ),

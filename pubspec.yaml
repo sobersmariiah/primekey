@@ -62,6 +62,6 @@ flutter:
     - assets/images/step_3.png
  
   fonts:
-    - family: Plus Jakarta Sans
+    - family: PlusJakartaSans
       fonts:
         - asset: assets/fonts/PlusJakartaSans.ttf

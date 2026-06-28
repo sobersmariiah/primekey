@@ -78,20 +78,20 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         title: Text('Reject Application', 
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w800)),
+          style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800)),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Please provide a reason for rejecting this application. This will be visible to the user.',
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 14, color: AppColors.textSecondary),
+              style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 14, color: AppColors.textSecondary),
             ),
             SizedBox(height: 20),
             TextField(
               controller: _rejectionReasonController,
               maxLines: 4,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 14),
+              style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 14),
               decoration: InputDecoration(
                 hintText: 'Enter rejection reason...',
                 filled: true,
@@ -116,7 +116,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                 Expanded(
                   child: TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text('Cancel', style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textSecondary, fontWeight: FontWeight.bold)),
+                    child: Text('Cancel', style: TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.textSecondary, fontWeight: FontWeight.bold)),
                   ),
                 ),
                 SizedBox(width: 16),
@@ -176,7 +176,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                       minimumSize: const Size(0, 52),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     ),
-                    child: Text('Reject', style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.bold)),
+                    child: Text('Reject', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],
@@ -317,7 +317,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
               children: [
                 Text(
                   'Loan Portal',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -325,7 +325,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                 ),
                 Text(
                   'ADMIN CONSOLE',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -397,7 +397,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
               children: [
                 Text(
                   'Application Details',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
                     color: AppColors.textPrimary,
@@ -405,7 +405,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                 ),
                 Text(
                   'Ref: ${app.id.toUpperCase().substring(0, 8)}',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                     fontWeight: FontWeight.w600,
@@ -427,7 +427,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
       children: [
         Text(
           Formatters.currency(app.loanAmount, app.countryCode),
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 48,
             fontWeight: FontWeight.w900,
             color: AppColors.primaryDark,
@@ -437,7 +437,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
         SizedBox(height: 4),
         Text(
           'Loan for ${app.loanPurpose} • Requested by ${applicant?.fullName ?? '...'}',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 16,
             color: AppColors.textSecondary,
             fontWeight: FontWeight.w500,
@@ -532,7 +532,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                     children: [
                       Text(
                         user.fullName,
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                           color: AppColors.textPrimary,
@@ -540,7 +540,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                       ),
                       Text(
                         user.email,
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontSize: 13,
                           color: AppColors.textSecondary,
                           fontWeight: FontWeight.w500,
@@ -574,7 +574,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
           ? Center(
               child: Padding(
                 padding: EdgeInsets.all(32),
-                child: Text('No documents uploaded', style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textSecondary)),
+                child: Text('No documents uploaded', style: TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.textSecondary)),
               ),
             )
           : GridView.builder(
@@ -623,7 +623,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
           ),
           child: Text(
             'DOC #$index',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               color: Colors.white,
               fontSize: 10,
               fontWeight: FontWeight.w800,
@@ -665,7 +665,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                     }
                   },
                   icon: _isApproving ? const SizedBox.shrink() : Icon(Icons.check_circle_outline_rounded, size: 20),
-                  label: _isApproving ? const _LoadingSpinner() : Text('APPROVE', style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w800)),
+                  label: _isApproving ? const _LoadingSpinner() : Text('APPROVE', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.success,
                     foregroundColor: Colors.white,
@@ -680,7 +680,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                 child: ElevatedButton.icon(
                   onPressed: _isActionLoading || applicant == null ? null : () => _showRejectionDialog(context, app, applicant),
                   icon: _isRejecting ? const SizedBox.shrink() : Icon(Icons.cancel_outlined, size: 20),
-                  label: _isRejecting ? const _LoadingSpinner() : Text('REJECT', style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w800)),
+                  label: _isRejecting ? const _LoadingSpinner() : Text('REJECT', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.error,
                     foregroundColor: Colors.white,
@@ -721,7 +721,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                 children: [
                   Text(
                     'Internal Note',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 12,
                       fontWeight: FontWeight.w800,
                       color: AppColors.textSecondary,
@@ -731,7 +731,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                   SizedBox(height: 12),
                   Text(
                     app.adminNote!,
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 14,
                       color: AppColors.textPrimary,
                       height: 1.6,
@@ -758,13 +758,13 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             context: context,
             builder: (ctx) => AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-              title: Text('Delete Application?', style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w800)),
-              content: Text('This action is permanent and cannot be undone.', style: TextStyle(fontFamily: 'Plus Jakarta Sans', )),
+              title: Text('Delete Application?', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800)),
+              content: Text('This action is permanent and cannot be undone.', style: TextStyle(fontFamily: 'PlusJakartaSans', )),
               actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text('CANCEL', style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.bold))),
+                TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text('CANCEL', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.bold))),
                 TextButton(
                   onPressed: () => Navigator.pop(ctx, true),
-                  child: Text('DELETE', style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.error, fontWeight: FontWeight.w900)),
+                  child: Text('DELETE', style: TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.error, fontWeight: FontWeight.w900)),
                 ),
               ],
             ),
@@ -780,7 +780,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
           }
         },
         icon: Icon(Icons.delete_forever_rounded, size: 20),
-        label: Text(_isDeleting ? 'DELETING...' : 'DELETE APPLICATION', style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w800)),
+        label: Text(_isDeleting ? 'DELETING...' : 'DELETE APPLICATION', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800)),
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColors.error,
           side: const BorderSide(color: AppColors.error, width: 2),
@@ -829,7 +829,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
               SizedBox(width: 16),
               Text(
                 title,
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 12,
                   fontWeight: FontWeight.w900,
                   color: AppColors.primary,
@@ -856,7 +856,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
         children: [
           Text(
             label,
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               color: AppColors.textSecondary,
               fontSize: 14,
               fontWeight: FontWeight.w600,
@@ -866,7 +866,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
           Expanded(
             child: Text(
               value,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontWeight: FontWeight.w800,
                 fontSize: 14,
                 color: AppColors.textPrimary,
@@ -943,7 +943,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??

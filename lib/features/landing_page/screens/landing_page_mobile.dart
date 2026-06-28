@@ -128,7 +128,7 @@ class LandingPageMobile extends ConsumerWidget {
               child: Center(
                 child: Text(
                   number,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
@@ -143,14 +143,14 @@ class LandingPageMobile extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title,
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                       color: AppColors.primaryDark,
                     )),
                 SizedBox(height: 6),
                 Text(description,
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 14,
                       color: AppColors.textSecondary,
                       height: 1.5,
@@ -188,7 +188,7 @@ class LandingPageMobile extends ConsumerWidget {
                     children: [
                       Text(
                         "Easy Online Loans\nfor Your Future",
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontSize: 40,
                           fontWeight: FontWeight.w700,
                           color: AppColors.textPrimary,
@@ -197,7 +197,7 @@ class LandingPageMobile extends ConsumerWidget {
                       SizedBox(height: 8),
                       Text(
                         "Designed for simplicity. Built for speed. Get the funds you need in just a few clicks.",
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontSize: 18,
                           color: AppColors.textPrimary,
                         ),
@@ -234,7 +234,7 @@ class LandingPageMobile extends ConsumerWidget {
                         label: 'Calculate Payment',
                         height: 70,
                         textStyle:
-                            TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            TextStyle(fontFamily: 'PlusJakartaSans', 
                                   color: AppColors.primary,
                                 ),
                         buttonStyle: ElevatedButton.styleFrom(
@@ -263,7 +263,7 @@ class LandingPageMobile extends ConsumerWidget {
                   index: 2,
                   child: Text(
                     "Why Choose ${AppStrings.appName}?",
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           color: const Color(0xFF747779),
                           fontSize: 28,
                         ),
@@ -442,7 +442,7 @@ class LandingPageMobile extends ConsumerWidget {
                   index: 6,
                   child: Text(
                     'How It Works',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           color: AppColors.primaryDark,
                           fontSize: 30,
                         ),
@@ -496,7 +496,7 @@ class LandingPageMobile extends ConsumerWidget {
                           'Ready to redefine your financial horizon?',
                           textAlign: TextAlign.center,
                           style:
-                              TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              TextStyle(fontFamily: 'PlusJakartaSans', 
                                     color: AppColors.white,
                                     fontSize: 30,
                                   ),
@@ -506,7 +506,7 @@ class LandingPageMobile extends ConsumerWidget {
                           'Join thousands of forward thinking individuals building their future with PRIMEKEY',
                           textAlign: TextAlign.center,
                           style:
-                              TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              TextStyle(fontFamily: 'PlusJakartaSans', 
                                     color: AppColors.primaryLightShade,
                                     fontSize: 18,
                                   ),
@@ -523,7 +523,7 @@ class LandingPageMobile extends ConsumerWidget {
                             onPressed: () => context.go(AppRoutes.login),
                             child: Text(
                               'Get Started',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFF1B2F5E),
@@ -584,7 +584,7 @@ class LandingPageMobile extends ConsumerWidget {
                         Text(
                           '© 2024 ${AppStrings.appName} Inc. All rights reserved.',
                           style:
-                              TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              TextStyle(fontFamily: 'PlusJakartaSans', 
                                     color: AppColors.textSecondary,
                                   ),
                         ),
@@ -608,7 +608,7 @@ Widget _buildFooterColumn(
     children: [
       Text(
         title,
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontSize: 8,
           fontWeight: FontWeight.w700,
           color: Color(0xFF1E2A3B),
@@ -620,7 +620,7 @@ Widget _buildFooterColumn(
             padding: const EdgeInsets.only(bottom: 12),
             child: Text(
               item,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 8,
                     color: AppColors.textSecondary,
                   ),

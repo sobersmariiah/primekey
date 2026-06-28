@@ -68,7 +68,7 @@ class ApplicationsMobile extends StatelessWidget {
         icon: Icon(Icons.add, color: Colors.white),
         label: Text(
           'NEW LOAN',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontWeight: FontWeight.bold,
             letterSpacing: 1,
             color: Colors.white,
@@ -91,7 +91,7 @@ class ApplicationsMobile extends StatelessWidget {
       centerTitle: false,
       title: Text(
         'Primekey Finance',
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontWeight: FontWeight.w900,
           fontSize: 18,
           color: AppColors.primary,
@@ -120,7 +120,7 @@ class ApplicationsMobile extends StatelessWidget {
                       currentUser?.fullName.isNotEmpty ?? false
                           ? currentUser!.fullName[0].toUpperCase()
                           : '?',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary),
@@ -158,7 +158,7 @@ class ApplicationsMobile extends StatelessWidget {
                             currentUser?.fullName.isNotEmpty ?? false
                                 ? currentUser!.fullName[0].toUpperCase()
                                 : '?',
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.primary),
@@ -167,13 +167,13 @@ class ApplicationsMobile extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(currentUser?.fullName ?? '',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w700)),
                   Text(currentUser?.email ?? '',
                       style:
-                          TextStyle(fontFamily: 'Plus Jakarta Sans', color: Colors.white60, fontSize: 13)),
+                          TextStyle(fontFamily: 'PlusJakartaSans', color: Colors.white60, fontSize: 13)),
                 ],
               ),
             ),
@@ -240,7 +240,7 @@ class ApplicationsMobile extends StatelessWidget {
       children: [
         Text(
           'Applications',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 28,
             fontWeight: FontWeight.w900,
             color: AppColors.textPrimary,
@@ -250,7 +250,7 @@ class ApplicationsMobile extends StatelessWidget {
         SizedBox(height: 4),
         Text(
           'ACTIVE PORTFOLIO REVIEW',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.bold,
             color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -309,7 +309,7 @@ class ApplicationsMobile extends StatelessWidget {
             SizedBox(height: 24),
             Text(
               'No applications found',
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: AppColors.textPrimary,
@@ -318,7 +318,7 @@ class ApplicationsMobile extends StatelessWidget {
             SizedBox(height: 8),
             Text(
               'Your history will appear here',
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
               ),
@@ -370,7 +370,7 @@ class _ApplicationCard extends StatelessWidget {
               children: [
                 Text(
                   'LOAN APPLICATION',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.6),
@@ -383,7 +383,7 @@ class _ApplicationCard extends StatelessWidget {
             SizedBox(height: 8),
             Text(
               application.loanPurpose,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 17,
                 fontWeight: FontWeight.w800,
                 color: AppColors.textPrimary,
@@ -398,7 +398,7 @@ class _ApplicationCard extends StatelessWidget {
                   children: [
                     Text(
                       'REQUESTED AMOUNT',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 9,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textSecondary.withValues(alpha: 0.6),
@@ -407,7 +407,7 @@ class _ApplicationCard extends StatelessWidget {
                     SizedBox(height: 4),
                     Text(
                       Formatters.currency(application.loanAmount, countryCode),
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 20,
                         fontWeight: FontWeight.w900,
                         color: AppColors.primary,
@@ -420,7 +420,7 @@ class _ApplicationCard extends StatelessWidget {
                   children: [
                     Text(
                       'SUBMISSION DATE',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 9,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textSecondary.withValues(alpha: 0.6),
@@ -429,7 +429,7 @@ class _ApplicationCard extends StatelessWidget {
                     SizedBox(height: 4),
                     Text(
                       Formatters.date(application.createdAt),
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimary,
@@ -478,7 +478,7 @@ class _FilterTab extends StatelessWidget {
         ),
         child: Text(
           label,
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.bold,
             color: isSelected ? AppColors.textPrimary : AppColors.textSecondary,
@@ -514,7 +514,7 @@ class _DrawerItem extends StatelessWidget {
           size: 22),
       title: Text(
         label,
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontSize: 15,
           fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
           color:

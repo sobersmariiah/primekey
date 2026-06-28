@@ -171,7 +171,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
               children: [
                 Text(
                   'Loan Portal',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -179,7 +179,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                 ),
                 Text(
                   'ADMIN CONSOLE',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -257,7 +257,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
             const SizedBox(width: 12),
             Text(
               'Admin',
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark,
@@ -269,7 +269,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
           if (!showLogo) ...[
             Text(
               name,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 14,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primary,
@@ -307,7 +307,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
       children: [
         Text(
           'REVIEW CONSOLE',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.bold,
             color: AppColors.textSecondary,
@@ -317,7 +317,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
         const SizedBox(height: 4),
         Text(
           'Admin Dashboard',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 32,
             fontWeight: FontWeight.w800,
             color: AppColors.primaryDark,
@@ -377,7 +377,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
           const Spacer(),
           Text(
             label.toUpperCase(),
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 10,
               fontWeight: FontWeight.bold,
               color: AppColors.textSecondary,
@@ -387,7 +387,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
           const SizedBox(height: 4),
           Text(
             value,
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 24,
               fontWeight: FontWeight.w900,
               color: AppColors.primaryDark,
@@ -405,7 +405,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
       children: [
         Text(
           'QUICK ACTIONS',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.bold,
             color: AppColors.textSecondary,
@@ -458,7 +458,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
             const SizedBox(width: 12),
             Text(
               label,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 14,
                 fontWeight: FontWeight.w700,
                 color: textColor,
@@ -476,7 +476,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
       children: [
         Text(
           'RECENT APPLICATIONS',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.bold,
             color: AppColors.textSecondary,
@@ -487,7 +487,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
           onPressed: () {},
           child: Text(
             'View All',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 12,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -531,7 +531,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
         ),
         child: Text(
           label,
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 12,
             fontWeight: FontWeight.w700,
             color: isSelected ? Colors.white : AppColors.textSecondary,
@@ -606,7 +606,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                           children: [
                             Text(
                               app.fullName,
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 16,
                                 fontWeight: FontWeight.w800,
                                 color: AppColors.primaryDark,
@@ -614,7 +614,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                             ),
                             Text(
                               'ID: #${app.id.substring(0, 8).toUpperCase()}',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 11,
                                 color: AppColors.textSecondary,
                                 fontWeight: FontWeight.w700,
@@ -632,7 +632,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                         ),
                         child: Text(
                           statusLabel.toUpperCase(),
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 10,
                             fontWeight: FontWeight.w900,
                             color: statusText,
@@ -653,7 +653,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                           children: [
                             Text(
                               'LOAN TYPE',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.textSecondary,
@@ -665,7 +665,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                               app.loanPurpose.isNotEmpty
                                   ? app.loanPurpose
                                   : 'General Loan',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
                                 color: const Color(0xFF191C1E),
@@ -681,7 +681,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                         children: [
                           Text(
                             'AMOUNT',
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
                               color: AppColors.textSecondary,
@@ -692,7 +692,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
                           Text(
                             Formatters.currency(
                                 app.loanAmount, app.countryCode),
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 20,
                               fontWeight: FontWeight.w900,
                               color: AppColors.primaryDark,
@@ -729,7 +729,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
           const SizedBox(height: 24),
           Text(
             'No applications found',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 18,
               fontWeight: FontWeight.w800,
               color: AppColors.primaryDark,
@@ -738,7 +738,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
           const SizedBox(height: 8),
           Text(
             'Review your filters and try again',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 14,
               color: AppColors.textSecondary,
               fontWeight: FontWeight.w500,
@@ -813,7 +813,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??

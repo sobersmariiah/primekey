@@ -156,7 +156,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
               ),
               title: Text(
                 'Withdrawals',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: AppColors.primary,
@@ -202,7 +202,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
       children: [
         Text(
           'Transfer Portfolio',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 32,
             fontWeight: FontWeight.w600,
             color: AppColors.primary,
@@ -212,7 +212,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
         const SizedBox(height: 4),
         Text(
           'Review your transfer history and withdrawal status.',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 16,
             color: AppColors.textSecondary,
             fontWeight: FontWeight.w500,
@@ -255,7 +255,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
       children: [
         Text(
           'FILTER BY STATUS',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 10,
             fontWeight: FontWeight.bold,
             color: AppColors.textSecondary,
@@ -346,7 +346,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
               children: [
                 Text(
                   w.bankName,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
@@ -354,7 +354,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
                 ),
                 Text(
                   'Ending in •••• $last4',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                     fontWeight: FontWeight.w500,
@@ -368,7 +368,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
                     const SizedBox(width: 4),
                     Text(
                       Formatters.date(w.createdAt),
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 12,
                         color: AppColors.textHint,
                         fontWeight: FontWeight.w500,
@@ -384,7 +384,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
             children: [
               Text(
                 Formatters.currency(w.amount, countryCode),
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                   color: AppColors.primary,
@@ -435,7 +435,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
       ),
       child: Text(
         label,
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontSize: 10,
           fontWeight: FontWeight.bold,
           color: fg,
@@ -485,7 +485,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
           const SizedBox(height: 16),
           Text(
             'No withdrawals yet',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -494,7 +494,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
           const SizedBox(height: 8),
           Text(
             'Your withdrawal history will appear here',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               color: AppColors.textSecondary,
               fontWeight: FontWeight.w500,
             ),
@@ -523,7 +523,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
               children: [
                 Text(
                   'Primekey Finance',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -531,7 +531,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
                 ),
                 Text(
                   'PRIMEKEY LOAN APP',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -599,7 +599,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
           const SizedBox(width: 12),
           Text(
             'Transfer Portfolio',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 16,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -654,7 +654,7 @@ class _StatCard extends StatelessWidget {
             children: [
               Text(
                 label.toUpperCase(),
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
                   color: textColor.withValues(alpha: 0.7),
@@ -668,7 +668,7 @@ class _StatCard extends StatelessWidget {
           FittedBox(
             child: Text(
               value,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 28,
                 fontWeight: FontWeight.w600,
                 color: textColor,
@@ -716,7 +716,7 @@ class _FilterTab extends StatelessWidget {
         ),
         child: Text(
           label.toUpperCase(),
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 10,
             fontWeight: FontWeight.bold,
             color: isSelected ? AppColors.primary : AppColors.textSecondary,
@@ -769,7 +769,7 @@ class _SidebarItem extends StatelessWidget {
               const SizedBox(width: 16),
               Text(
                 label,
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 14,
                   fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
                   color: isActive ? activeColor : defaultColor,

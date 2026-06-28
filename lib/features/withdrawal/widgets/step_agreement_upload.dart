@@ -45,7 +45,7 @@ class StepAgreementUpload extends ConsumerWidget {
         SizedBox(height: 8),
         Text(
           'Verification Required for Withdrawal',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 26,
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
@@ -55,7 +55,7 @@ class StepAgreementUpload extends ConsumerWidget {
         SizedBox(height: 12),
         Text(
           'To ensure regulatory compliance and secure your funds, please review and upload your signed withdrawal agreement. You can upload multiple documents if necessary.',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 14,
             color: AppColors.textSecondary,
             height: 1.6,
@@ -77,7 +77,7 @@ class StepAgreementUpload extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'WITHDRAWAL_AGREEMENT.PDF',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
                     color: AppColors.primary,
@@ -91,7 +91,7 @@ class StepAgreementUpload extends ConsumerWidget {
         if (state.uploadedDocuments.isNotEmpty) ...[
           Text(
             'Uploaded Documents',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: AppColors.primary,
@@ -117,7 +117,7 @@ class StepAgreementUpload extends ConsumerWidget {
                   Expanded(
                     child: Text(
                       file.name,
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 13,
                         color: AppColors.primary,
                         fontWeight: FontWeight.w500,
@@ -173,7 +173,7 @@ class StepAgreementUpload extends ConsumerWidget {
                         : state.uploadedDocuments.isEmpty
                             ? 'Upload Signed Copy'
                             : 'Upload More Documents',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: AppColors.primary,
@@ -211,7 +211,7 @@ class StepAgreementUpload extends ConsumerWidget {
                   children: [
                     Text(
                       'ENCRYPTED & SECURE',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         color: AppColors.primary,
@@ -221,7 +221,7 @@ class StepAgreementUpload extends ConsumerWidget {
                     SizedBox(height: 2),
                     Text(
                       'Your digital signature is legally binding and protected by 256-bit bank-grade encryption.',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 11,
                         color: AppColors.textSecondary,
                         height: 1.4,

@@ -45,7 +45,7 @@ class CustomPopup {
                 Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primaryDark,
@@ -55,7 +55,7 @@ class CustomPopup {
                 Text(
                   message,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -79,7 +79,7 @@ class CustomPopup {
                     ),
                     child: Text(
                       isWarning ? 'UNDERSTOOD' : 'DONE',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontWeight: FontWeight.w900,
                         letterSpacing: 1,
                       ),

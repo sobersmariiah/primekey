@@ -154,7 +154,7 @@ class _DesktopProfileView extends StatelessWidget {
             children: [
               Text(
                 'Primekey Finance',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 20,
                   fontWeight: FontWeight.w900,
                   color: AppColors.primary,
@@ -162,7 +162,7 @@ class _DesktopProfileView extends StatelessWidget {
               ),
               Text(
                 'PRIMEKEY LOAN APP',
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
                   color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -236,7 +236,7 @@ class _DesktopProfileView extends StatelessWidget {
           SizedBox(width: 12),
           Text(
             'Profile Settings',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 16,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -261,7 +261,7 @@ class _DesktopProfileView extends StatelessWidget {
                     user.fullName.isNotEmpty
                         ? user.fullName[0].toUpperCase()
                         : '?',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 14,
                         color: AppColors.primary,
                         fontWeight: FontWeight.bold))
@@ -282,7 +282,7 @@ class _DesktopProfileView extends StatelessWidget {
             children: [
               Text(
                 user.fullName,
-                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 40,
                   fontWeight: FontWeight.w900,
                   color: AppColors.primary,
@@ -296,7 +296,7 @@ class _DesktopProfileView extends StatelessWidget {
                   Flexible(
                     child: Text(
                       user.email,
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 15,
                         color: AppColors.textSecondary,
                         fontWeight: FontWeight.w500,
@@ -322,7 +322,7 @@ class _DesktopProfileView extends StatelessWidget {
                         SizedBox(width: 8),
                         Text(
                           'KYC ${user.verificationStatus.name.toUpperCase()}',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 11,
                             fontWeight: FontWeight.w800,
                             color: AppColors.primary,
@@ -345,7 +345,7 @@ class _DesktopProfileView extends StatelessWidget {
               icon: Icon(Icons.edit_outlined, size: 18),
               label: Text('Edit Profile',
                   style:
-                      TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w800)),
+                      TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800)),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primaryLight,
                 foregroundColor: AppColors.primary,
@@ -382,7 +382,7 @@ class _DesktopProfileView extends StatelessWidget {
               Expanded(
                 child: Text(
                   'PERSONAL INFORMATION',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 12,
                     fontWeight: FontWeight.w800,
                     color: AppColors.primary,
@@ -418,7 +418,7 @@ class _DesktopProfileView extends StatelessWidget {
           SizedBox(height: 40),
           Text(
             'CONTACT DETAILS',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 12,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
@@ -454,7 +454,7 @@ class _DesktopProfileView extends StatelessWidget {
         children: [
           Text(
             'KYC MANAGEMENT',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 12,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
@@ -485,7 +485,7 @@ class _DesktopProfileView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Identity Verification',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary)),
@@ -499,7 +499,7 @@ class _DesktopProfileView extends StatelessWidget {
                                 : user.kycRejectionReason != null
                                     ? 'Declined: ${user.kycRejectionReason}'
                                     : 'Not yet verified',
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 13,
                             color: user.kycRejectionReason != null
                                 ? AppColors.error
@@ -517,7 +517,7 @@ class _DesktopProfileView extends StatelessWidget {
                     user.kycRejectionReason != null
                         ? 'RE-SUBMIT KYC'
                         : 'VIEW CERTIFICATE',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 12,
                         fontWeight: FontWeight.w800,
                         color: AppColors.primary,
@@ -549,7 +549,7 @@ class _DesktopProfileView extends StatelessWidget {
               Expanded(
                 child: Text(
                   'BANK ACCOUNTS',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 12,
                     fontWeight: FontWeight.w800,
                     color: AppColors.primary,
@@ -575,7 +575,7 @@ class _DesktopProfileView extends StatelessWidget {
                     },
                     icon: Icon(Icons.add, size: 16),
                     label: Text('LINK NEW',
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 10, fontWeight: FontWeight.w900)),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primaryLight,
@@ -597,7 +597,7 @@ class _DesktopProfileView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 40),
               child: Center(
                   child: Text('No accounts linked',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           color: AppColors.textSecondary, fontSize: 15))),
             )
           else
@@ -638,7 +638,7 @@ class _DesktopProfileView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(account.bankName,
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary),
@@ -646,7 +646,7 @@ class _DesktopProfileView extends StatelessWidget {
                   SizedBox(height: 2),
                   Text(
                     '**** ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber} • ${account.accountName}',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 12,
                         color: AppColors.textSecondary,
                         fontWeight: FontWeight.w500),
@@ -692,7 +692,7 @@ class _DesktopProfileView extends StatelessWidget {
       ),
       child: Text(
         status.name.toUpperCase(),
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontSize: 9,
           fontWeight: FontWeight.w900,
           color: fg,
@@ -715,7 +715,7 @@ class _DesktopProfileView extends StatelessWidget {
         children: [
           Text(
             'Need Help?',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 22,
               fontWeight: FontWeight.w900,
               color: Colors.white,
@@ -724,7 +724,7 @@ class _DesktopProfileView extends StatelessWidget {
           SizedBox(height: 16),
           Text(
             'Our dedicated support team is available 24/7 for premium account holders.',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 15,
               color: Colors.white.withValues(alpha: 0.8),
               height: 1.6,
@@ -744,7 +744,7 @@ class _DesktopProfileView extends StatelessWidget {
                 elevation: 0,
               ),
               child: Text('CONTACT SUPPORT',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontWeight: FontWeight.w900, letterSpacing: 1)),
             ),
           ),
@@ -760,7 +760,7 @@ class _DesktopProfileView extends StatelessWidget {
         icon: Icon(Icons.logout, color: AppColors.error, size: 22),
         label: Text(
           'SECURE LOG OUT',
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontWeight: FontWeight.w900,
             color: AppColors.error,
             letterSpacing: 1.5,
@@ -796,7 +796,7 @@ class _MobileProfileView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
                 color: AppColors.primary)),
@@ -842,7 +842,7 @@ class _MobileProfileView extends StatelessWidget {
                         child: Text(
                           '${AppStrings.appName} — Secured with 256-bit encryption',
                           style:
-                              TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 11, color: Color(0xFFCBD5E1)),
+                              TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 11, color: Color(0xFFCBD5E1)),
                         ),
                       ),
                       SizedBox(height: 32),
@@ -880,7 +880,7 @@ class _MobileProfileView extends StatelessWidget {
                         user.fullName.isNotEmpty
                             ? user.fullName[0].toUpperCase()
                             : '?',
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 26,
                             fontWeight: FontWeight.w700,
                             color: Colors.white),
@@ -918,7 +918,7 @@ class _MobileProfileView extends StatelessWidget {
                       SizedBox(width: 5),
                       Text(
                         'KYC ${user.verificationStatus.name.toUpperCase()}',
-                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
                             fontSize: 10,
                             fontWeight: FontWeight.w700,
                             color: AppColors.primaryDark,
@@ -932,13 +932,13 @@ class _MobileProfileView extends StatelessWidget {
           ),
           SizedBox(height: 24),
           Text(user.fullName,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                   color: AppColors.primaryDark)),
           SizedBox(height: 4),
           Text(user.email,
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                   fontSize: 13, color: AppColors.textSecondary)),
           SizedBox(height: 18),
           SizedBox(
@@ -954,7 +954,7 @@ class _MobileProfileView extends StatelessWidget {
                 elevation: 0,
                 padding: const EdgeInsets.symmetric(vertical: 14),
                 textStyle:
-                    TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 15, fontWeight: FontWeight.w600),
+                    TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 15, fontWeight: FontWeight.w600),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
               ),
@@ -1031,7 +1031,7 @@ class _MobileProfileView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('KYC Status',
-                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
                                 color: AppColors.primaryDark)),
@@ -1044,7 +1044,7 @@ class _MobileProfileView extends StatelessWidget {
                                   : user.kycRejectionReason != null
                                       ? 'Declined: ${user.kycRejectionReason}'
                                       : 'Not verified — tap to start KYC',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 11,
                               fontWeight: FontWeight.w600,
                               color: user.kycRejectionReason != null
@@ -1089,14 +1089,14 @@ class _MobileProfileView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('MOBILE NUMBER',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 10,
                               fontWeight: FontWeight.w700,
                               color: AppColors.textHint,
                               letterSpacing: 0.8)),
                       SizedBox(height: 4),
                       Text(user.phone.isEmpty ? 'Not set' : user.phone,
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: AppColors.primaryDark)),
@@ -1120,14 +1120,14 @@ class _MobileProfileView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('RESIDENTIAL ADDRESS',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 10,
                               fontWeight: FontWeight.w700,
                               color: AppColors.textHint,
                               letterSpacing: 0.8)),
                       SizedBox(height: 4),
                       Text(address.isEmpty ? 'Not set' : address,
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: AppColors.primaryDark,
@@ -1206,13 +1206,13 @@ class _MobileProfileView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(account.bankName,
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                   color: AppColors.primaryDark)),
                           Text(
                               '**** ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber}',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                   fontSize: 12,
                                   color: AppColors.textSecondary)),
                         ],
@@ -1258,7 +1258,7 @@ class _MobileProfileView extends StatelessWidget {
         icon:
             Icon(Icons.logout_outlined, color: AppColors.error, size: 18),
         label: Text(' Log Out',
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 color: AppColors.error,
                 fontWeight: FontWeight.w600,
                 fontSize: 15)),
@@ -1270,7 +1270,7 @@ class _MobileProfileView extends StatelessWidget {
 
   Widget _sectionLabel(String text) {
     return Text(text,
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textHint,
@@ -1282,14 +1282,14 @@ class _MobileProfileView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(label,
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 10,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textHint,
                 letterSpacing: 0.8)),
         SizedBox(height: 4),
         Text(value.isEmpty ? '—' : value,
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
                 color: AppColors.primaryDark),
@@ -1324,7 +1324,7 @@ class _MobileProfileView extends StatelessWidget {
         decoration:
             BoxDecoration(color: bg, borderRadius: BorderRadius.circular(6)),
         child: Text(label,
-            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+            style: TextStyle(fontFamily: 'PlusJakartaSans', 
                 fontSize: 10,
                 fontWeight: FontWeight.w700,
                 color: fg,
@@ -1390,7 +1390,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??
@@ -1431,7 +1431,7 @@ class _DrawerItem extends StatelessWidget {
               color ?? (isActive ? AppColors.primary : AppColors.textPrimary),
           size: 22),
       title: Text(label,
-          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+          style: TextStyle(fontFamily: 'PlusJakartaSans', 
               fontSize: 15,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
               color: color ??
@@ -1466,7 +1466,7 @@ Widget _buildSharedDrawer(
                           user.fullName.isNotEmpty
                               ? user.fullName[0].toUpperCase()
                               : '?',
-                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary),
@@ -1475,13 +1475,13 @@ Widget _buildSharedDrawer(
                 ),
                 SizedBox(height: 12),
                 Text(user.fullName,
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user.email,
                     style:
-                        TextStyle(fontFamily: 'Plus Jakarta Sans', color: Colors.white60, fontSize: 13)),
+                        TextStyle(fontFamily: 'PlusJakartaSans', color: Colors.white60, fontSize: 13)),
               ],
             ),
           ),
@@ -1548,7 +1548,7 @@ Widget _buildSharedDataField(String label, String value) {
     children: [
       Text(
         label,
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontSize: 10,
           fontWeight: FontWeight.w800,
           color: AppColors.textSecondary,
@@ -1558,7 +1558,7 @@ Widget _buildSharedDataField(String label, String value) {
       SizedBox(height: 10),
       Text(
         value,
-        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+        style: TextStyle(fontFamily: 'PlusJakartaSans', 
           fontSize: 16,
           fontWeight: FontWeight.w700,
           color: AppColors.primary,
@@ -1617,7 +1617,7 @@ void _showEditProfileSheet(
                     SizedBox(height: 24),
                     Text(
                       'Edit Profile',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryDark,
@@ -1626,7 +1626,7 @@ void _showEditProfileSheet(
                     SizedBox(height: 8),
                     Text(
                       'Update your personal information below.',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                         fontSize: 14,
                         color: AppColors.textSecondary,
                       ),
@@ -1808,7 +1808,7 @@ void _showEditProfileSheet(
                               )
                             : Text(
                                 'SAVE CHANGES',
-                                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                                style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                   fontWeight: FontWeight.w900,
                                   letterSpacing: 1.2,
                                 ),
@@ -1838,15 +1838,15 @@ void _showDeleteBankAccountDialog(
       return StatefulBuilder(
         builder: (context, setDialogState) => AlertDialog(
           title: Text('Delete Bank Account',
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.bold)),
+              style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.bold)),
           content: Text(
               'Are you sure you want to delete this bank account (${account.bankName} - ${account.accountNumber})?',
-              style: TextStyle(fontFamily: 'Plus Jakarta Sans', )),
+              style: TextStyle(fontFamily: 'PlusJakartaSans', )),
           actions: [
             TextButton(
               onPressed: isDeleting ? null : () => Navigator.pop(context),
               child: Text('CANCEL',
-                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontWeight: FontWeight.bold,
                       color: AppColors.textSecondary)),
             ),
@@ -1895,7 +1895,7 @@ void _showDeleteBankAccountDialog(
                           strokeWidth: 2, color: AppColors.error),
                     )
                   : Text('DELETE',
-                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
                           fontWeight: FontWeight.bold, color: AppColors.error)),
             ),
           ],
@@ -1953,7 +1953,7 @@ void _showAddBankAccountSheet(
                   SizedBox(height: 24),
                   Text(
                     'Add Bank Account',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primaryDark,
@@ -1962,7 +1962,7 @@ void _showAddBankAccountSheet(
                   SizedBox(height: 8),
                   Text(
                     'Link your account to receive disbursements.',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 14,
                       color: AppColors.textSecondary,
                     ),
@@ -1970,7 +1970,7 @@ void _showAddBankAccountSheet(
                   SizedBox(height: 32),
                   Text(
                     'Bank Name',
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
@@ -1979,7 +1979,7 @@ void _showAddBankAccountSheet(
                   SizedBox(height: 8),
                   DropdownButtonFormField<String>(
                     initialValue: selectedBank.isEmpty ? null : selectedBank,
-                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
                       color: AppColors.textPrimary,
                       fontSize: 15,
                     ),
@@ -2005,7 +2005,7 @@ void _showAddBankAccountSheet(
                         .map((bank) => DropdownMenuItem(
                               value: bank,
                               child: Text(bank,
-                                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', )),
+                                  style: TextStyle(fontFamily: 'PlusJakartaSans', )),
                             ))
                         .toList(),
                     onChanged: isSubmitting
@@ -2115,7 +2115,7 @@ void _showAddBankAccountSheet(
                             )
                           : Text(
                               'LINK ACCOUNT',
-                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
+                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
                                 fontWeight: FontWeight.w900,
                                 letterSpacing: 1.2,
                               ),
