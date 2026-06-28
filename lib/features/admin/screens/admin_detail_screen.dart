@@ -157,6 +157,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                             applicant.countryCode,
                           ),
                           referenceNo: app.id,
+                          reason: reason,
                         );
 
                         if (mounted) {

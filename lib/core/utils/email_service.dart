@@ -8,6 +8,13 @@ class EmailService {
     required String toEmail,
     required String subject,
     required String content,
+    String? status,
+    String? fullName,
+    String? referenceNo,
+    String? loanAmount,
+    String? monthlyRepayment,
+    String? duration,
+    String? reason,
   }) async {
     try {
       final idToken = await FirebaseAuth.instance.currentUser?.getIdToken();
@@ -21,6 +28,13 @@ class EmailService {
           'to_email': toEmail,
           'subject': subject,
           'content': content,
+          if (status != null) 'status': status,
+          if (fullName != null) 'full_name': fullName,
+          if (referenceNo != null) 'reference_no': referenceNo,
+          if (loanAmount != null) 'loan_amount': loanAmount,
+          if (monthlyRepayment != null) 'monthly_repayment': monthlyRepayment,
+          if (duration != null) 'duration': duration,
+          if (reason != null) 'reason': reason,
         }),
       );
       if (response.statusCode != 200) {
@@ -143,24 +157,20 @@ Primekey Finance Team
     required String referenceNo,
     required String repayment,
     required int duration,
+    String? reason,
   }) async {
-    final firstName = toName.split(' ').first;
-    final subject = 'Loan Application APPROVED - $referenceNo';
-    final content = '''
-Hi $firstName,
-
-Congratulations! Your loan application $referenceNo for $loanAmount has been APPROVED.
-
-Details:
-- Repayment Term: $duration months
-- Monthly Payment: $repayment
-
-Please log in to your dashboard to review and sign your loan agreement contract to finalize the payout.
-
-Best regards,
-Primekey Finance Team
-''';
-    return _send(toEmail: toEmail, subject: subject, content: content);
+    return _send(
+      toEmail: toEmail,
+      subject: 'Loan Application APPROVED - $referenceNo',
+      content: 'Congratulations! Your loan application $referenceNo has been approved.',
+      status: 'approved',
+      fullName: toName,
+      referenceNo: referenceNo,
+      loanAmount: loanAmount,
+      monthlyRepayment: repayment,
+      duration: '$duration months',
+      reason: reason,
+    );
   }
 
   static Future<bool> sendRejectionEmail({
@@ -170,21 +180,19 @@ Primekey Finance Team
     required String referenceNo,
     required String repayment,
     required int duration,
+    String? reason,
   }) async {
-    final firstName = toName.split(' ').first;
-    final subject = 'Loan Application Rejected - $referenceNo';
-    final content = '''
-Hi $firstName,
-
-Thank you for your interest in Primekey Finance. 
-
-Unfortunately, after reviewing your application $referenceNo for $loanAmount, we are unable to approve it at this time. 
-
-You can check your dashboard for additional notes or apply again in the future if your financial status changes.
-
-Best regards,
-Primekey Finance Team
-''';
-    return _send(toEmail: toEmail, subject: subject, content: content);
+    return _send(
+      toEmail: toEmail,
+      subject: 'Loan Application Rejected - $referenceNo',
+      content: 'Unfortunately, your loan application $referenceNo was not approved at this time.',
+      status: 'rejected',
+      fullName: toName,
+      referenceNo: referenceNo,
+      loanAmount: loanAmount,
+      monthlyRepayment: repayment,
+      duration: '$duration months',
+      reason: reason,
+    );
   }
 }
