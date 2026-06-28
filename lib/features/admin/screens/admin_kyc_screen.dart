@@ -118,6 +118,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                 await EmailService.sendKycRejectionEmail(
                   toEmail: user.email,
                   toName: user.fullName,
+                  reason: reason,
                 );
 
                 if (mounted) {

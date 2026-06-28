@@ -1,5 +1,4 @@
 import 'package:primekey_loan_app/core/constants/app_assets.dart';
-import 'package:primekey_loan_app/core/utils/email_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -67,11 +66,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
         );
 
     if (success && mounted) {
-      await EmailService.sendWelcomeEmail(
-        toEmail: _emailController.text.trim(),
-        toName: _fullNameController.text.trim().split(' ').first,
-      );
-      if (mounted) context.go(AppRoutes.dashboard);
+      context.go(AppRoutes.dashboard);
     }
   }
 

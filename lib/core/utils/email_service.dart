@@ -1,60 +1,139 @@
 import 'dart:convert';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
+import 'package:primekey_loan_app/core/app_config.dart';
 
 class EmailService {
-  static const _serviceId = 'service_u7rnqnj';
-  static const _publicKey = 'k25KMYGf_XoOgRODh';
+  static Future<bool> _send({
+    required String toEmail,
+    required String subject,
+    required String content,
+  }) async {
+    try {
+      final idToken = await FirebaseAuth.instance.currentUser?.getIdToken();
+      final response = await http.post(
+        Uri.parse('${AppConfig.agreementApiUrl}/send-notification-email'),
+        headers: {
+          'Content-Type': 'application/json',
+          if (idToken != null) 'Authorization': 'Bearer $idToken',
+        },
+        body: jsonEncode({
+          'to_email': toEmail,
+          'subject': subject,
+          'content': content,
+        }),
+      );
+      if (response.statusCode != 200) {
+        print('EmailService: Failed to send email via Render API. Code: ${response.statusCode}, Body: ${response.body}');
+        return false;
+      }
+      print('EmailService: Email sent successfully via Render API to $toEmail');
+      return true;
+    } catch (e) {
+      print('EmailService: Error sending email: $e');
+      return false;
+    }
+  }
 
   static Future<bool> sendWelcomeEmail({
     required String toEmail,
     required String toName,
   }) async {
-    return _send(
-      templateId: 'template_welcome',
-      params: {
-        'email': toEmail,
-        'name': toName.split(' ').first,
-      },
-    );
+    final firstName = toName.split(' ').first;
+    final subject = 'Welcome to Primekey Finance!';
+    final content = '''
+Hi $firstName,
+
+Welcome to Primekey Finance! We're excited to help you with your financial needs.
+
+To get started, please log in and complete your KYC verification on the dashboard so you can apply for your first loan.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
   }
 
   static Future<bool> sendKycRejectionEmail({
     required String toEmail,
     required String toName,
+    String? reason,
   }) async {
-    return _send2(
-      templateId: 'template_kyc_rejection',
-      params: {
-        'email': toEmail,
-        'name': toName.split(' ').first,
-      },
-    );
+    final firstName = toName.split(' ').first;
+    final subject = 'KYC Verification Rejected';
+    final reasonText = reason != null && reason.isNotEmpty 
+        ? '\n\nRemarks:\n"$reason"'
+        : '';
+    final content = '''
+Hi $firstName,
+
+Unfortunately, your identity verification (KYC) documents could not be approved. $reasonText
+
+Please log in to your dashboard to re-upload clear documents.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
   }
 
   static Future<bool> sendKycApprovalEmail({
     required String toEmail,
     required String toName,
   }) async {
-    return _send3(
-      templateId: 'template_kyc_approval',
-      params: {
-        'email': toEmail,
-        'name': toName,
-      },
-    );
+    final firstName = toName.split(' ').first;
+    final subject = 'KYC Verification Approved!';
+    final content = '''
+Hi $firstName,
+
+Congratulations! Your identity verification (KYC) has been successfully approved. 
+
+You can now apply for loans and access all features of the Primekey platform.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
   }
 
   static Future<bool> sendBankVerEmail({
     required String toEmail,
     required String toName,
   }) async {
-    return _send3(
-      templateId: 'template_bank_ver',
-      params: {
-        'email': toEmail,
-        'firstName': toName.split(" ").first,
-      },
-    );
+    final firstName = toName.split(' ').first;
+    final subject = 'Bank Account Verified';
+    final content = '''
+Hi $firstName,
+
+Your bank account details have been successfully verified by our underwriting team.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
+  }
+
+  static Future<bool> sendSubmittedEmail({
+    required String toEmail,
+    required String toName,
+    required String loanAmount,
+    required String referenceNo,
+  }) async {
+    final firstName = toName.split(' ').first;
+    final subject = 'Loan Application Received - $referenceNo';
+    final content = '''
+Hi $firstName,
+
+Thank you for applying for a loan with Primekey Finance.
+
+We have successfully received your application for $loanAmount (Ref: $referenceNo). Our underwriting team will review it shortly.
+
+You can monitor the status of your application from your user dashboard at any time.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
   }
 
   static Future<bool> sendApprovalEmail({
@@ -64,21 +143,24 @@ class EmailService {
     required String referenceNo,
     required String repayment,
     required int duration,
-    // required DateTime date,
   }) async {
-    return _send(
-      templateId: 'template_approved',
-      params: {
-        'first_name': toName.split(' ').first,
-        'email': toEmail,
-        'name': toName,
-        'loan_amount': loanAmount,
-        'reference_no': referenceNo,
-        'repayment': repayment,
-        'duration': duration,
-        // 'date': date,
-      },
-    );
+    final firstName = toName.split(' ').first;
+    final subject = 'Loan Application APPROVED - $referenceNo';
+    final content = '''
+Hi $firstName,
+
+Congratulations! Your loan application $referenceNo for $loanAmount has been APPROVED.
+
+Details:
+- Repayment Term: $duration months
+- Monthly Payment: $repayment
+
+Please log in to your dashboard to review and sign your loan agreement contract to finalize the payout.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
   }
 
   static Future<bool> sendRejectionEmail({
@@ -88,83 +170,21 @@ class EmailService {
     required String referenceNo,
     required String repayment,
     required int duration,
-    // required DateTime date,
   }) async {
-    return _send2(
-      templateId: 'template_rejected_app',
-      params: {
-        'first_name': toName.split(' ').first,
-        'email': toEmail,
-        'name': toName,
-        'loan_amount': loanAmount,
-        'reference_no': referenceNo,
-        'repayment': repayment,
-        'duration': duration,
-        // 'date': date,
-      },
-    );
-  }
+    final firstName = toName.split(' ').first;
+    final subject = 'Loan Application Rejected - $referenceNo';
+    final content = '''
+Hi $firstName,
 
-  static Future<bool> _send({
-    required String templateId,
-    required Map<String, dynamic> params,
-  }) async {
-    try {
-      final response = await http.post(
-        Uri.parse('https://api.emailjs.com/api/v1.0/email/send'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'service_id': _serviceId,
-          'template_id': templateId,
-          'user_id': _publicKey,
-          'template_params': params,
-        }),
-      );
-      return response.statusCode == 200;
-    } catch (e) {
-      return false;
-    }
-  }
+Thank you for your interest in Primekey Finance. 
 
-  static Future<bool> _send2({
-    required String templateId,
-    required Map<String, dynamic> params,
-  }) async {
-    try {
-      final response = await http.post(
-        Uri.parse('https://api.emailjs.com/api/v1.0/email/send'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'service_id': "service_6s62p8v",
-          'template_id': templateId,
-          'user_id': 'Tg4ku4wFuZNaE4-7d',
-          'template_params': params,
-        }),
-      );
-      return response.statusCode == 200;
-    } catch (e) {
-      return false;
-    }
-  }
+Unfortunately, after reviewing your application $referenceNo for $loanAmount, we are unable to approve it at this time. 
 
-  static Future<bool> _send3({
-    required String templateId,
-    required Map<String, dynamic> params,
-  }) async {
-    try {
-      final response = await http.post(
-        Uri.parse('https://api.emailjs.com/api/v1.0/email/send'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'service_id': "service_q10j97q",
-          'template_id': templateId,
-          'user_id': 'zJaKxIhmjGLKgieCE',
-          'template_params': params,
-        }),
-      );
-      return response.statusCode == 200;
-    } catch (e) {
-      return false;
-    }
+You can check your dashboard for additional notes or apply again in the future if your financial status changes.
+
+Best regards,
+Primekey Finance Team
+''';
+    return _send(toEmail: toEmail, subject: subject, content: content);
   }
 }

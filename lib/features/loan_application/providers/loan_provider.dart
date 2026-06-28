@@ -7,6 +7,7 @@ import '../../../../data/providers/service_providers.dart';
 import '../../../../data/services/firestore_service.dart';
 import '../../../../data/services/storage_service.dart';
 import '../../auth/providers/auth_provider.dart';
+import '../../../core/utils/email_service.dart';
 
 // Loan state
 class LoanState {
@@ -57,6 +58,7 @@ class LoanNotifier extends StateNotifier<LoanState> {
 
   // Submit application
   Future<LoanApplicationModel?> submitApplication({
+    required String email,
     required String fullName,
     required String phone,
     required String employmentStatus,
@@ -112,6 +114,17 @@ class LoanNotifier extends StateNotifier<LoanState> {
       print('LoanNotifier: Saving application to Firestore');
       await _firestoreService.saveApplication(application);
       print('LoanNotifier: Application saved successfully');
+
+      try {
+        await EmailService.sendSubmittedEmail(
+          toEmail: email,
+          toName: fullName,
+          loanAmount: '\$${loanAmount.toStringAsFixed(2)}',
+          referenceNo: applicationId,
+        );
+      } catch (e) {
+        print('LoanNotifier: Email notification failed: $e');
+      }
 
       // Refetch applications so dashboard is up to date
       print('LoanNotifier: Fetching applications after submission');

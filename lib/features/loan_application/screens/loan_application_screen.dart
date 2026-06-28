@@ -152,6 +152,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
       print('LoanApplicationScreen: Notifier instance: ${notifier.hashCode}');
 
       final application = await notifier.submitApplication(
+        email: currentUser?.email ?? '',
         fullName: currentUser?.fullName.trim() ?? 'Unknown User',
         phone: formState.phone.trim(),
         employmentStatus: formState.employmentStatus,
