@@ -1050,8 +1050,8 @@ class _DesktopStatusView extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 20,
-                backgroundImage:
-                    NetworkImage('https://i.pravatar.cc/100?img=12'),
+                backgroundColor: Colors.white24,
+                child: Icon(Icons.person, color: Colors.white, size: 20),
               ),
               const SizedBox(width: 16),
               Column(

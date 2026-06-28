@@ -2,7 +2,7 @@ class AppConfig {
   static const bool isProduction = bool.fromEnvironment('dart.vm.product');
 
   // API Base URLs
-  static const String agreementApiUrl = 'https://loan-agreement-script.onrender.com';
+  static const String agreementApiUrl = 'https://primekeyagreement.onrender.com';
   
   // Auth Redirection URLs
   static const String resetPasswordUrlProd = 'https://primekeyapp-49jj.onrender.com/reset-password';

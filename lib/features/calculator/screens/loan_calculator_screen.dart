@@ -511,10 +511,10 @@ class _DesktopCalculator extends StatelessWidget {
             ),
             child: Row(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 16,
-                  backgroundImage:
-                      NetworkImage('https://i.pravatar.cc/100?u=primekey1'),
+                  backgroundColor: AppColors.primary.withValues(alpha: 0.1),
+                  child: const Icon(Icons.support_agent, size: 16, color: AppColors.primary),
                 ),
                 const SizedBox(width: 8),
                 Text(
