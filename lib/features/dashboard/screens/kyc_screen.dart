@@ -260,7 +260,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             // Description with highlighted text
             RichText(
               textAlign: TextAlign.center,
-              text: const TextSpan(
+              text: TextSpan(
                 style: GoogleFonts.plusJakartaSans(
                   fontSize: 14,
                   color: AppColors.textSecondary,

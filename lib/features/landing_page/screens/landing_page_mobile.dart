@@ -188,18 +188,19 @@ class LandingPageMobile extends ConsumerWidget {
                     children: [
                       Text(
                         "Easy Online Loans\nfor Your Future",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(fontSize: 40),
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 40,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.textPrimary,
+                        ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         "Designed for simplicity. Built for speed. Get the funds you need in just a few clicks.",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(fontSize: 18),
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 18,
+                          color: AppColors.textPrimary,
+                        ),
                       ),
                     ],
                   ),
@@ -233,7 +234,7 @@ class LandingPageMobile extends ConsumerWidget {
                         label: 'Calculate Payment',
                         height: 70,
                         textStyle:
-                            Theme.of(context).textTheme.bodySmall?.copyWith(
+                            GoogleFonts.plusJakartaSans(
                                   color: AppColors.primary,
                                 ),
                         buttonStyle: ElevatedButton.styleFrom(
@@ -262,7 +263,7 @@ class LandingPageMobile extends ConsumerWidget {
                   index: 2,
                   child: Text(
                     "Why Choose ${AppStrings.appName}?",
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    style: GoogleFonts.plusJakartaSans(
                           color: const Color(0xFF747779),
                           fontSize: 28,
                         ),
@@ -441,7 +442,7 @@ class LandingPageMobile extends ConsumerWidget {
                   index: 6,
                   child: Text(
                     'How It Works',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    style: GoogleFonts.plusJakartaSans(
                           color: AppColors.primaryDark,
                           fontSize: 30,
                         ),
@@ -495,7 +496,7 @@ class LandingPageMobile extends ConsumerWidget {
                           'Ready to redefine your financial horizon?',
                           textAlign: TextAlign.center,
                           style:
-                              Theme.of(context).textTheme.titleLarge?.copyWith(
+                              GoogleFonts.plusJakartaSans(
                                     color: AppColors.white,
                                     fontSize: 30,
                                   ),
@@ -505,7 +506,7 @@ class LandingPageMobile extends ConsumerWidget {
                           'Join thousands of forward thinking individuals building their future with PRIMEKEY',
                           textAlign: TextAlign.center,
                           style:
-                              Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              GoogleFonts.plusJakartaSans(
                                     color: AppColors.primaryLightShade,
                                     fontSize: 18,
                                   ),
@@ -583,7 +584,7 @@ class LandingPageMobile extends ConsumerWidget {
                         Text(
                           '© 2024 ${AppStrings.appName} Inc. All rights reserved.',
                           style:
-                              Theme.of(context).textTheme.bodySmall?.copyWith(
+                              GoogleFonts.plusJakartaSans(
                                     color: AppColors.textSecondary,
                                   ),
                         ),
@@ -619,7 +620,7 @@ Widget _buildFooterColumn(
             padding: const EdgeInsets.only(bottom: 12),
             child: Text(
               item,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              style: GoogleFonts.plusJakartaSans(
                     fontSize: 8,
                     color: AppColors.textSecondary,
                   ),

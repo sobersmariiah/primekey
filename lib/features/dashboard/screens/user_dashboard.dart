@@ -774,7 +774,7 @@ class _MobileDashboard extends StatelessWidget {
                         onPressed: () => Scaffold.of(context).openDrawer())),
                 SizedBox(width: 8),
                 Text('Dashboard',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    style: GoogleFonts.plusJakartaSans(
                         color: AppColors.textPrimary,
                         fontWeight: FontWeight.bold)),
               ],

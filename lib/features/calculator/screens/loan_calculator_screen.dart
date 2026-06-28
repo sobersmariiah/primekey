@@ -192,21 +192,12 @@ class _DesktopCalculator extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Loan Projection',
+                              'Loan Calculator',
                               style: GoogleFonts.plusJakartaSans(
                                 fontSize: 32,
                                 fontWeight: FontWeight.w900,
                                 color: AppColors.primary,
                                 letterSpacing: -1,
-                              ),
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              'Simulate architectural lending scenarios with high-precision instruments.\nDefine your parameters to visualize capital commitments.',
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: 16,
-                                color: AppColors.textSecondary,
-                                height: 1.5,
                               ),
                             ),
                             SizedBox(height: 48),
@@ -225,7 +216,6 @@ class _DesktopCalculator extends StatelessWidget {
                               ],
                             ),
                             SizedBox(height: 48),
-                            _buildBottomGrid(context),
                           ],
                         ),
                       ),
@@ -274,8 +264,8 @@ class _DesktopCalculator extends StatelessWidget {
             label: 'Loan Amount',
             controller: amountController,
             hint: 'e.g. 250000',
-            prefixIcon: Icon(Icons.attach_money_rounded,
-                color: AppColors.primary),
+            prefixIcon:
+                Icon(Icons.attach_money_rounded, color: AppColors.primary),
             keyboardType: TextInputType.number,
             onChanged: (v) => onAmountChanged(),
           ),
@@ -514,7 +504,8 @@ class _DesktopCalculator extends StatelessWidget {
                 CircleAvatar(
                   radius: 16,
                   backgroundColor: AppColors.primary.withValues(alpha: 0.1),
-                  child: Icon(Icons.support_agent, size: 16, color: AppColors.primary),
+                  child: Icon(Icons.support_agent,
+                      size: 16, color: AppColors.primary),
                 ),
                 SizedBox(width: 8),
                 Text(
@@ -610,33 +601,6 @@ class _DesktopCalculator extends StatelessWidget {
           onChanged: (val) => onDurationChanged(val!),
         ),
       ),
-    );
-  }
-
-  Widget _buildBottomGrid(BuildContext context) {
-    return Row(
-      children: [
-        _buildInfoCard(
-          'Market Benchmark',
-          '3.85% APY',
-          'Avg. rate for credit score 780+',
-          Icons.show_chart_rounded,
-        ),
-        SizedBox(width: 24),
-        _buildInfoCard(
-          'Capital Composition',
-          'Principal accounts for 74%',
-          'of your total loan lifecycle commitment.',
-          Icons.pie_chart_outline_rounded,
-        ),
-        SizedBox(width: 24),
-        _buildInfoCard(
-          'Accelerated Path',
-          'Pay an extra \$200/mo',
-          'to save \$24,102 in interest and finish early.',
-          Icons.bolt_rounded,
-        ),
-      ],
     );
   }
 
@@ -790,7 +754,8 @@ class _DesktopCalculator extends StatelessWidget {
                       currentUser?.fullName.isNotEmpty ?? false
                           ? currentUser!.fullName[0].toUpperCase()
                           : '?',
-                      style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold),
+                      style: GoogleFonts.plusJakartaSans(
+                          fontWeight: FontWeight.bold),
                     ),
                   )
                 : null,
@@ -1223,8 +1188,8 @@ Widget _buildSharedDrawer(
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user?.email ?? '',
-                    style:
-                        GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
+                    style: GoogleFonts.plusJakartaSans(
+                        color: Colors.white60, fontSize: 13)),
               ],
             ),
           ),
@@ -1245,8 +1210,7 @@ Widget _buildSharedDrawer(
             onTap: () => context.go(AppRoutes.userApplications),
           ),
           ListTile(
-            leading:
-                Icon(Icons.calculate_outlined, color: AppColors.primary),
+            leading: Icon(Icons.calculate_outlined, color: AppColors.primary),
             title: Text('Calculator',
                 style: GoogleFonts.plusJakartaSans(
                     color: AppColors.primary, fontWeight: FontWeight.bold)),
@@ -1266,8 +1230,8 @@ Widget _buildSharedDrawer(
           Divider(),
           ListTile(
             leading: Icon(Icons.logout, color: AppColors.error),
-            title:
-                Text('Log Out', style: GoogleFonts.plusJakartaSans(color: AppColors.error)),
+            title: Text('Log Out',
+                style: GoogleFonts.plusJakartaSans(color: AppColors.error)),
             onTap: onLogout,
           ),
           SizedBox(height: 16),
