@@ -94,7 +94,23 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
                   label: 'HOW MUCH DO YOU NEED? ($currencyCode)',
                   controller: _loanAmountController,
                   hint: '0.00',
-                  prefixIcon: Icon(Icons.account_balance_wallet_outlined, size: 20),
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          currencyCode,
+                          style: TextStyle(
+                            fontFamily: 'Ubuntu',
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.textSecondary,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   onChanged: (v) {
                     final amount = double.tryParse(v) ?? 0.0;
