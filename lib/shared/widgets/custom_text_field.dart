@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
@@ -40,12 +41,12 @@ class CustomTextField extends StatelessWidget {
           style: theme.textTheme.titleSmall?.copyWith(
                 fontWeight: FontWeight.w500,
               ) ??
-              const TextStyle(
+              GoogleFonts.plusJakartaSans(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: 8),
         TextFormField(
           controller: controller,
           keyboardType: keyboardType,

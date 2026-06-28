@@ -214,7 +214,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                 children: [
                   Text(
                     'STEP ${_currentStep + 1} OF $_totalSteps',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 11,
                       fontWeight: FontWeight.w700,
                       color: AppColors.primary,
@@ -223,7 +223,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                   ),
                   Text(
                     stepNames[_currentStep],
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
                       color: AppColors.textPrimary,
@@ -231,7 +231,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8),
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
                 child: LinearProgressIndicator(
@@ -285,14 +285,14 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                 backgroundColor: AppColors.white,
                 elevation: 0,
                 leading: IconButton(
-                  icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary),
+                  icon: Icon(Icons.arrow_back, color: AppColors.textPrimary),
                   onPressed: _currentStep > 0
                       ? _previousStep
                       : () => context.go(AppRoutes.dashboard),
                 ),
-                title: const Text(
+                title: Text(
                   'Loan Application',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
                     color: AppColors.textPrimary,
@@ -336,7 +336,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
             onPressed: _currentStep > 0
                 ? _previousStep
                 : () => context.go(AppRoutes.dashboard),
-            icon: const Icon(Icons.arrow_back, color: AppColors.textSecondary),
+            icon: Icon(Icons.arrow_back, color: AppColors.textSecondary),
           ),
           const Spacer(),
           ElevatedButton(
@@ -354,13 +354,13 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
               children: [
                 Text(
                   isLastStep ? 'SUBMIT APPLICATION' : 'CONTINUE',
-                  style: const TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const SizedBox(width: 8),
-                const Icon(Icons.arrow_forward, size: 18),
+                SizedBox(width: 8),
+                Icon(Icons.arrow_forward, size: 18),
               ],
             ),
           ),
@@ -438,14 +438,14 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
             onTap: () => context.go(AppRoutes.profile),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout,
             label: 'Log Out',
             color: AppColors.error,
             onTap: _handleLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -461,7 +461,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
       ),
       child: Row(
         children: [
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Text(
             'Apply for Loan',
             style: GoogleFonts.plusJakartaSans(
@@ -514,7 +514,7 @@ class _SidebarItem extends StatelessWidget {
                 color: isActive ? activeColor : defaultColor,
                 size: 20,
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
               Text(
                 label,
                 style: GoogleFonts.plusJakartaSans(

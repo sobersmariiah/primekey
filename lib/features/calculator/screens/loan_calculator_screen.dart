@@ -200,7 +200,7 @@ class _DesktopCalculator extends StatelessWidget {
                                 letterSpacing: -1,
                               ),
                             ),
-                            const SizedBox(height: 8),
+                            SizedBox(height: 8),
                             Text(
                               'Simulate architectural lending scenarios with high-precision instruments.\nDefine your parameters to visualize capital commitments.',
                               style: GoogleFonts.plusJakartaSans(
@@ -209,7 +209,7 @@ class _DesktopCalculator extends StatelessWidget {
                                 height: 1.5,
                               ),
                             ),
-                            const SizedBox(height: 48),
+                            SizedBox(height: 48),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -217,14 +217,14 @@ class _DesktopCalculator extends StatelessWidget {
                                   flex: 4,
                                   child: _buildParameterCard(context),
                                 ),
-                                const SizedBox(width: 32),
+                                SizedBox(width: 32),
                                 Expanded(
                                   flex: 6,
                                   child: _buildResultPanel(context),
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 48),
+                            SizedBox(height: 48),
                             _buildBottomGrid(context),
                           ],
                         ),
@@ -267,23 +267,23 @@ class _DesktopCalculator extends StatelessWidget {
               color: AppColors.textSecondary,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           _buildInputLabel('PRINCIPAL AMOUNT'),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           CustomTextField(
             label: 'Loan Amount',
             controller: amountController,
             hint: 'e.g. 250000',
-            prefixIcon: const Icon(Icons.attach_money_rounded,
+            prefixIcon: Icon(Icons.attach_money_rounded,
                 color: AppColors.primary),
             keyboardType: TextInputType.number,
             onChanged: (v) => onAmountChanged(),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           _buildInputLabel('AMORTIZATION PERIOD'),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           _buildDurationDropdown(),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           Row(
             children: [
               Expanded(
@@ -291,7 +291,7 @@ class _DesktopCalculator extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     _buildInputLabel('INTEREST RATE'),
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 12),
@@ -323,13 +323,13 @@ class _DesktopCalculator extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     _buildInputLabel('START DATE'),
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 12),
@@ -348,7 +348,7 @@ class _DesktopCalculator extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          const Icon(Icons.calendar_today_rounded,
+                          Icon(Icons.calendar_today_rounded,
                               size: 16, color: AppColors.textSecondary),
                         ],
                       ),
@@ -358,7 +358,7 @@ class _DesktopCalculator extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           SizedBox(
             width: double.infinity,
             height: 56,
@@ -381,8 +381,8 @@ class _DesktopCalculator extends StatelessWidget {
                       fontSize: 16,
                     ),
                   ),
-                  const SizedBox(width: 8),
-                  const Icon(Icons.arrow_forward_rounded, size: 18),
+                  SizedBox(width: 8),
+                  Icon(Icons.arrow_forward_rounded, size: 18),
                 ],
               ),
             ),
@@ -407,7 +407,7 @@ class _DesktopCalculator extends StatelessWidget {
             children: [
               Icon(Icons.calculate_outlined,
                   size: 64, color: AppColors.primary.withValues(alpha: 0.2)),
-              const SizedBox(height: 16),
+              SizedBox(height: 16),
               Text(
                 'Enter an amount to see your projection',
                 textAlign: TextAlign.center,
@@ -460,7 +460,7 @@ class _DesktopCalculator extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -476,7 +476,7 @@ class _DesktopCalculator extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
                 Text(
                   'Your estimated monthly repayment based on current interest rates.',
                   style: GoogleFonts.plusJakartaSans(
@@ -484,9 +484,9 @@ class _DesktopCalculator extends StatelessWidget {
                     height: 1.5,
                   ),
                 ),
-                const SizedBox(height: 48),
-                const Divider(color: Colors.white12),
-                const SizedBox(height: 24),
+                SizedBox(height: 48),
+                Divider(color: Colors.white12),
+                SizedBox(height: 24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -514,9 +514,9 @@ class _DesktopCalculator extends StatelessWidget {
                 CircleAvatar(
                   radius: 16,
                   backgroundColor: AppColors.primary.withValues(alpha: 0.1),
-                  child: const Icon(Icons.support_agent, size: 16, color: AppColors.primary),
+                  child: Icon(Icons.support_agent, size: 16, color: AppColors.primary),
                 ),
-                const SizedBox(width: 8),
+                SizedBox(width: 8),
                 Text(
                   'Verified Specialists Available',
                   style: GoogleFonts.plusJakartaSans(
@@ -555,7 +555,7 @@ class _DesktopCalculator extends StatelessWidget {
             letterSpacing: 0.5,
           ),
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: 8),
         Text(
           value,
           style: GoogleFonts.plusJakartaSans(
@@ -593,7 +593,7 @@ class _DesktopCalculator extends StatelessWidget {
               ? selectedDuration
               : availableRates.keys.first,
           isExpanded: true,
-          icon: const Icon(Icons.keyboard_arrow_down_rounded),
+          icon: Icon(Icons.keyboard_arrow_down_rounded),
           style: GoogleFonts.plusJakartaSans(
             fontWeight: FontWeight.bold,
             color: AppColors.primary,
@@ -622,14 +622,14 @@ class _DesktopCalculator extends StatelessWidget {
           'Avg. rate for credit score 780+',
           Icons.show_chart_rounded,
         ),
-        const SizedBox(width: 24),
+        SizedBox(width: 24),
         _buildInfoCard(
           'Capital Composition',
           'Principal accounts for 74%',
           'of your total loan lifecycle commitment.',
           Icons.pie_chart_outline_rounded,
         ),
-        const SizedBox(width: 24),
+        SizedBox(width: 24),
         _buildInfoCard(
           'Accelerated Path',
           'Pay an extra \$200/mo',
@@ -660,7 +660,7 @@ class _DesktopCalculator extends StatelessWidget {
               ),
               child: Icon(icon, size: 20, color: AppColors.primary),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Text(
               title,
               style: GoogleFonts.plusJakartaSans(
@@ -669,7 +669,7 @@ class _DesktopCalculator extends StatelessWidget {
                 color: AppColors.textSecondary,
               ),
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(
               val,
               style: GoogleFonts.plusJakartaSans(
@@ -678,7 +678,7 @@ class _DesktopCalculator extends StatelessWidget {
                 color: AppColors.primary,
               ),
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(
               sub,
               style: GoogleFonts.plusJakartaSans(
@@ -748,14 +748,14 @@ class _DesktopCalculator extends StatelessWidget {
             onTap: () => context.go(AppRoutes.profile),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout,
             label: 'Log Out',
             color: AppColors.error,
             onTap: onLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -772,7 +772,7 @@ class _DesktopCalculator extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            icon: const Icon(Icons.menu_rounded, color: AppColors.textPrimary),
+            icon: Icon(Icons.menu_rounded, color: AppColors.textPrimary),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
           const Spacer(),
@@ -790,7 +790,7 @@ class _DesktopCalculator extends StatelessWidget {
                       currentUser?.fullName.isNotEmpty ?? false
                           ? currentUser!.fullName[0].toUpperCase()
                           : '?',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold),
                     ),
                   )
                 : null,
@@ -840,7 +840,7 @@ class _MobileCalculator extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary),
+          icon: Icon(Icons.arrow_back, color: AppColors.textPrimary),
           onPressed: () => context.go(AppRoutes.dashboard),
         ),
         title: Text(
@@ -864,9 +864,9 @@ class _MobileCalculator extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     _buildMobileResultCard(context, countryCode),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40),
                     _buildMobileInputSection(context),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32),
                     SizedBox(
                       width: double.infinity,
                       height: 56,
@@ -888,13 +888,13 @@ class _MobileCalculator extends StatelessWidget {
                                 fontSize: 16,
                               ),
                             ),
-                            const SizedBox(width: 12),
-                            const Icon(Icons.arrow_forward_rounded, size: 18),
+                            SizedBox(width: 12),
+                            Icon(Icons.arrow_forward_rounded, size: 18),
                           ],
                         ),
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40),
                   ],
                 ),
               ),
@@ -925,7 +925,7 @@ class _MobileCalculator extends StatelessWidget {
               letterSpacing: 0.5,
             ),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -963,7 +963,7 @@ class _MobileCalculator extends StatelessWidget {
               // ),
             ],
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           Row(
             children: [
               Expanded(
@@ -978,7 +978,7 @@ class _MobileCalculator extends StatelessWidget {
                         color: Colors.white.withValues(alpha: 0.5),
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4),
                     Text(
                       totalInterest != null
                           ? Formatters.currency(totalInterest!, countryCode)
@@ -1004,7 +1004,7 @@ class _MobileCalculator extends StatelessWidget {
                         color: Colors.white.withValues(alpha: 0.5),
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4),
                     Text(
                       totalPayment != null
                           ? Formatters.currency(totalPayment!, countryCode)
@@ -1038,16 +1038,16 @@ class _MobileCalculator extends StatelessWidget {
             letterSpacing: 0.5,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         CustomTextField(
           label: "",
           controller: amountController,
           hint: 'e.g. 50000',
-          prefixIcon: const Icon(Icons.account_balance_wallet_outlined),
+          prefixIcon: Icon(Icons.account_balance_wallet_outlined),
           keyboardType: TextInputType.number,
           onChanged: (v) => onAmountChanged(),
         ),
-        const SizedBox(height: 32),
+        SizedBox(height: 32),
         Text(
           'DURATION',
           style: GoogleFonts.plusJakartaSans(
@@ -1057,9 +1057,9 @@ class _MobileCalculator extends StatelessWidget {
             letterSpacing: 0.5,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         _buildDurationDropdown(),
-        const SizedBox(height: 32),
+        SizedBox(height: 32),
         Text(
           'INTEREST RATE',
           style: GoogleFonts.plusJakartaSans(
@@ -1069,7 +1069,7 @@ class _MobileCalculator extends StatelessWidget {
             letterSpacing: 0.5,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           decoration: BoxDecoration(
@@ -1078,9 +1078,9 @@ class _MobileCalculator extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Icon(Icons.percent_rounded,
+              Icon(Icons.percent_rounded,
                   size: 20, color: AppColors.textSecondary),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Text(
                 interestRate.toStringAsFixed(1),
                 style: GoogleFonts.plusJakartaSans(
@@ -1109,7 +1109,7 @@ class _MobileCalculator extends StatelessWidget {
               ? selectedDuration
               : availableRates.keys.first,
           isExpanded: true,
-          icon: const Icon(Icons.keyboard_arrow_down_rounded),
+          icon: Icon(Icons.keyboard_arrow_down_rounded),
           items: availableRates.keys.map((months) {
             return DropdownMenuItem<int>(
               value: months,
@@ -1165,7 +1165,7 @@ class _SidebarItem extends StatelessWidget {
                     ? AppColors.primary
                     : (color ?? AppColors.textSecondary),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
               Text(
                 label,
                 style: GoogleFonts.plusJakartaSans(
@@ -1210,67 +1210,67 @@ Widget _buildSharedDrawer(
                           user?.fullName.isNotEmpty ?? false
                               ? user!.fullName[0].toUpperCase()
                               : '?',
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary))
                       : null,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 Text(user?.fullName ?? '',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user?.email ?? '',
                     style:
-                        const TextStyle(color: Colors.white60, fontSize: 13)),
+                        GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
               ],
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           ListTile(
-            leading: const Icon(Icons.dashboard_outlined),
-            title: const Text('Dashboard'),
+            leading: Icon(Icons.dashboard_outlined),
+            title: Text('Dashboard'),
             onTap: () => context.go(AppRoutes.dashboard),
           ),
           ListTile(
-            leading: const Icon(Icons.description_outlined),
-            title: const Text('Apply for Loan'),
+            leading: Icon(Icons.description_outlined),
+            title: Text('Apply for Loan'),
             onTap: () => context.go(AppRoutes.apply),
           ),
           ListTile(
-            leading: const Icon(Icons.summarize_outlined),
-            title: const Text('Applications'),
+            leading: Icon(Icons.summarize_outlined),
+            title: Text('Applications'),
             onTap: () => context.go(AppRoutes.userApplications),
           ),
           ListTile(
             leading:
-                const Icon(Icons.calculate_outlined, color: AppColors.primary),
-            title: const Text('Calculator',
-                style: TextStyle(
+                Icon(Icons.calculate_outlined, color: AppColors.primary),
+            title: Text('Calculator',
+                style: GoogleFonts.plusJakartaSans(
                     color: AppColors.primary, fontWeight: FontWeight.bold)),
             onTap: () => Navigator.pop(context),
           ),
           ListTile(
-            leading: const Icon(Icons.account_balance_wallet_outlined),
-            title: const Text('Withdrawals'),
+            leading: Icon(Icons.account_balance_wallet_outlined),
+            title: Text('Withdrawals'),
             onTap: () => context.go(AppRoutes.withdrawals),
           ),
           ListTile(
-            leading: const Icon(Icons.person_outlined),
-            title: const Text('Profile'),
+            leading: Icon(Icons.person_outlined),
+            title: Text('Profile'),
             onTap: () => context.go(AppRoutes.profile),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           ListTile(
-            leading: const Icon(Icons.logout, color: AppColors.error),
+            leading: Icon(Icons.logout, color: AppColors.error),
             title:
-                const Text('Log Out', style: TextStyle(color: AppColors.error)),
+                Text('Log Out', style: GoogleFonts.plusJakartaSans(color: AppColors.error)),
             onTap: onLogout,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
         ],
       ),
     ),

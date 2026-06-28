@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomBadge extends StatelessWidget {
   final String label;
@@ -29,7 +30,7 @@ class CustomBadge extends StatelessWidget {
       child: Text(
         label,
         style: textStyle ??
-            TextStyle(
+            GoogleFonts.plusJakartaSans(
               fontSize: 12,
               fontWeight: FontWeight.w600,
               color: textColor,

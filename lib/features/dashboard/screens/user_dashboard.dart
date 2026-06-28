@@ -160,9 +160,9 @@ class _DesktopDashboard extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               _buildWelcomeHeader(context),
-                              const SizedBox(height: 40),
+                              SizedBox(height: 40),
                               _buildStatsGrid(context),
-                              const SizedBox(height: 48),
+                              SizedBox(height: 48),
                               _buildApplicationsSection(context),
                             ],
                           ),
@@ -243,14 +243,14 @@ class _DesktopDashboard extends StatelessWidget {
             onTap: () => context.go(AppRoutes.profile),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout,
             label: 'Log Out',
             color: AppColors.error,
             onTap: onLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -268,7 +268,7 @@ class _DesktopDashboard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             Text(
               'Primekey Dashboard',
               style: GoogleFonts.plusJakartaSans(
@@ -279,12 +279,12 @@ class _DesktopDashboard extends StatelessWidget {
             ),
             const Spacer(),
             IconButton(
-              icon: const Icon(Icons.notifications_none_rounded),
+              icon: Icon(Icons.notifications_none_rounded),
               onPressed: () {},
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             IconButton(
-              icon: const Icon(Icons.account_balance_wallet_outlined),
+              icon: Icon(Icons.account_balance_wallet_outlined),
               onPressed: () => context.go(AppRoutes.withdrawals),
             ),
           ],
@@ -310,7 +310,7 @@ class _DesktopDashboard extends StatelessWidget {
                   letterSpacing: -1,
                 ),
               ),
-              const SizedBox(height: 4),
+              SizedBox(height: 4),
               Text(
                 'Review your application status and manage your financial profile.',
                 style: GoogleFonts.plusJakartaSans(
@@ -333,7 +333,7 @@ class _DesktopDashboard extends StatelessWidget {
                 isPrimary: false,
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             SizedBox(
               width: 140,
               child: _HeaderButton(
@@ -415,7 +415,7 @@ class _DesktopDashboard extends StatelessWidget {
               _buildFilterTabs(),
             ],
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           if (filtered.isEmpty)
             _buildEmptyState(context)
           else
@@ -423,7 +423,7 @@ class _DesktopDashboard extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: filtered.length,
-              separatorBuilder: (_, __) => const SizedBox(height: 16),
+              separatorBuilder: (_, __) => SizedBox(height: 16),
               itemBuilder: (context, index) => _ApplicationListItem(
                 application: filtered[index],
                 countryCode: currentUser?.countryCode ?? 'BZ',
@@ -471,10 +471,10 @@ class _DesktopDashboard extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Icon(Icons.description_outlined,
               size: 64, color: AppColors.primary.withValues(alpha: 0.2)),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Text(
             'No applications yet',
             style: GoogleFonts.plusJakartaSans(
@@ -483,18 +483,18 @@ class _DesktopDashboard extends StatelessWidget {
               color: AppColors.primary,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
             'Apply for your first loan to get started',
             style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           CustomButton(
             label: 'Apply for a Loan',
             onPressed: () => context.go(AppRoutes.apply),
             width: 200,
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
         ],
       ),
     );
@@ -541,7 +541,7 @@ class _MobileDashboard extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           onPressed: () => context.go(AppRoutes.apply),
           backgroundColor: AppColors.primaryShade2,
-          child: const Icon(Icons.add, color: Colors.white),
+          child: Icon(Icons.add, color: Colors.white),
         ),
         backgroundColor: AppColors.backgroundDark,
         drawer: Drawer(
@@ -569,26 +569,26 @@ class _MobileDashboard extends StatelessWidget {
                                 currentUser?.fullName.isNotEmpty ?? false
                                     ? currentUser!.fullName[0].toUpperCase()
                                     : '?',
-                                style: const TextStyle(
+                                style: GoogleFonts.plusJakartaSans(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.primary),
                               )
                             : null,
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12),
                       Text(currentUser?.fullName ?? '',
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w700)),
                       Text(currentUser?.email ?? '',
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               color: Colors.white60, fontSize: 13)),
                     ],
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 _DrawerItem(
                     icon: Icons.dashboard_outlined,
                     label: 'Dashboard',
@@ -632,13 +632,13 @@ class _MobileDashboard extends StatelessWidget {
                       context.go(AppRoutes.profile);
                     }),
                 const Spacer(),
-                const Divider(),
+                Divider(),
                 _DrawerItem(
                     icon: Icons.logout,
                     label: 'Log Out',
                     color: AppColors.error,
                     onTap: onLogout),
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
               ],
             ),
           ),
@@ -663,20 +663,20 @@ class _MobileDashboard extends StatelessWidget {
                                 ?.copyWith(
                                     color: AppColors.textPrimary,
                                     fontWeight: FontWeight.bold)),
-                        const SizedBox(height: 4),
+                        SizedBox(height: 4),
                         Text('Here is a summary of your loan applications',
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium
                                 ?.copyWith(color: AppColors.textPrimary)),
-                        const SizedBox(height: 32),
+                        SizedBox(height: 32),
                         _buildStatCard(
                             context,
                             'TOTAL APPLICATIONS',
                             total.toString(),
                             AppColors.white,
                             AppColors.primaryDark),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16),
                         Row(
                           children: [
                             Expanded(
@@ -686,7 +686,7 @@ class _MobileDashboard extends StatelessWidget {
                                     approved.toString(),
                                     AppColors.primaryDark,
                                     AppColors.white)),
-                            const SizedBox(width: 16),
+                            SizedBox(width: 16),
                             Expanded(
                                 child: _buildStatCard(
                                     context,
@@ -696,15 +696,15 @@ class _MobileDashboard extends StatelessWidget {
                                     AppColors.primaryLightShade2)),
                           ],
                         ),
-                        const SizedBox(height: 30),
-                        const Text('Your Applications',
-                            style: TextStyle(
+                        SizedBox(height: 30),
+                        Text('Your Applications',
+                            style: GoogleFonts.plusJakartaSans(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.textPrimary)),
-                        const SizedBox(height: 26),
+                        SizedBox(height: 26),
                         _buildFilterTabs(),
-                        const SizedBox(height: 26),
+                        SizedBox(height: 26),
                         filtered.isEmpty
                             ? _buildEmptyState(context)
                             : Column(children: [
@@ -770,9 +770,9 @@ class _MobileDashboard extends StatelessWidget {
               children: [
                 Builder(
                     builder: (context) => IconButton(
-                        icon: const Icon(Icons.menu),
+                        icon: Icon(Icons.menu),
                         onPressed: () => Scaffold.of(context).openDrawer())),
-                const SizedBox(width: 8),
+                SizedBox(width: 8),
                 Text('Dashboard',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: AppColors.textPrimary,
@@ -783,7 +783,7 @@ class _MobileDashboard extends StatelessWidget {
               children: [
                 const NotificationBell(),
                 IconButton(
-                  icon: const Icon(Icons.person_outline_rounded),
+                  icon: Icon(Icons.person_outline_rounded),
                   onPressed: () => context.push(AppRoutes.profile),
                 ),
               ],
@@ -805,10 +805,10 @@ class _MobileDashboard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(label,
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 13, color: color, fontWeight: FontWeight.w500)),
           Text(value,
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 45, fontWeight: FontWeight.bold, color: color)),
         ],
       ),
@@ -834,29 +834,29 @@ class _MobileDashboard extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: AppColors.primary,
                     borderRadius: BorderRadius.circular(4))),
-            const SizedBox(width: 16),
+            SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(children: [
                     Text(application.loanPurpose,
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
                             color: AppColors.textPrimary)),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8),
                     StatusBadge(status: application.status)
                   ]),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4),
                   Text(Formatters.currency(application.loanAmount, countryCode),
-                      style: const TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                           fontSize: 22,
                           fontWeight: FontWeight.w600,
                           color: AppColors.primaryDark)),
-                  const SizedBox(height: 2),
+                  SizedBox(height: 2),
                   Text('Applied ${Formatters.date(application.createdAt)}',
-                      style: const TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                           fontSize: 12, color: AppColors.textHint)),
                 ],
               ),
@@ -867,7 +867,7 @@ class _MobileDashboard extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: AppColors.background,
                     borderRadius: BorderRadius.circular(10)),
-                child: const Icon(Icons.remove_red_eye_outlined,
+                child: Icon(Icons.remove_red_eye_outlined,
                     color: AppColors.primaryDark, size: 20)),
           ],
         ),
@@ -921,7 +921,7 @@ class _MobileDashboard extends StatelessWidget {
                 color:
                     isSelected ? AppColors.primary : AppColors.textSecondary)),
         child: Text(label,
-            style: TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 13,
                 fontWeight: FontWeight.w700,
                 color: isSelected ? AppColors.white : AppColors.primaryDark)),
@@ -945,18 +945,18 @@ class _MobileDashboard extends StatelessWidget {
               decoration: BoxDecoration(
                   color: AppColors.primaryLight,
                   borderRadius: BorderRadius.circular(16)),
-              child: const Icon(Icons.description_outlined,
+              child: Icon(Icons.description_outlined,
                   color: AppColors.primary, size: 32)),
-          const SizedBox(height: 16),
-          const Text('No applications yet',
-              style: TextStyle(
+          SizedBox(height: 16),
+          Text('No applications yet',
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                   color: AppColors.textPrimary)),
-          const SizedBox(height: 8),
-          const Text('Apply for your first loan to get started',
-              style: TextStyle(fontSize: 14, color: AppColors.textSecondary)),
-          const SizedBox(height: 24),
+          SizedBox(height: 8),
+          Text('Apply for your first loan to get started',
+              style: GoogleFonts.plusJakartaSans(fontSize: 14, color: AppColors.textSecondary)),
+          SizedBox(height: 24),
           CustomButton(
               label: 'Apply for a Loan',
               onPressed: () => context.go(AppRoutes.apply),
@@ -1001,7 +1001,7 @@ class _SidebarItem extends StatelessWidget {
                   color: color ??
                       (isActive ? AppColors.primary : AppColors.textSecondary),
                   size: 20),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Text(label,
                   style: GoogleFonts.plusJakartaSans(
                       fontSize: 14,
@@ -1035,7 +1035,7 @@ class _DrawerItem extends StatelessWidget {
     return ListTile(
       leading: Icon(icon, color: color ?? AppColors.textPrimary, size: 22),
       title: Text(label,
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
               fontSize: 15,
               fontWeight: FontWeight.w500,
               color: color ?? AppColors.textPrimary)),
@@ -1218,7 +1218,7 @@ class _ApplicationListItem extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Icon(_getPurposeIcon(application.loanPurpose),
                     color: AppColors.primary)),
-            const SizedBox(width: 20),
+            SizedBox(width: 20),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1242,8 +1242,8 @@ class _ApplicationListItem extends StatelessWidget {
                       color: AppColors.primary)),
               StatusBadge(status: application.status)
             ]),
-            const SizedBox(width: 16),
-            const Icon(Icons.arrow_forward_ios_rounded,
+            SizedBox(width: 16),
+            Icon(Icons.arrow_forward_ios_rounded,
                 size: 16, color: AppColors.textHint),
           ],
         ),

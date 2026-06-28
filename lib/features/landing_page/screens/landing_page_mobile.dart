@@ -1,4 +1,5 @@
 import 'package:primekey_loan_app/core/constants/app_assets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -127,7 +128,7 @@ class LandingPageMobile extends ConsumerWidget {
               child: Center(
                 child: Text(
                   number,
-                  style: const TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
@@ -136,20 +137,20 @@ class LandingPageMobile extends ConsumerWidget {
               ),
             ),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                       color: AppColors.primaryDark,
                     )),
-                const SizedBox(height: 6),
+                SizedBox(height: 6),
                 Text(description,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 14,
                       color: AppColors.textSecondary,
                       height: 1.5,
@@ -177,7 +178,7 @@ class LandingPageMobile extends ConsumerWidget {
                   child: Image.asset(AppAssets.logo, height: 80),
                 ),
 
-                const SizedBox(height: 24),
+                SizedBox(height: 24),
 
                 // ── Hero text ────────────────────────────
                 _AnimatedSection(
@@ -192,7 +193,7 @@ class LandingPageMobile extends ConsumerWidget {
                             .bodyLarge
                             ?.copyWith(fontSize: 40),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: 8),
                       Text(
                         "Designed for simplicity. Built for speed. Get the funds you need in just a few clicks.",
                         style: Theme.of(context)
@@ -204,7 +205,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 48),
+                SizedBox(height: 48),
 
                 // ── Buttons ──────────────────────────────
                 _AnimatedSection(
@@ -227,7 +228,7 @@ class LandingPageMobile extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16),
                       CustomButton(
                         label: 'Calculate Payment',
                         height: 70,
@@ -254,7 +255,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 48),
+                SizedBox(height: 48),
 
                 // ── Why Choose Us ────────────────────────
                 _AnimatedSection(
@@ -268,7 +269,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
 
                 _AnimatedSection(
                   direction: SlideDirection.right,
@@ -293,10 +294,10 @@ class LandingPageMobile extends ConsumerWidget {
                             color: const Color(0xFFF0F2F5),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: const Icon(Icons.devices_outlined,
+                          child: Icon(Icons.devices_outlined,
                               color: Color(0xFF1E2A3B), size: 24),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -307,7 +308,7 @@ class LandingPageMobile extends ConsumerWidget {
                                     ?.copyWith(
                                         color: const Color(0xFF444749),
                                         fontSize: 30)),
-                            const SizedBox(height: 8),
+                            SizedBox(height: 8),
                             Text(
                                 'Complete your application\nfrom the comfort of your home',
                                 style: Theme.of(context)
@@ -323,7 +324,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
 
                 _AnimatedSection(
                   direction: SlideDirection.right,
@@ -348,10 +349,10 @@ class LandingPageMobile extends ConsumerWidget {
                             color: const Color(0xFFF0F2F5),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: const Icon(Icons.bolt_outlined,
+                          child: Icon(Icons.bolt_outlined,
                               color: Color(0xFF1E2A3B), size: 24),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -362,7 +363,7 @@ class LandingPageMobile extends ConsumerWidget {
                                     ?.copyWith(
                                         color: const Color(0xFF444749),
                                         fontSize: 30)),
-                            const SizedBox(height: 8),
+                            SizedBox(height: 8),
                             Text(
                                 'Streamlined application\nprocess with fast decisions.',
                                 style: Theme.of(context)
@@ -378,7 +379,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
 
                 _AnimatedSection(
                   direction: SlideDirection.left,
@@ -403,10 +404,10 @@ class LandingPageMobile extends ConsumerWidget {
                             color: const Color(0xFFF0F2F5),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: const Icon(Icons.verified_user_outlined,
+                          child: Icon(Icons.verified_user_outlined,
                               color: Color(0xFF1E2A3B), size: 24),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -417,7 +418,7 @@ class LandingPageMobile extends ConsumerWidget {
                                     ?.copyWith(
                                         color: const Color(0xFF444749),
                                         fontSize: 30)),
-                            const SizedBox(height: 8),
+                            SizedBox(height: 8),
                             Text(
                                 'Bank Grade encryption ensures your\ndata is safe.',
                                 style: Theme.of(context)
@@ -433,7 +434,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 48),
+                SizedBox(height: 48),
 
                 // ── How It Works ─────────────────────────
                 _AnimatedSection(
@@ -447,7 +448,7 @@ class LandingPageMobile extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 40),
+                SizedBox(height: 40),
 
                 _AnimatedSection(
                   direction: SlideDirection.right,
@@ -456,7 +457,7 @@ class LandingPageMobile extends ConsumerWidget {
                       'Fill out our secure 5-minute application form with your business details.'),
                 ),
 
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
 
                 _AnimatedSection(
                   direction: SlideDirection.left,
@@ -465,7 +466,7 @@ class LandingPageMobile extends ConsumerWidget {
                       'Our expert team reviews your application and provides a tailored offer.'),
                 ),
 
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
 
                 _AnimatedSection(
                   direction: SlideDirection.right,
@@ -474,7 +475,7 @@ class LandingPageMobile extends ConsumerWidget {
                       'Funds are deposited directly into your account within 24 hours.'),
                 ),
 
-                const SizedBox(height: 60),
+                SizedBox(height: 60),
 
                 // ── CTA ──────────────────────────────────
                 _AnimatedSection(
@@ -499,7 +500,7 @@ class LandingPageMobile extends ConsumerWidget {
                                     fontSize: 30,
                                   ),
                         ),
-                        const SizedBox(height: 40),
+                        SizedBox(height: 40),
                         Text(
                           'Join thousands of forward thinking individuals building their future with PRIMEKEY',
                           textAlign: TextAlign.center,
@@ -509,7 +510,7 @@ class LandingPageMobile extends ConsumerWidget {
                                     fontSize: 18,
                                   ),
                         ),
-                        const SizedBox(height: 40),
+                        SizedBox(height: 40),
                         Container(
                           width: double.infinity,
                           height: 56,
@@ -519,9 +520,9 @@ class LandingPageMobile extends ConsumerWidget {
                           ),
                           child: TextButton(
                             onPressed: () => context.go(AppRoutes.login),
-                            child: const Text(
+                            child: Text(
                               'Get Started',
-                              style: TextStyle(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFF1B2F5E),
@@ -576,9 +577,9 @@ class LandingPageMobile extends ConsumerWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 48),
-                        const Divider(),
-                        const SizedBox(height: 24),
+                        SizedBox(height: 48),
+                        Divider(),
+                        SizedBox(height: 24),
                         Text(
                           '© 2024 ${AppStrings.appName} Inc. All rights reserved.',
                           style:
@@ -606,14 +607,14 @@ Widget _buildFooterColumn(
     children: [
       Text(
         title,
-        style: const TextStyle(
+        style: GoogleFonts.plusJakartaSans(
           fontSize: 8,
           fontWeight: FontWeight.w700,
           color: Color(0xFF1E2A3B),
           letterSpacing: 1.2,
         ),
       ),
-      const SizedBox(height: 16),
+      SizedBox(height: 16),
       ...items.map((item) => Padding(
             padding: const EdgeInsets.only(bottom: 12),
             child: Text(

@@ -1,4 +1,5 @@
 import 'package:primekey_loan_app/shared/widgets/custom_popup.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -59,7 +60,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back, color: AppColors.primary),
           onPressed: () {
             if (state.currentStep > 0) {
               notifier.setStep(state.currentStep - 1);
@@ -68,9 +69,9 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
             }
           },
         ),
-        title: const Text(
+        title: Text(
           'Withdraw Funds',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 17,
             fontWeight: FontWeight.w600,
             color: AppColors.primary,
@@ -199,7 +200,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
                 elevation: 0,
               ),
               child: (state.isUploading || state.isSubmittingWithdrawal)
-                  ? const SizedBox(
+                  ? SizedBox(
                       height: 20,
                       width: 20,
                       child: CircularProgressIndicator(
@@ -211,7 +212,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
                       state.currentStep == 2
                           ? 'CONFIRM WITHDRAWAL'
                           : 'CONTINUE',
-                      style: const TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 1.2,

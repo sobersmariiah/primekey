@@ -1,4 +1,5 @@
 import 'package:primekey_loan_app/core/constants/app_assets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -98,16 +99,16 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     Center(
                       child: Column(
                         children: [
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16),
                           Image.asset(
                             AppAssets.logo,
                             height: 48,
                           ),
-                          const SizedBox(height: 16),
-                          const SizedBox(height: 4),
-                          const Text(
+                          SizedBox(height: 16),
+                          SizedBox(height: 4),
+                          Text(
                             AppStrings.tagline,
-                            style: TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               fontSize: 14,
                               color: AppColors.textSecondary,
                             ),
@@ -116,29 +117,29 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       ),
                     ),
 
-                    const SizedBox(height: 32),
-                    const Divider(),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32),
+                    Divider(),
+                    SizedBox(height: 32),
 
                     // Heading
-                    const Text(
+                    Text(
                       'Create your account',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimary,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    const Text(
+                    SizedBox(height: 4),
+                    Text(
                       'Fill in your details to get started',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 14,
                         color: AppColors.textSecondary,
                       ),
                     ),
 
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
 
                     // Error message
                     if (authState.error != null)
@@ -153,16 +154,16 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                         ),
                         child: Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.error_outline,
                               color: AppColors.error,
                               size: 18,
                             ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: 8),
                             Expanded(
                               child: Text(
                                 authState.error!,
-                                style: const TextStyle(
+                                style: GoogleFonts.plusJakartaSans(
                                   color: AppColors.error,
                                   fontSize: 13,
                                 ),
@@ -177,7 +178,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       label: 'Full Name',
                       hint: 'Enter your full name',
                       controller: _fullNameController,
-                      prefixIcon: const Icon(Icons.person_outlined),
+                      prefixIcon: Icon(Icons.person_outlined),
                       onChanged: (_) =>
                           ref.read(authNotifierProvider.notifier).clearError(),
                       validator: (value) {
@@ -191,7 +192,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Email
                     CustomTextField(
@@ -199,7 +200,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       hint: 'Enter your email',
                       controller: _emailController,
                       keyboardType: TextInputType.emailAddress,
-                      prefixIcon: const Icon(Icons.email_outlined),
+                      prefixIcon: Icon(Icons.email_outlined),
                       onChanged: (_) =>
                           ref.read(authNotifierProvider.notifier).clearError(),
                       validator: (value) {
@@ -213,7 +214,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Phone
                     CustomTextField(
@@ -221,7 +222,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       hint: 'Enter your phone number',
                       controller: _phoneController,
                       keyboardType: TextInputType.phone,
-                      prefixIcon: const Icon(Icons.phone_outlined),
+                      prefixIcon: Icon(Icons.phone_outlined),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Phone number is required';
@@ -233,13 +234,13 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     CustomTextField(
                       label: 'Street Address',
                       hint: 'Enter your street address',
                       controller: _streetAddressController,
-                      prefixIcon: const Icon(Icons.home_outlined),
+                      prefixIcon: Icon(Icons.home_outlined),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Street address is required';
@@ -251,12 +252,12 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     CustomTextField(
                       label: 'City',
                       hint: 'Enter your city',
                       controller: _cityController,
-                      prefixIcon: const Icon(Icons.location_city_outlined),
+                      prefixIcon: Icon(Icons.location_city_outlined),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'City is required';
@@ -268,12 +269,12 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     CustomTextField(
                       label: 'State',
                       hint: 'Enter your state',
                       controller: _stateController,
-                      prefixIcon: const Icon(Icons.location_city_outlined),
+                      prefixIcon: Icon(Icons.location_city_outlined),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'State is required';
@@ -285,27 +286,27 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Country selector
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           'Country',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                             color: AppColors.textPrimary,
                           ),
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8),
                         DropdownButtonFormField<String>(
                           initialValue: _selectedCountry,
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: AppColors.white,
-                            prefixIcon: const Icon(Icons.flag_outlined),
+                            prefixIcon: Icon(Icons.flag_outlined),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide:
@@ -339,7 +340,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       ],
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Password
                     CustomTextField(
@@ -347,7 +348,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       hint: 'Create a password',
                       controller: _passwordController,
                       obscureText: !_showPassword,
-                      prefixIcon: const Icon(Icons.lock_outlined),
+                      prefixIcon: Icon(Icons.lock_outlined),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _showPassword
@@ -369,7 +370,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Confirm password
                     CustomTextField(
@@ -377,7 +378,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       hint: 'Re-enter your password',
                       controller: _confirmPasswordController,
                       obscureText: !_showConfirmPassword,
-                      prefixIcon: const Icon(Icons.lock_outlined),
+                      prefixIcon: Icon(Icons.lock_outlined),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _showConfirmPassword
@@ -399,7 +400,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
 
                     // Register button
                     CustomButton(
@@ -408,24 +409,24 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       isLoading: authState.isLoading,
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Login link
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           'Already have an account? ',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             color: AppColors.textSecondary,
                             fontSize: 14,
                           ),
                         ),
                         GestureDetector(
                           onTap: () => context.go(AppRoutes.login),
-                          child: const Text(
+                          child: Text(
                             'Sign in',
-                            style: TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               color: AppColors.primary,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,

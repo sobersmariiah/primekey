@@ -145,9 +145,9 @@ class _DesktopApplicationsView extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               _buildHeader(context),
-                              const SizedBox(height: 48),
+                              SizedBox(height: 48),
                               _buildStatsGrid(context),
-                              const SizedBox(height: 56),
+                              SizedBox(height: 56),
                               _buildApplicationsSection(context),
                             ],
                           ),
@@ -228,14 +228,14 @@ class _DesktopApplicationsView extends StatelessWidget {
             onTap: () => context.go(AppRoutes.profile),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout,
             label: 'Log Out',
             color: AppColors.error,
             onTap: onLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -254,11 +254,11 @@ class _DesktopApplicationsView extends StatelessWidget {
           Builder(
             builder: (context) => IconButton(
               icon:
-                  const Icon(Icons.menu_rounded, color: AppColors.textPrimary),
+                  Icon(Icons.menu_rounded, color: AppColors.textPrimary),
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),
           ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Text(
             'Loan Applications',
             style: GoogleFonts.plusJakartaSans(
@@ -269,11 +269,11 @@ class _DesktopApplicationsView extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-            icon: const Icon(Icons.notifications_none_rounded,
+            icon: Icon(Icons.notifications_none_rounded,
                 color: AppColors.textSecondary),
             onPressed: () {},
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           GestureDetector(
             onTap: () => context.go(AppRoutes.profile),
             child: CircleAvatar(
@@ -290,7 +290,7 @@ class _DesktopApplicationsView extends StatelessWidget {
                         currentUser?.fullName.isNotEmpty ?? false
                             ? currentUser!.fullName[0].toUpperCase()
                             : '?',
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                             color: AppColors.primary),
@@ -320,7 +320,7 @@ class _DesktopApplicationsView extends StatelessWidget {
                 letterSpacing: -0.5,
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               'Track and manage all your credit requests in one place.',
               style: GoogleFonts.plusJakartaSans(
@@ -410,7 +410,7 @@ class _DesktopApplicationsView extends StatelessWidget {
               _buildFilterTabs(),
             ],
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           if (filtered.isEmpty)
             _buildEmptyState(context)
           else
@@ -418,7 +418,7 @@ class _DesktopApplicationsView extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: filtered.length,
-              separatorBuilder: (_, __) => const SizedBox(height: 20),
+              separatorBuilder: (_, __) => SizedBox(height: 20),
               itemBuilder: (context, index) => _ApplicationListItem(
                 application: filtered[index],
                 countryCode: currentUser?.countryCode ?? 'BZ',
@@ -466,15 +466,15 @@ class _DesktopApplicationsView extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Container(
             padding: const EdgeInsets.all(24),
             decoration: const BoxDecoration(
                 color: AppColors.primaryLight, shape: BoxShape.circle),
-            child: const Icon(Icons.description_outlined,
+            child: Icon(Icons.description_outlined,
                 size: 48, color: AppColors.primary),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           Text(
             'No applications found',
             style: GoogleFonts.plusJakartaSans(
@@ -482,13 +482,13 @@ class _DesktopApplicationsView extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: AppColors.primary),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           Text(
             'Adjust your filters to see more results',
             style: GoogleFonts.plusJakartaSans(
                 color: AppColors.textSecondary, fontSize: 15),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
         ],
       ),
     );
@@ -519,26 +519,26 @@ class _DesktopApplicationsView extends StatelessWidget {
                             currentUser?.fullName.isNotEmpty ?? false
                                 ? currentUser!.fullName[0].toUpperCase()
                                 : '?',
-                            style: const TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.primary),
                           )
                         : null,
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Text(currentUser?.fullName ?? '',
-                      style: const TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w700)),
                   Text(currentUser?.email ?? '',
                       style:
-                          const TextStyle(color: Colors.white60, fontSize: 13)),
+                          GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
                 ],
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _DrawerItem(
                 icon: Icons.dashboard_outlined,
                 label: 'Dashboard',
@@ -582,13 +582,13 @@ class _DesktopApplicationsView extends StatelessWidget {
                   context.go(AppRoutes.profile);
                 }),
             const Spacer(),
-            const Divider(),
+            Divider(),
             _DrawerItem(
                 icon: Icons.logout,
                 label: 'Log Out',
                 color: AppColors.error,
                 onTap: onLogout),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
           ],
         ),
       ),
@@ -637,7 +637,7 @@ class _SidebarItem extends StatelessWidget {
                   color: color ??
                       (isActive ? AppColors.primary : AppColors.textSecondary),
                   size: 20),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Text(
                 label,
                 style: GoogleFonts.plusJakartaSans(
@@ -677,7 +677,7 @@ class _DrawerItem extends StatelessWidget {
               color ?? (isActive ? AppColors.primary : AppColors.textPrimary),
           size: 22),
       title: Text(label,
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
               fontSize: 15,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
               color: color ??
@@ -877,7 +877,7 @@ class _ApplicationListItem extends StatelessWidget {
               child: Icon(_getPurposeIcon(application.loanPurpose),
                   color: AppColors.primary),
             ),
-            const SizedBox(width: 24),
+            SizedBox(width: 24),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -887,7 +887,7 @@ class _ApplicationListItem extends StatelessWidget {
                           fontSize: 18,
                           fontWeight: FontWeight.w800,
                           color: AppColors.primary)),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4),
                   Text('Applied ${Formatters.date(application.createdAt)}',
                       style: GoogleFonts.plusJakartaSans(
                           fontSize: 13, color: AppColors.textSecondary)),
@@ -902,12 +902,12 @@ class _ApplicationListItem extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.w900,
                         color: AppColors.primary)),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 StatusBadge(status: application.status),
               ],
             ),
-            const SizedBox(width: 24),
-            const Icon(Icons.arrow_forward_ios_rounded,
+            SizedBox(width: 24),
+            Icon(Icons.arrow_forward_ios_rounded,
                 size: 16, color: AppColors.textHint),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:primekey_loan_app/core/constants/app_strings.dart';
@@ -55,13 +56,13 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       'Work & Income',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -70,40 +71,40 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                     _buildStepDots(1),
                   ],
                 ),
-                const SizedBox(height: 8),
-                const Text(
+                SizedBox(height: 8),
+                Text(
                   'Your employment information helps us understand your ability to repay.',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
                 _buildFieldLabel('EMPLOYMENT STATUS'),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 _buildDropdown(
                   value: loanState.employmentStatus,
                   hint: 'Select status',
                   items: AppStrings.employmentStatuses,
                   onChanged: (v) => notifier.updateEmploymentStatus(v!),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 CustomTextField(
                   label: 'EMPLOYER NAME',
                   controller: _employerController,
                   hint: 'e.g. Global Tech Solutions',
-                  prefixIcon: const Icon(Icons.business_outlined, size: 20),
+                  prefixIcon: Icon(Icons.business_outlined, size: 20),
                   onChanged: (v) => notifier.updateEmployer(v),
                   validator: (v) =>
                       v == null || v.isEmpty ? 'Employer is required' : null,
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 CustomTextField(
                   label: 'MONTHLY NET INCOME (${widget.currencyCode})',
                   controller: _monthlyIncomeController,
                   hint: '0.00',
-                  prefixIcon: const Icon(Icons.payments_outlined, size: 20),
+                  prefixIcon: Icon(Icons.payments_outlined, size: 20),
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   onChanged: (v) {
                     final amount = double.tryParse(v) ?? 0.0;
@@ -126,7 +127,7 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label,
-      style: const TextStyle(
+      style: GoogleFonts.plusJakartaSans(
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,

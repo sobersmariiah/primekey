@@ -76,7 +76,7 @@ class AdminUserProfile extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             _buildHeader(user),
-                            const SizedBox(height: 32),
+                            SizedBox(height: 32),
                             if (isDesktop)
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,21 +86,21 @@ class AdminUserProfile extends ConsumerWidget {
                                     child: Column(
                                       children: [
                                         _buildInfoSection(context, user),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildApplicationsSection(
                                             context, applicationsAsync, user),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildWithdrawalsSection(context, withdrawalsAsync, user, ref),
                                       ],
                                     ),
                                   ),
-                                  const SizedBox(width: 32),
+                                  SizedBox(width: 32),
                                   Expanded(
                                     flex: 3,
                                     child: Column(
                                       children: [
                                         _buildKycStatusCard(context, user),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildBankAccountsCard(
                                             context, user, ref),
                                       ],
@@ -112,18 +112,18 @@ class AdminUserProfile extends ConsumerWidget {
                               Column(
                                 children: [
                                   _buildKycStatusCard(context, user),
-                                  const SizedBox(height: 24),
+                                  SizedBox(height: 24),
                                   _buildInfoSection(context, user),
-                                  const SizedBox(height: 24),
+                                  SizedBox(height: 24),
                                   _buildBankAccountsCard(context, user, ref),
-                                  const SizedBox(height: 24),
+                                  SizedBox(height: 24),
                                   _buildApplicationsSection(
                                       context, applicationsAsync, user),
-                                  const SizedBox(height: 24),
+                                  SizedBox(height: 24),
                                   _buildWithdrawalsSection(context, withdrawalsAsync, user, ref),
                                 ],
                               ),
-                            const SizedBox(height: 48),
+                            SizedBox(height: 48),
                           ],
                         ),
                       ),
@@ -150,9 +150,9 @@ class AdminUserProfile extends ConsumerWidget {
           IconButton(
             onPressed: () => context.go(AppRoutes.adminUsers),
             icon:
-                const Icon(Icons.arrow_back_rounded, color: AppColors.primaryDark),
+                Icon(Icons.arrow_back_rounded, color: AppColors.primaryDark),
           ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
@@ -177,7 +177,7 @@ class AdminUserProfile extends ConsumerWidget {
           ),
           const Spacer(),
           IconButton(
-            icon: const Icon(Icons.refresh_rounded, size: 20),
+            icon: Icon(Icons.refresh_rounded, size: 20),
             onPressed: () {
               ref.invalidate(userByIdProvider(userId));
               ref.invalidate(userApplicationsProvider(userId));
@@ -217,7 +217,7 @@ class AdminUserProfile extends ConsumerWidget {
                     user.fullName.isNotEmpty
                         ? user.fullName[0].toUpperCase()
                         : '?',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primary),
@@ -225,7 +225,7 @@ class AdminUserProfile extends ConsumerWidget {
                 )
               : null,
         ),
-        const SizedBox(width: 24),
+        SizedBox(width: 24),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -304,7 +304,7 @@ class AdminUserProfile extends ConsumerWidget {
             child: Row(
               children: [
                 Icon(statusIcon, color: statusColor),
-                const SizedBox(width: 16),
+                SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -319,7 +319,7 @@ class AdminUserProfile extends ConsumerWidget {
                       ),
                       Text(
                         'Identity verification is ${user.verificationStatus.name}',
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 12,
                             color: statusColor.withValues(alpha: 0.8)),
                       ),
@@ -329,7 +329,7 @@ class AdminUserProfile extends ConsumerWidget {
               ],
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           _buildActionButton(
             'Review KYC Documents',
             Icons.assignment_ind_outlined,
@@ -348,10 +348,10 @@ class AdminUserProfile extends ConsumerWidget {
       child: Column(
         children: [
           if (user.bankAccounts.isEmpty)
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(vertical: 20),
               child: Text('No bank accounts linked',
-                  style: TextStyle(color: AppColors.textSecondary)),
+                  style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary)),
             )
           else
             ...user.bankAccounts.map((account) => Padding(
@@ -374,20 +374,20 @@ class AdminUserProfile extends ConsumerWidget {
                               color: const Color(0xFFF2F4F6),
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: const Icon(Icons.account_balance_outlined,
+                            child: Icon(Icons.account_balance_outlined,
                                 size: 18, color: AppColors.primary),
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(account.bankName,
-                                    style: const TextStyle(
+                                    style: GoogleFonts.plusJakartaSans(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 13)),
                                 Text(account.accountNumber,
-                                    style: const TextStyle(
+                                    style: GoogleFonts.plusJakartaSans(
                                         fontSize: 11,
                                         color: AppColors.textSecondary)),
                               ],
@@ -400,11 +400,11 @@ class AdminUserProfile extends ConsumerWidget {
                                 ? AppColors.success
                                 : AppColors.warning,
                           ),
-                          const SizedBox(width: 8),
+                          SizedBox(width: 8),
                           IconButton(
                             onPressed: () => _showAdminDeleteBankAccountDialog(
                                 context, account, user, ref),
-                            icon: const Icon(Icons.delete_outline_rounded,
+                            icon: Icon(Icons.delete_outline_rounded,
                                 color: AppColors.error, size: 20),
                             tooltip: 'Delete Account',
                             visualDensity: VisualDensity.compact,
@@ -425,14 +425,14 @@ class AdminUserProfile extends ConsumerWidget {
       title: 'LOAN APPLICATIONS',
       icon: Icons.description_outlined,
       child: asyncApps.when(
-        loading: () => const Center(
+        loading: () => Center(
             child: Padding(
                 padding: EdgeInsets.all(20),
                 child: CircularProgressIndicator())),
         error: (e, _) => Text('Error: $e'),
         data: (apps) {
           if (apps.isEmpty)
-            return const Padding(
+            return Padding(
                 padding: EdgeInsets.all(20),
                 child: Text('No applications found'));
           return Column(
@@ -464,18 +464,18 @@ class AdminUserProfile extends ConsumerWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         Formatters.currency(app.loanAmount, app.countryCode),
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+        style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold, fontSize: 15),
       ),
       subtitle: Text(
         '${app.loanDuration} Months • ${Formatters.date(app.createdAt)}',
-        style: const TextStyle(fontSize: 12, color: AppColors.textSecondary),
+        style: GoogleFonts.plusJakartaSans(fontSize: 12, color: AppColors.textSecondary),
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           _buildMiniBadge(app.status.name, statusColor),
-          const SizedBox(width: 8),
-          const Icon(Icons.chevron_right, size: 18, color: AppColors.textHint),
+          SizedBox(width: 8),
+          Icon(Icons.chevron_right, size: 18, color: AppColors.textHint),
         ],
       ),
     );
@@ -487,14 +487,14 @@ class AdminUserProfile extends ConsumerWidget {
       title: 'WITHDRAWAL HISTORY',
       icon: Icons.payments_outlined,
       child: asyncWithdrawals.when(
-        loading: () => const Center(
+        loading: () => Center(
             child: Padding(
                 padding: EdgeInsets.all(20),
                 child: CircularProgressIndicator())),
         error: (e, _) => Text('Error: $e'),
         data: (withdrawals) {
           if (withdrawals.isEmpty)
-            return const Padding(
+            return Padding(
                 padding: EdgeInsets.all(20),
                 child: Text('No withdrawals found'));
           return Column(
@@ -530,18 +530,18 @@ class AdminUserProfile extends ConsumerWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         Formatters.currency(withdrawal.amount, withdrawal.countryCode),
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+        style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold, fontSize: 15),
       ),
       subtitle: Text(
         'via ${withdrawal.bankName} • ${Formatters.date(withdrawal.createdAt)}',
-        style: const TextStyle(fontSize: 12, color: AppColors.textSecondary),
+        style: GoogleFonts.plusJakartaSans(fontSize: 12, color: AppColors.textSecondary),
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           _buildMiniBadge(withdrawal.status.name, statusColor),
-          const SizedBox(width: 8),
-          const Icon(Icons.chevron_right, size: 18, color: AppColors.textHint),
+          SizedBox(width: 8),
+          Icon(Icons.chevron_right, size: 18, color: AppColors.textHint),
         ],
       ),
     );
@@ -599,7 +599,7 @@ class AdminUserProfile extends ConsumerWidget {
                     side: BorderSide(color: color),
                   ),
                   child: isLoading
-                      ? const SizedBox(
+                      ? SizedBox(
                           width: 20,
                           height: 20,
                           child: CircularProgressIndicator(strokeWidth: 2),
@@ -618,7 +618,7 @@ class AdminUserProfile extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(12)),
                 ),
                 child: isLoading
-                    ? const SizedBox(
+                    ? SizedBox(
                         width: 20,
                         height: 20,
                         child: CircularProgressIndicator(
@@ -637,15 +637,15 @@ class AdminUserProfile extends ConsumerWidget {
                   Text('Update Withdrawal Status',
                       style: GoogleFonts.plusJakartaSans(
                           fontWeight: FontWeight.w800, fontSize: 20)),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Text(
                     'Update status for ${Formatters.currency(withdrawal.amount, withdrawal.countryCode)} withdrawal',
-                    style: const TextStyle(color: AppColors.textSecondary),
+                    style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24),
                   _detailRowItem('Bank Name', withdrawal.bankName),
                   _detailRowItem('Account Number', withdrawal.accountNumber),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32),
                   Column(
                     children: [
                       Row(
@@ -653,19 +653,19 @@ class AdminUserProfile extends ConsumerWidget {
                           Expanded(
                               child: statusButton(
                                   WithdrawalStatus.pending, 'Pending', AppColors.warning)),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12),
                           Expanded(
                               child: statusButton(
                                   WithdrawalStatus.processing, 'Processing', AppColors.pending)),
                         ],
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12),
                       Row(
                         children: [
                           Expanded(
                               child: statusButton(
                                   WithdrawalStatus.completed, 'Complete', AppColors.success)),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12),
                           Expanded(
                               child: statusButton(
                                   WithdrawalStatus.failed, 'Fail', AppColors.error)),
@@ -705,7 +705,7 @@ class AdminUserProfile extends ConsumerWidget {
           Row(
             children: [
               Icon(icon, size: 16, color: AppColors.primary),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               Text(
                 title,
                 style: GoogleFonts.plusJakartaSans(
@@ -717,9 +717,9 @@ class AdminUserProfile extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(height: 20),
-          const Divider(height: 1),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
+          Divider(height: 1),
+          SizedBox(height: 20),
           child,
         ],
       ),
@@ -733,10 +733,10 @@ class AdminUserProfile extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(label,
-              style: const TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   color: AppColors.textSecondary, fontSize: 13)),
           Text(value,
-              style: const TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   fontWeight: FontWeight.w600,
                   fontSize: 13,
                   color: AppColors.primaryDark)),
@@ -754,7 +754,7 @@ class AdminUserProfile extends ConsumerWidget {
       ),
       child: Text(
         label.toUpperCase(),
-        style: TextStyle(
+        style: GoogleFonts.plusJakartaSans(
           fontSize: 9,
           fontWeight: FontWeight.w800,
           color: color,
@@ -824,12 +824,12 @@ void _showBankVerificationSheet(
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (isLoading) ...[
-                  const SizedBox(
+                  SizedBox(
                     width: 14,
                     height: 14,
                     child: CircularProgressIndicator(strokeWidth: 2),
                   ),
-                  const SizedBox(width: 8),
+                  SizedBox(width: 8),
                 ],
                 Text(isLoading ? '$text...' : text),
               ],
@@ -845,11 +845,11 @@ void _showBankVerificationSheet(
                 Text('Bank Verification',
                     style: GoogleFonts.plusJakartaSans(
                         fontWeight: FontWeight.w800, fontSize: 20)),
-                const SizedBox(height: 24),
+                SizedBox(height: 24),
                 _detailRowItem('Bank Name', account.bankName),
                 _detailRowItem('Account Number', account.accountNumber),
                 _detailRowItem('Account Name', account.accountName),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
                 Row(
                   children: [
                     Expanded(
@@ -878,7 +878,7 @@ void _showBankVerificationSheet(
                         child: actionLabel('verify', 'Verify'),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12),
                     Expanded(
                       child: OutlinedButton(
                         onPressed: account.verificationStatus ==
@@ -909,7 +909,7 @@ void _showBankVerificationSheet(
                         child: actionLabel('unverify', 'Unverify'),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12),
                     Expanded(
                       child: OutlinedButton(
                         onPressed: account.verificationStatus ==
@@ -954,12 +954,12 @@ Widget _detailRowItem(String label, String value) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(label,
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 11,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w700)),
         Text(value,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+            style: GoogleFonts.plusJakartaSans(fontSize: 15, fontWeight: FontWeight.w600)),
       ],
     ),
   );
@@ -970,15 +970,15 @@ void _showAdminDeleteBankAccountDialog(
   showDialog(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Delete Bank Account',
-          style: TextStyle(fontWeight: FontWeight.bold)),
+      title: Text('Delete Bank Account',
+          style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold)),
       content: Text(
           'Are you sure you want to delete this bank account (${account.bankName} - ${account.accountNumber}) for user ${user.fullName}?'),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('CANCEL',
-              style: TextStyle(
+          child: Text('CANCEL',
+              style: GoogleFonts.plusJakartaSans(
                   fontWeight: FontWeight.bold, color: AppColors.textSecondary)),
         ),
         TextButton(
@@ -1018,8 +1018,8 @@ void _showAdminDeleteBankAccountDialog(
               }
             }
           },
-          child: const Text('DELETE',
-              style: TextStyle(
+          child: Text('DELETE',
+              style: GoogleFonts.plusJakartaSans(
                   fontWeight: FontWeight.bold, color: AppColors.error)),
         ),
       ],

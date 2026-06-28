@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_colors.dart';
@@ -70,12 +71,12 @@ class KycStatusScreen extends ConsumerWidget {
             foregroundColor: AppColors.textPrimary,
             elevation: 0,
             leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
+              icon: Icon(Icons.arrow_back),
               onPressed: () => context.go(AppRoutes.admin),
             ),
-            title: const Text(
+            title: Text(
               'KYC Status',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
               ),
@@ -101,10 +102,10 @@ class KycStatusScreen extends ConsumerWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(statusIcon, size: 72, color: circleColor),
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12),
                         Text(
                           statusLabel,
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 22,
                             fontWeight: FontWeight.w700,
                             color: circleColor,
@@ -114,24 +115,24 @@ class KycStatusScreen extends ConsumerWidget {
                     ),
                   ),
 
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32),
 
                   // User name
                   Text(
                     user.fullName,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: AppColors.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
 
                   // Status message
                   Text(
                     statusMessage,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 14,
                       color: AppColors.textSecondary,
                       height: 1.5,
@@ -142,17 +143,17 @@ class KycStatusScreen extends ConsumerWidget {
 
                   // Review button — goes to KYC approval screen
 
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16),
 
                   TextButton(
                     onPressed: () => context.go(AppRoutes.admin),
-                    child: const Text(
+                    child: Text(
                       'Back to Dashboard',
-                      style: TextStyle(color: AppColors.textSecondary),
+                      style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary),
                     ),
                   ),
 
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16),
                 ],
               ),
             ),

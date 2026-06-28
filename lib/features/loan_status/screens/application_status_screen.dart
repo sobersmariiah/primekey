@@ -98,10 +98,10 @@ class _ApplicationStatusScreenState
         );
       }
       return Scaffold(
-        appBar: AppBar(title: const Text('Application not found')),
-        body: const Center(
+        appBar: AppBar(title: Text('Application not found')),
+        body: Center(
           child: Text('Application not found',
-              style: TextStyle(color: AppColors.textSecondary)),
+              style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary)),
         ),
       );
     }
@@ -335,7 +335,7 @@ class _DesktopStatusView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             _buildHeader(context),
-                            const SizedBox(height: 48),
+                            SizedBox(height: 48),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -348,16 +348,16 @@ class _DesktopStatusView extends StatelessWidget {
                                     children: [
                                       _buildMainLoanInfoCard(
                                           context, countryCode),
-                                      const SizedBox(height: 32),
+                                      SizedBox(height: 32),
                                       if (application.status != LoanStatus.pending) ...[
                                         _buildReviewCard(context),
-                                        const SizedBox(height: 32),
+                                        SizedBox(height: 32),
                                       ],
                                       _buildDocumentsSection(context),
                                     ],
                                   ),
                                 ),
-                                const SizedBox(width: 40),
+                                SizedBox(width: 40),
                                 // Right Column: Actions & Roadmap
                                 Expanded(
                                   flex: 2,
@@ -367,10 +367,10 @@ class _DesktopStatusView extends StatelessWidget {
                                       if (canVerify ||
                                           application.status ==
                                               LoanStatus.approved) ...[
-                                        const SizedBox(height: 32),
+                                        SizedBox(height: 32),
                                         _buildActionsCard(context, canVerify),
                                       ],
-                                      const SizedBox(height: 32),
+                                      SizedBox(height: 32),
                                       _buildProTipCard(context),
                                     ],
                                   ),
@@ -446,14 +446,14 @@ class _DesktopStatusView extends StatelessWidget {
             onTap: () => context.go(AppRoutes.profile),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout,
             label: 'Log Out',
             color: AppColors.error,
             onTap: onLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -472,10 +472,10 @@ class _DesktopStatusView extends StatelessWidget {
         child: Row(
           children: [
             IconButton(
-              icon: const Icon(Icons.menu_rounded, color: AppColors.textPrimary),
+              icon: Icon(Icons.menu_rounded, color: AppColors.textPrimary),
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             Text(
               'Application Status',
               style: GoogleFonts.plusJakartaSans(
@@ -487,7 +487,7 @@ class _DesktopStatusView extends StatelessWidget {
             const Spacer(),
             // Only show one profile entry point
             IconButton(
-              icon: const Icon(Icons.person_outline_rounded, color: AppColors.textPrimary),
+              icon: Icon(Icons.person_outline_rounded, color: AppColors.textPrimary),
               onPressed: () => context.go(AppRoutes.profile),
             ),
           ],
@@ -541,7 +541,7 @@ class _DesktopStatusView extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Text(
                   '#${application.id.substring(0, 8).toUpperCase()}',
                   style: GoogleFonts.plusJakartaSans(
@@ -552,7 +552,7 @@ class _DesktopStatusView extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Text(
               'Loan Status',
               style: GoogleFonts.plusJakartaSans(
@@ -562,7 +562,7 @@ class _DesktopStatusView extends StatelessWidget {
                 letterSpacing: -1.5,
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               'Your application is currently under internal review.',
               style: GoogleFonts.plusJakartaSans(
@@ -597,7 +597,7 @@ class _DesktopStatusView extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -664,22 +664,22 @@ class _DesktopStatusView extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 48),
+          SizedBox(height: 48),
           Row(
             children: [
               _buildLargeStat('REQUESTED AMOUNT',
                   Formatters.currency(application.loanAmount, countryCode)),
-              const SizedBox(width: 80),
+              SizedBox(width: 80),
               _buildLargeStat(
                   'TERM LENGTH', '${application.loanDuration} Months'),
-              const SizedBox(width: 80),
+              SizedBox(width: 80),
               _buildLargeStat('INTEREST (APR)',
                   '${AppStrings.getLoanRates(application.countryCode)[application.loanDuration]}%'),
             ],
           ),
-          const SizedBox(height: 64),
-          const Divider(color: AppColors.border),
-          const SizedBox(height: 48),
+          SizedBox(height: 64),
+          Divider(color: AppColors.border),
+          SizedBox(height: 48),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -696,7 +696,7 @@ class _DesktopStatusView extends StatelessWidget {
                         letterSpacing: 1,
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
                     Row(
                       children: [
                         Container(
@@ -705,10 +705,10 @@ class _DesktopStatusView extends StatelessWidget {
                             color: const Color(0xFFF2F4F6),
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: const Icon(Icons.business_center_outlined,
+                          child: Icon(Icons.business_center_outlined,
                               color: AppColors.primary, size: 24),
                         ),
-                        const SizedBox(width: 20),
+                        SizedBox(width: 20),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -737,7 +737,7 @@ class _DesktopStatusView extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 40),
+              SizedBox(width: 40),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -751,7 +751,7 @@ class _DesktopStatusView extends StatelessWidget {
                         letterSpacing: 1,
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
                     Row(
                       children: [
                         Container(
@@ -760,10 +760,10 @@ class _DesktopStatusView extends StatelessWidget {
                             color: const Color(0xFFF2F4F6),
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: const Icon(Icons.account_balance_outlined,
+                          child: Icon(Icons.account_balance_outlined,
                               color: AppColors.primary, size: 24),
                         ),
-                        const SizedBox(width: 20),
+                        SizedBox(width: 20),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -812,7 +812,7 @@ class _DesktopStatusView extends StatelessWidget {
             letterSpacing: 1.2,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         Text(
           value,
           style: GoogleFonts.plusJakartaSans(
@@ -846,7 +846,7 @@ class _DesktopStatusView extends StatelessWidget {
               letterSpacing: 1.5,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           Row(
             children: [
               _buildSharedDataField(
@@ -855,7 +855,7 @@ class _DesktopStatusView extends StatelessWidget {
                     ? 'Approved'
                     : 'Rejected',
               ),
-              const SizedBox(width: 80),
+              SizedBox(width: 80),
               if (application.reviewedAt != null)
                 _buildSharedDataField(
                   'REVIEWED ON',
@@ -865,9 +865,9 @@ class _DesktopStatusView extends StatelessWidget {
           ),
           if (application.adminNote != null &&
               application.adminNote!.isNotEmpty) ...[
-            const SizedBox(height: 32),
-            const Divider(color: AppColors.border),
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
+            Divider(color: AppColors.border),
+            SizedBox(height: 32),
             Text(
               'OFFICIAL NOTE',
               style: GoogleFonts.plusJakartaSans(
@@ -877,7 +877,7 @@ class _DesktopStatusView extends StatelessWidget {
                 letterSpacing: 1,
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Text(
               application.adminNote!,
               style: GoogleFonts.plusJakartaSans(
@@ -913,7 +913,7 @@ class _DesktopStatusView extends StatelessWidget {
               letterSpacing: 1.5,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           if (application.documentUrls.isEmpty)
             Text('No documents submitted',
                 style:
@@ -948,10 +948,10 @@ class _DesktopStatusView extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(8),
             ),
-            child: const Icon(Icons.description_outlined,
+            child: Icon(Icons.description_outlined,
                 color: AppColors.error, size: 20),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -977,7 +977,7 @@ class _DesktopStatusView extends StatelessWidget {
             ),
           ),
           IconButton(
-            icon: const Icon(Icons.open_in_new_rounded,
+            icon: Icon(Icons.open_in_new_rounded,
                 size: 18, color: AppColors.textSecondary),
             onPressed: () => Navigator.push(
               context,
@@ -1016,7 +1016,7 @@ class _DesktopStatusView extends StatelessWidget {
               letterSpacing: 1,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           _buildRoadmapStep(
             'Application Submitted',
             Formatters.date(application.createdAt),
@@ -1085,7 +1085,7 @@ class _DesktopStatusView extends StatelessWidget {
                 ),
             ],
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1109,7 +1109,7 @@ class _DesktopStatusView extends StatelessWidget {
                     color: AppColors.textSecondary,
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24),
               ],
             ),
           ),
@@ -1132,14 +1132,14 @@ class _DesktopStatusView extends StatelessWidget {
             _buildActionBtn('PROCEED TO KYC', Icons.perm_identity,
                 () => context.go(AppRoutes.kyc)),
           if (application.status == LoanStatus.approved) ...[
-            if (canVerify) const SizedBox(height: 16),
+            if (canVerify) SizedBox(height: 16),
             _buildActionBtn(
               isLoading ? 'PREPARING AGREEMENT...' : 'VIEW LOAN AGREEMENT',
               Icons.picture_as_pdf,
               () => generateAgreement(context, application, currentUser!),
               loading: isLoading,
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             _buildActionBtn(
               isLoading2 ? 'LOADING...' : 'PROCEED TO WITHDRAWAL',
               Icons.account_balance_outlined,
@@ -1161,7 +1161,7 @@ class _DesktopStatusView extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: loading ? null : onPressed,
         icon: loading
-            ? const SizedBox(
+            ? SizedBox(
                 width: 20,
                 height: 20,
                 child: CircularProgressIndicator(
@@ -1191,9 +1191,9 @@ class _DesktopStatusView extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Icon(Icons.lightbulb_outline,
+          Icon(Icons.lightbulb_outline,
               color: AppColors.primary, size: 24),
-          const SizedBox(width: 20),
+          SizedBox(width: 20),
           Expanded(
             child: RichText(
               text: TextSpan(
@@ -1248,12 +1248,12 @@ class _MobileStatusView extends StatelessWidget {
         backgroundColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back),
           onPressed: () => context.go(AppRoutes.dashboard),
         ),
-        title: const Text(
+        title: Text(
           'Loan Status',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -1267,29 +1267,29 @@ class _MobileStatusView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildHeroCard(application),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             _buildSectionLabel('LOAN DETAILS'),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _buildLoanDetailsCard(application, countryCode),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             _buildSectionLabel('EMPLOYMENT DETAILS'),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _buildEmploymentCard(application, countryCode),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             _buildSectionLabel('BANK DETAILS'),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _buildBankCard(application),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             _buildSectionLabel('SUBMITTED DOCUMENTS'),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _buildDocumentsCard(context, application),
             if (application.status != LoanStatus.pending) ...[
-              const SizedBox(height: 24),
+              SizedBox(height: 24),
               _buildSectionLabel('REVIEW DETAILS'),
-              const SizedBox(height: 8),
+              SizedBox(height: 8),
               _buildReviewCard(application),
             ],
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
             if (canVerify)
               _buildActionButton(
                 label: 'Proceed to KYC',
@@ -1297,7 +1297,7 @@ class _MobileStatusView extends StatelessWidget {
                 onPressed: () => context.go(AppRoutes.kyc),
               ),
             if (application.status == LoanStatus.approved) ...[
-              const SizedBox(height: 12),
+              SizedBox(height: 12),
               _buildActionButton(
                 label: isLoading ? 'Preparing...' : 'View Loan Agreement',
                 icon: Icons.picture_as_pdf,
@@ -1305,7 +1305,7 @@ class _MobileStatusView extends StatelessWidget {
                 onPressed: () =>
                     generateAgreement(context, application, currentUser!),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12),
               _buildActionButton(
                 label: isLoading2 ? 'Loading...' : 'Proceed to Withdrawal',
                 icon: Icons.account_balance_outlined,
@@ -1315,7 +1315,7 @@ class _MobileStatusView extends StatelessWidget {
                     extra: application),
               ),
             ],
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
           ],
         ),
       ),
@@ -1356,19 +1356,19 @@ class _MobileStatusView extends StatelessWidget {
         children: [
           Text(
             'APPLICATION REFERENCE: #${application.id.substring(0, 8).toUpperCase()}',
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 11,
                 color: Colors.white54,
                 letterSpacing: 1.2,
                 fontWeight: FontWeight.w500),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(statusTitle,
-              style: const TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 26,
                   fontWeight: FontWeight.w800,
                   color: Colors.white)),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -1376,11 +1376,11 @@ class _MobileStatusView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12)),
             child: Row(
               children: [
-                const Icon(Icons.info_outline, color: Colors.white, size: 18),
-                const SizedBox(width: 12),
+                Icon(Icons.info_outline, color: Colors.white, size: 18),
+                SizedBox(width: 12),
                 Expanded(
                     child: Text(statusMessage,
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 13, color: Colors.white, height: 1.5))),
               ],
             ),
@@ -1392,7 +1392,7 @@ class _MobileStatusView extends StatelessWidget {
 
   Widget _buildSectionLabel(String label) {
     return Text(label,
-        style: const TextStyle(
+        style: GoogleFonts.plusJakartaSans(
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
@@ -1410,20 +1410,20 @@ class _MobileStatusView extends StatelessWidget {
           _detailRow('Requested Amount',
               Formatters.currency(application.loanAmount, countryCode),
               isBold: true),
-          const Divider(height: 24),
+          Divider(height: 24),
           _detailRow('Loan Term', Formatters.duration(application.loanDuration),
               isBold: true),
-          const Divider(height: 24),
+          Divider(height: 24),
           _detailRow('Interest Rate (Est.)',
               '${AppStrings.getLoanRates(application.countryCode)[application.loanDuration]}% APR',
               isBold: true),
-          const Divider(height: 24),
+          Divider(height: 24),
           _detailRow(
               'Monthly Repayment',
               Formatters.currency(
                   calculateMonthlyRepayment(application), countryCode),
               isBold: true),
-          const Divider(height: 24),
+          Divider(height: 24),
           _detailRow('Applied On', Formatters.date(application.createdAt)),
         ],
       ),
@@ -1441,37 +1441,37 @@ class _MobileStatusView extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.business_outlined,
+              Icon(Icons.business_outlined,
                   color: AppColors.primary, size: 22),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(application.employer,
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 15, fontWeight: FontWeight.w700)),
                     Text(application.employmentStatus,
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 13, color: AppColors.textSecondary)),
                   ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 16),
-          const Divider(),
-          const SizedBox(height: 16),
-          const Text('MONTHLY INCOME',
-              style: TextStyle(
+          SizedBox(height: 16),
+          Divider(),
+          SizedBox(height: 16),
+          Text('MONTHLY INCOME',
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 10,
                   fontWeight: FontWeight.w700,
                   color: AppColors.textSecondary,
                   letterSpacing: 1.2)),
-          const SizedBox(height: 4),
+          SizedBox(height: 4),
           Text(Formatters.currency(application.monthlyIncome, countryCode),
               style:
-                  const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+                  GoogleFonts.plusJakartaSans(fontSize: 15, fontWeight: FontWeight.w700)),
         ],
       ),
     );
@@ -1484,19 +1484,19 @@ class _MobileStatusView extends StatelessWidget {
       decoration: _cardDecoration(),
       child: Row(
         children: [
-          const Icon(Icons.account_balance_outlined,
+          Icon(Icons.account_balance_outlined,
               color: AppColors.primary, size: 22),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(application.bankName,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         fontSize: 15, fontWeight: FontWeight.w700)),
                 Text(
                     'Ending in •••• ${application.accountNumber.length >= 4 ? application.accountNumber.substring(application.accountNumber.length - 4) : application.accountNumber}',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         fontSize: 13, color: AppColors.textSecondary)),
               ],
             ),
@@ -1508,7 +1508,7 @@ class _MobileStatusView extends StatelessWidget {
 
   Widget _buildDocumentsCard(
       BuildContext context, LoanApplicationModel application) {
-    if (application.documentUrls.isEmpty) return const SizedBox();
+    if (application.documentUrls.isEmpty) return SizedBox();
     return Container(
       width: double.infinity,
       decoration: _cardDecoration(),
@@ -1524,15 +1524,15 @@ class _MobileStatusView extends StatelessWidget {
                         builder: (_) => DocumentViewerScreen(
                             imageUrl: entry.value,
                             title: 'Document ${entry.key + 1}'))),
-                leading: const Icon(Icons.insert_drive_file_outlined,
+                leading: Icon(Icons.insert_drive_file_outlined,
                     color: AppColors.primary, size: 18),
                 title: Text('Document ${entry.key + 1}.pdf',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         fontSize: 14, fontWeight: FontWeight.w500)),
-                trailing: const Icon(Icons.download_outlined,
+                trailing: Icon(Icons.download_outlined,
                     color: AppColors.textSecondary, size: 20),
               ),
-              if (!isLast) const Divider(height: 1),
+              if (!isLast) Divider(height: 1),
             ],
           );
         }).toList(),
@@ -1554,12 +1554,12 @@ class _MobileStatusView extends StatelessWidget {
                   : 'Rejected',
               isBold: true),
           if (application.reviewedAt != null) ...[
-            const Divider(height: 24),
+            Divider(height: 24),
             _detailRow('Reviewed On', Formatters.date(application.reviewedAt!)),
           ],
           if (application.adminNote != null &&
               application.adminNote!.isNotEmpty) ...[
-            const Divider(height: 24),
+            Divider(height: 24),
             _detailRow('Note', application.adminNote!),
           ],
         ],
@@ -1573,9 +1573,9 @@ class _MobileStatusView extends StatelessWidget {
       children: [
         Text(label,
             style:
-                const TextStyle(fontSize: 14, color: AppColors.textSecondary)),
+                GoogleFonts.plusJakartaSans(fontSize: 14, color: AppColors.textSecondary)),
         Text(value,
-            style: TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 14,
                 fontWeight: isBold ? FontWeight.w700 : FontWeight.w500,
                 color: AppColors.textPrimary)),
@@ -1594,7 +1594,7 @@ class _MobileStatusView extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: isLoading ? null : onPressed,
         icon: isLoading
-            ? const SizedBox(
+            ? SizedBox(
                 width: 20,
                 height: 20,
                 child: CircularProgressIndicator(
@@ -1606,7 +1606,7 @@ class _MobileStatusView extends StatelessWidget {
           foregroundColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+          textStyle: GoogleFonts.plusJakartaSans(fontSize: 15, fontWeight: FontWeight.w600),
         ),
       ),
     );
@@ -1663,7 +1663,7 @@ class _SidebarItem extends StatelessWidget {
                   color: color ??
                       (isActive ? AppColors.primary : AppColors.textSecondary),
                   size: 20),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Expanded(
                 child: Text(
                   label,
@@ -1708,7 +1708,7 @@ class _DrawerItem extends StatelessWidget {
               color ?? (isActive ? AppColors.primary : AppColors.textPrimary),
           size: 22),
       title: Text(label,
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
               fontSize: 15,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
               color: color ??
@@ -1743,25 +1743,25 @@ Widget _buildSharedDrawer(
                           user?.fullName.isNotEmpty ?? false
                               ? user!.fullName[0].toUpperCase()
                               : '?',
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary))
                       : null,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 Text(user?.fullName ?? '',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user?.email ?? '',
                     style:
-                        const TextStyle(color: Colors.white60, fontSize: 13)),
+                        GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
               ],
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           _DrawerItem(
               icon: Icons.dashboard_outlined,
               label: 'Dashboard',
@@ -1805,13 +1805,13 @@ Widget _buildSharedDrawer(
                 context.go(AppRoutes.profile);
               }),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _DrawerItem(
               icon: Icons.logout,
               label: 'Log Out',
               color: AppColors.error,
               onTap: onLogout),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
         ],
       ),
     ),
@@ -1831,7 +1831,7 @@ Widget _buildSharedDataField(String label, String value) {
           letterSpacing: 1.2,
         ),
       ),
-      const SizedBox(height: 10),
+      SizedBox(height: 10),
       Text(
         value,
         style: GoogleFonts.plusJakartaSans(

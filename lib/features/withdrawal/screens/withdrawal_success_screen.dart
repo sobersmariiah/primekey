@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -63,9 +64,9 @@ class _WithdrawalSuccessScreenState
       appBar: AppBar(
         backgroundColor: const Color(0xFFF4F6F9),
         elevation: 0,
-        title: const Text(
+        title: Text(
           'Transaction',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 17,
             fontWeight: FontWeight.w700,
             color: AppColors.primary,
@@ -74,7 +75,7 @@ class _WithdrawalSuccessScreenState
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.more_vert, color: AppColors.primary),
+            icon: Icon(Icons.more_vert, color: AppColors.primary),
             onPressed: () {},
           ),
         ],
@@ -91,7 +92,7 @@ class _WithdrawalSuccessScreenState
                     opacity: _fadeAnimation,
                     child: Column(
                       children: [
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16),
 
                         // ── Success icon ──────────────────
                         ScaleTransition(
@@ -111,7 +112,7 @@ class _WithdrawalSuccessScreenState
                                   color: AppColors.primary,
                                   shape: BoxShape.circle,
                                 ),
-                                child: const Icon(
+                                child: Icon(
                                   Icons.check_rounded,
                                   color: Colors.white,
                                   size: 34,
@@ -121,12 +122,12 @@ class _WithdrawalSuccessScreenState
                           ),
                         ),
 
-                        const SizedBox(height: 28),
+                        SizedBox(height: 28),
 
                         // ── Title ─────────────────────────
-                        const Text(
+                        Text(
                           'Withdrawal Requested',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 30,
                             fontWeight: FontWeight.w800,
                             color: AppColors.primary,
@@ -134,11 +135,11 @@ class _WithdrawalSuccessScreenState
                           textAlign: TextAlign.center,
                         ),
 
-                        const SizedBox(height: 14),
+                        SizedBox(height: 14),
 
-                        const Text(
+                        Text(
                           'Your withdrawal request has been successfully submitted and is now pending review. This process typically takes 1–2 business days.',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 14,
                             color: AppColors.textSecondary,
                             height: 1.6,
@@ -146,7 +147,7 @@ class _WithdrawalSuccessScreenState
                           textAlign: TextAlign.center,
                         ),
 
-                        const SizedBox(height: 32),
+                        SizedBox(height: 32),
 
                         // ── Summary card ──────────────────
                         Container(
@@ -170,20 +171,20 @@ class _WithdrawalSuccessScreenState
                                     const EdgeInsets.fromLTRB(24, 28, 24, 20),
                                 child: Column(
                                   children: [
-                                    const Text(
+                                    Text(
                                       'AMOUNT REQUESTED',
-                                      style: TextStyle(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.textSecondary,
                                         letterSpacing: 1.4,
                                       ),
                                     ),
-                                    const SizedBox(height: 10),
+                                    SizedBox(height: 10),
                                     Text(
                                       Formatters.currency(
                                           w.amount, countryCode),
-                                      style: const TextStyle(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 42,
                                         fontWeight: FontWeight.w800,
                                         color: AppColors.primary,
@@ -193,7 +194,7 @@ class _WithdrawalSuccessScreenState
                                 ),
                               ),
 
-                              const Divider(
+                              Divider(
                                   height: 0.5, color: Color(0xFFF1F5F9)),
 
                               // Details
@@ -206,7 +207,7 @@ class _WithdrawalSuccessScreenState
                                       w.bankName,
                                       subtitle: 'Ending in $last4',
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     _buildDetailRow(
                                       'STATUS',
                                       'PENDING REVIEW',
@@ -250,12 +251,12 @@ class _WithdrawalSuccessScreenState
                           minimumSize: Size.zero,
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
-                        child: const Row(
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               'Back to Dashboard',
-                              style: TextStyle(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w700,
                               ),
@@ -267,14 +268,14 @@ class _WithdrawalSuccessScreenState
                       ),
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // View receipt
                     GestureDetector(
                       onTap: () => context.go(AppRoutes.withdrawals),
-                      child: const Text(
+                      child: Text(
                         'View Withdrawals',
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
                           color: AppColors.primary,
@@ -303,7 +304,7 @@ class _WithdrawalSuccessScreenState
       children: [
         Text(
           label,
-          style: const TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 13,
             fontWeight: FontWeight.w600,
             color: AppColors.textSecondary,
@@ -324,10 +325,10 @@ class _WithdrawalSuccessScreenState
                       shape: BoxShape.circle,
                     ),
                   ),
-                  const SizedBox(width: 6),
+                  SizedBox(width: 6),
                   Text(
                     value,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                       color: AppColors.primary,
@@ -339,17 +340,17 @@ class _WithdrawalSuccessScreenState
             else
               Text(
                 value,
-                style: const TextStyle(
+                style: GoogleFonts.plusJakartaSans(
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: AppColors.primary,
                 ),
               ),
             if (subtitle != null) ...[
-              const SizedBox(height: 2),
+              SizedBox(height: 2),
               Text(
                 subtitle,
-                style: const TextStyle(
+                style: GoogleFonts.plusJakartaSans(
                   fontSize: 12,
                   color: AppColors.textSecondary,
                 ),

@@ -41,9 +41,9 @@ class ApplicationsMobile extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildHeader(),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             _buildFilterTabs(),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             if (filtered.isEmpty)
               _buildEmptyState()
             else
@@ -58,14 +58,14 @@ class ApplicationsMobile extends StatelessWidget {
                   animationController: listAnimationController,
                 );
               }),
-            const SizedBox(height: 80), // Space for FAB
+            SizedBox(height: 80), // Space for FAB
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.go(AppRoutes.apply),
         backgroundColor: AppColors.primary,
-        icon: const Icon(Icons.add, color: Colors.white),
+        icon: Icon(Icons.add, color: Colors.white),
         label: Text(
           'NEW LOAN',
           style: GoogleFonts.plusJakartaSans(
@@ -84,7 +84,7 @@ class ApplicationsMobile extends StatelessWidget {
       elevation: 0,
       leading: Builder(builder: (context) {
         return IconButton(
-          icon: const Icon(Icons.menu, color: AppColors.textPrimary),
+          icon: Icon(Icons.menu, color: AppColors.textPrimary),
           onPressed: () => Scaffold.of(context).openDrawer(),
         );
       }),
@@ -99,7 +99,7 @@ class ApplicationsMobile extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.notifications_outlined,
+          icon: Icon(Icons.notifications_outlined,
               color: AppColors.textPrimary),
           onPressed: () {},
         ),
@@ -120,7 +120,7 @@ class ApplicationsMobile extends StatelessWidget {
                       currentUser?.fullName.isNotEmpty ?? false
                           ? currentUser!.fullName[0].toUpperCase()
                           : '?',
-                      style: const TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary),
@@ -158,26 +158,26 @@ class ApplicationsMobile extends StatelessWidget {
                             currentUser?.fullName.isNotEmpty ?? false
                                 ? currentUser!.fullName[0].toUpperCase()
                                 : '?',
-                            style: const TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.primary),
                           )
                         : null,
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Text(currentUser?.fullName ?? '',
-                      style: const TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w700)),
                   Text(currentUser?.email ?? '',
                       style:
-                          const TextStyle(color: Colors.white60, fontSize: 13)),
+                          GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
                 ],
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _DrawerItem(
                 icon: Icons.dashboard_outlined,
                 label: 'Dashboard',
@@ -221,13 +221,13 @@ class ApplicationsMobile extends StatelessWidget {
                   context.go(AppRoutes.profile);
                 }),
             const Spacer(),
-            const Divider(),
+            Divider(),
             _DrawerItem(
                 icon: Icons.logout,
                 label: 'Log Out',
                 color: AppColors.error,
                 onTap: onLogout),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
           ],
         ),
       ),
@@ -247,7 +247,7 @@ class ApplicationsMobile extends StatelessWidget {
             letterSpacing: -0.5,
           ),
         ),
-        const SizedBox(height: 4),
+        SizedBox(height: 4),
         Text(
           'ACTIVE PORTFOLIO REVIEW',
           style: GoogleFonts.plusJakartaSans(
@@ -270,17 +270,17 @@ class ApplicationsMobile extends StatelessWidget {
               label: 'ALL',
               isSelected: selectedFilter == null,
               onTap: () => onFilterChanged(null)),
-          const SizedBox(width: 8),
+          SizedBox(width: 8),
           _FilterTab(
               label: 'PENDING',
               isSelected: selectedFilter == LoanStatus.pending,
               onTap: () => onFilterChanged(LoanStatus.pending)),
-          const SizedBox(width: 8),
+          SizedBox(width: 8),
           _FilterTab(
               label: 'APPROVED',
               isSelected: selectedFilter == LoanStatus.approved,
               onTap: () => onFilterChanged(LoanStatus.approved)),
-          const SizedBox(width: 8),
+          SizedBox(width: 8),
           _FilterTab(
               label: 'REJECTED',
               isSelected: selectedFilter == LoanStatus.rejected,
@@ -303,10 +303,10 @@ class ApplicationsMobile extends StatelessWidget {
                 color: AppColors.primaryLight.withValues(alpha: 0.5),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: const Icon(Icons.description_outlined,
+              child: Icon(Icons.description_outlined,
                   color: AppColors.primary, size: 32),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             Text(
               'No applications found',
               style: GoogleFonts.plusJakartaSans(
@@ -315,7 +315,7 @@ class ApplicationsMobile extends StatelessWidget {
                 color: AppColors.textPrimary,
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               'Your history will appear here',
               style: GoogleFonts.plusJakartaSans(
@@ -380,7 +380,7 @@ class _ApplicationCard extends StatelessWidget {
                 StatusBadge(status: application.status),
               ],
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               application.loanPurpose,
               style: GoogleFonts.plusJakartaSans(
@@ -389,7 +389,7 @@ class _ApplicationCard extends StatelessWidget {
                 color: AppColors.textPrimary,
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -404,7 +404,7 @@ class _ApplicationCard extends StatelessWidget {
                         color: AppColors.textSecondary.withValues(alpha: 0.6),
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4),
                     Text(
                       Formatters.currency(application.loanAmount, countryCode),
                       style: GoogleFonts.plusJakartaSans(
@@ -426,7 +426,7 @@ class _ApplicationCard extends StatelessWidget {
                         color: AppColors.textSecondary.withValues(alpha: 0.6),
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4),
                     Text(
                       Formatters.date(application.createdAt),
                       style: GoogleFonts.plusJakartaSans(
@@ -514,7 +514,7 @@ class _DrawerItem extends StatelessWidget {
           size: 22),
       title: Text(
         label,
-        style: TextStyle(
+        style: GoogleFonts.plusJakartaSans(
           fontSize: 15,
           fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
           color:

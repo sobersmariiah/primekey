@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:primekey_loan_app/core/constants/app_strings.dart';
@@ -64,13 +65,13 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       'Loan Details',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -79,21 +80,21 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
                     _buildStepDots(2),
                   ],
                 ),
-                const SizedBox(height: 8),
-                const Text(
+                SizedBox(height: 8),
+                Text(
                   'Customize your loan to fit your needs and budget.',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
                 CustomTextField(
                   label: 'HOW MUCH DO YOU NEED? ($currencyCode)',
                   controller: _loanAmountController,
                   hint: '0.00',
-                  prefixIcon: const Icon(Icons.account_balance_wallet_outlined, size: 20),
+                  prefixIcon: Icon(Icons.account_balance_wallet_outlined, size: 20),
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   onChanged: (v) {
                     final amount = double.tryParse(v) ?? 0.0;
@@ -106,18 +107,18 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
                     return null;
                   },
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 _buildFieldLabel('LOAN PURPOSE'),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 _buildDropdown<String>(
                   value: loanState.loanPurpose,
                   hint: 'Select purpose',
                   items: AppStrings.loanPurposes,
                   onChanged: (v) => notifier.updateLoanPurpose(v!),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 _buildFieldLabel('REPAYMENT DURATION'),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 _buildDropdown<int>(
                   value: loanState.loanDuration,
                   hint: 'Select duration',
@@ -125,7 +126,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
                   itemLabelBuilder: (item) => '$item Months',
                   onChanged: (v) => notifier.updateLoanDuration(v!),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
                 if (loanState.monthlyPayment != null) _buildSummaryCard(loanState, interestRate),
               ],
             ),
@@ -157,7 +158,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
             Formatters.currency(state.monthlyPayment!, widget.countryCode),
             isHighlighted: true,
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(vertical: 16),
             child: Divider(height: 1),
           ),
@@ -165,7 +166,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
             'Interest Rate',
             '$interestRate% / year',
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           _buildSummaryRow(
             'Total Repayment',
             Formatters.currency(state.totalPayment!, widget.countryCode),
@@ -181,7 +182,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: isHighlighted ? 14 : 13,
             fontWeight: isHighlighted ? FontWeight.w600 : FontWeight.w500,
             color: isHighlighted ? AppColors.textPrimary : AppColors.textSecondary,
@@ -189,7 +190,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
         ),
         Text(
           value,
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: isHighlighted ? 18 : 14,
             fontWeight: isHighlighted ? FontWeight.w800 : FontWeight.w600,
             color: isHighlighted ? AppColors.primary : AppColors.textPrimary,
@@ -202,7 +203,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label,
-      style: const TextStyle(
+      style: GoogleFonts.plusJakartaSans(
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,

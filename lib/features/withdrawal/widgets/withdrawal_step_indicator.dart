@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/app_colors.dart';
 
 class WithdrawalStepIndicator extends StatelessWidget {
@@ -39,11 +40,11 @@ class WithdrawalStepIndicator extends StatelessWidget {
                           ),
                           child: Center(
                             child: isComplete
-                                ? const Icon(Icons.check,
+                                ? Icon(Icons.check,
                                     color: Colors.white, size: 16)
                                 : Text(
                                     '${i + 1}',
-                                    style: TextStyle(
+                                    style: GoogleFonts.plusJakartaSans(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w700,
                                       color: isActive
@@ -53,10 +54,10 @@ class WithdrawalStepIndicator extends StatelessWidget {
                                   ),
                           ),
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: 6),
                         Text(
                           steps[i].toUpperCase(),
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 9,
                             fontWeight: FontWeight.w700,
                             color: isActive || isComplete
@@ -66,9 +67,9 @@ class WithdrawalStepIndicator extends StatelessWidget {
                           ),
                         ),
                         if (isComplete)
-                          const Text(
+                          Text(
                             'Verified',
-                            style: TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               fontSize: 9,
                               color: Color(0xFF16A34A),
                             ),
@@ -90,21 +91,21 @@ class WithdrawalStepIndicator extends StatelessWidget {
               );
             }),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           Text(
             'STEP ${currentStep + 1}: ${[
               'UPLOAD AGREEMENT',
               'BANK VERIFICATION',
               'CONFIRM WITHDRAWAL'
             ][currentStep]}',
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
               fontSize: 10,
               fontWeight: FontWeight.w700,
               color: AppColors.textSecondary,
               letterSpacing: 1.2,
             ),
           ),
-          const SizedBox(height: 6),
+          SizedBox(height: 6),
           ClipRRect(
             borderRadius: BorderRadius.circular(4),
             child: LinearProgressIndicator(

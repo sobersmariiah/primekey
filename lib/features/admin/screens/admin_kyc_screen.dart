@@ -1,4 +1,5 @@
 import 'package:primekey_loan_app/core/utils/email_service.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -67,16 +68,16 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
       context: context,
       barrierDismissible: !_isDeclining,
       builder: (context) => AlertDialog(
-        title: const Text('Decline KYC'),
+        title: Text('Decline KYC'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Please provide a reason for declining this KYC submission. This will help the user correct their documents.',
-              style: TextStyle(fontSize: 14, color: AppColors.textSecondary),
+              style: GoogleFonts.plusJakartaSans(fontSize: 14, color: AppColors.textSecondary),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             TextField(
               controller: _kycRejectionReasonController,
               maxLines: 3,
@@ -93,7 +94,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text('Cancel'),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -134,7 +135,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
               backgroundColor: AppColors.error,
               foregroundColor: Colors.white,
             ),
-            child: const Text('Decline'),
+            child: Text('Decline'),
           ),
         ],
       ),
@@ -161,15 +162,15 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
         foregroundColor: AppColors.textPrimary,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back),
           onPressed: () => context.go(AppRoutes.admin),
         ),
-        title: const Column(
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'KYC Approval',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
@@ -177,7 +178,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
             ),
             Text(
               'PRIMEKEY Finance Admin',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 11,
                 fontWeight: FontWeight.w400,
                 color: AppColors.textSecondary,
@@ -187,7 +188,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.more_vert),
+            icon: Icon(Icons.more_vert),
             onPressed: () {},
           ),
         ],
@@ -201,16 +202,16 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // USER INFORMATION label
-                  const Text(
+                  Text(
                     'USER INFORMATION',
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 11,
                       fontWeight: FontWeight.w700,
                       color: AppColors.textSecondary,
                       letterSpacing: 1.2,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
 
                   // Name card
                   Container(
@@ -237,7 +238,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                       user.fullName.isNotEmpty
                                           ? user.fullName[0].toUpperCase()
                                           : '?',
-                                      style: const TextStyle(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 22,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.primary,
@@ -245,22 +246,22 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                     )
                                   : null,
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               user.fullName,
-                              style: const TextStyle(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w700,
                                 color: AppColors.textPrimary,
                               ),
                             ),
-                            const SizedBox(height: 2),
-                            const Text(
+                            SizedBox(height: 2),
+                            Text(
                               'Full Name',
-                              style: TextStyle(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 12,
                                 color: AppColors.textSecondary,
                               ),
@@ -271,7 +272,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     ),
                   ),
 
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
 
                   // KYC ID + Submitted date row
                   Row(
@@ -284,7 +285,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                           label: 'Application ID',
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: 12),
                       Expanded(
                         child: _InfoCard(
                           icon: Icons.calendar_today_outlined,
@@ -295,20 +296,20 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     ],
                   ),
 
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24),
 
                   if (user.kycRejectionReason != null &&
                       user.kycRejectionReason!.isNotEmpty) ...[
-                    const Text(
+                    Text(
                       'PREVIOUS REJECTION REASON',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         color: AppColors.error,
                         letterSpacing: 1.2,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(16),
@@ -320,23 +321,23 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                       ),
                       child: Text(
                         user.kycRejectionReason!,
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 14,
                           color: AppColors.error,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
                   ],
 
                   // DOCUMENT PREVIEW label + doc type badge
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         'DOCUMENT PREVIEW',
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.textSecondary,
@@ -358,7 +359,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                         ),
                         child: Text(
                           user.verificationStatus.name.toUpperCase(),
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 12,
                             fontWeight: FontWeight.w700,
                             color: user.verificationStatus ==
@@ -385,7 +386,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                 : _selectedDocIndex == 1
                                     ? 'SELFIE'
                                     : 'PASSPORT',
-                            style: const TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
                               color: AppColors.primary,
@@ -396,7 +397,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     ],
                   ),
 
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
 
                   // Document image
                   GestureDetector(
@@ -430,10 +431,10 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                               fit: BoxFit.cover,
                               loadingBuilder: (context, child, progress) {
                                 if (progress == null) return child;
-                                return const Center(
+                                return Center(
                                     child: CircularProgressIndicator());
                               },
-                              errorBuilder: (_, __, ___) => const Center(
+                              errorBuilder: (_, __, ___) => Center(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -442,13 +443,13 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                         color: AppColors.textSecondary),
                                     SizedBox(height: 8),
                                     Text('Failed to load document',
-                                        style: TextStyle(
+                                        style: GoogleFonts.plusJakartaSans(
                                             color: AppColors.textSecondary)),
                                   ],
                                 ),
                               ),
                             )
-                          : const Center(
+                          : Center(
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
@@ -456,7 +457,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                       size: 48, color: AppColors.textSecondary),
                                   SizedBox(height: 8),
                                   Text('No document uploaded',
-                                      style: TextStyle(
+                                      style: GoogleFonts.plusJakartaSans(
                                           color: AppColors.textSecondary)),
                                 ],
                               ),
@@ -466,7 +467,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
 
                   // Doc switcher if multiple docs
                   if (docUrls.length > 1) ...[
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(docUrls.length, (i) {
@@ -489,7 +490,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     ),
                   ],
 
-                  const SizedBox(height: 100),
+                  SizedBox(height: 100),
 
                   // space for bottom buttons
                 ],
@@ -517,7 +518,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     ? null
                     : () => _showKycRejectionDialog(context, user),
                 icon: _isDeclining
-                    ? const SizedBox(
+                    ? SizedBox(
                         width: 18,
                         height: 18,
                         child: CircularProgressIndicator(
@@ -526,10 +527,10 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                               AlwaysStoppedAnimation<Color>(AppColors.error),
                         ),
                       )
-                    : const Icon(Icons.close, size: 18, color: AppColors.error),
+                    : Icon(Icons.close, size: 18, color: AppColors.error),
                 label: Text(
                   _isDeclining ? 'Declining...' : 'Decline',
-                  style: const TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontWeight: FontWeight.w600,
                     color: AppColors.error,
                   ),
@@ -543,7 +544,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                 ),
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             // Approve button
             Expanded(
               flex: 2,
@@ -571,7 +572,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                           }
                         : null,
                 icon: _isApproving
-                    ? const SizedBox(
+                    ? SizedBox(
                         width: 18,
                         height: 18,
                         child: CircularProgressIndicator(
@@ -580,10 +581,10 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                               AlwaysStoppedAnimation<Color>(Colors.white),
                         ),
                       )
-                    : const Icon(Icons.check_circle_outline, size: 18),
+                    : Icon(Icons.check_circle_outline, size: 18),
                 label: Text(
                   _isApproving ? 'Approving...' : 'Approve KYC',
-                  style: const TextStyle(fontWeight: FontWeight.w600),
+                  style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor:
@@ -649,19 +650,19 @@ class _InfoCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(icon, color: AppColors.primary, size: 22),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Text(
             value,
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: AppColors.textPrimary,
             ),
           ),
-          const SizedBox(height: 2),
+          SizedBox(height: 2),
           Text(
             label,
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
               fontSize: 11,
               color: AppColors.textSecondary,
             ),

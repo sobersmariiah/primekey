@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../core/constants/app_colors.dart';
 
 class LoadingOverlay extends StatelessWidget {
@@ -19,7 +20,7 @@ class LoadingOverlay extends StatelessWidget {
         if (isLoading)
           Container(
             color: Colors.black.withValues(alpha: 0.4),
-            child: const Center(
+            child: Center(
               child: Card(
                 child: Padding(
                   padding: EdgeInsets.all(24),
@@ -32,7 +33,7 @@ class LoadingOverlay extends StatelessWidget {
                       SizedBox(height: 16),
                       Text(
                         'Please wait...',
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 14,
                           color: AppColors.textSecondary,
                         ),

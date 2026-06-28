@@ -98,7 +98,7 @@ class _DesktopProfileView extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             _buildHeader(context),
-                            const SizedBox(height: 48),
+                            SizedBox(height: 48),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -108,21 +108,21 @@ class _DesktopProfileView extends StatelessWidget {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       _buildPersonalInfoSection(context),
-                                      const SizedBox(height: 32),
+                                      SizedBox(height: 32),
                                       _buildKYCManagementSection(context),
                                     ],
                                   ),
                                 ),
-                                const SizedBox(width: 40),
+                                SizedBox(width: 40),
                                 Expanded(
                                   flex: 2,
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       _buildBankAccountsSection(context),
-                                      const SizedBox(height: 32),
+                                      SizedBox(height: 32),
                                       _buildSupportSection(context),
-                                      const SizedBox(height: 48),
+                                      SizedBox(height: 48),
                                       _buildLogoutAction(context),
                                     ],
                                   ),
@@ -204,14 +204,14 @@ class _DesktopProfileView extends StatelessWidget {
           onTap: () => context.go(AppRoutes.profile),
         ),
         const Spacer(),
-        const Divider(),
+        Divider(),
         _SidebarItem(
           icon: Icons.logout,
           label: 'Log Out',
           color: AppColors.error,
           onTap: onLogout,
         ),
-        const SizedBox(height: 32),
+        SizedBox(height: 32),
       ],
     );
   }
@@ -229,11 +229,11 @@ class _DesktopProfileView extends StatelessWidget {
           // Builder(
           //   builder: (context) => IconButton(
           //     icon:
-          //         const Icon(Icons.menu_rounded, color: AppColors.textPrimary),
+          //         Icon(Icons.menu_rounded, color: AppColors.textPrimary),
           //     onPressed: () => Scaffold.of(context).openDrawer(),
           //   ),
           // ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Text(
             'Profile Settings',
             style: GoogleFonts.plusJakartaSans(
@@ -243,12 +243,12 @@ class _DesktopProfileView extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          const Icon(Icons.notifications_none_rounded,
+          Icon(Icons.notifications_none_rounded,
               color: AppColors.textSecondary, size: 24),
-          const SizedBox(width: 20),
-          const Icon(Icons.help_outline_rounded,
+          SizedBox(width: 20),
+          Icon(Icons.help_outline_rounded,
               color: AppColors.textSecondary, size: 24),
-          const SizedBox(width: 20),
+          SizedBox(width: 20),
           CircleAvatar(
             radius: 18,
             backgroundColor: AppColors.primaryLight,
@@ -261,7 +261,7 @@ class _DesktopProfileView extends StatelessWidget {
                     user.fullName.isNotEmpty
                         ? user.fullName[0].toUpperCase()
                         : '?',
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         fontSize: 14,
                         color: AppColors.primary,
                         fontWeight: FontWeight.bold))
@@ -290,7 +290,7 @@ class _DesktopProfileView extends StatelessWidget {
                 ),
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8),
               Row(
                 children: [
                   Flexible(
@@ -304,7 +304,7 @@ class _DesktopProfileView extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: 16),
                   Container(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -319,7 +319,7 @@ class _DesktopProfileView extends StatelessWidget {
                         Icon(Icons.check_circle,
                             size: 16,
                             color: _kycStatusColor(user.verificationStatus)),
-                        const SizedBox(width: 8),
+                        SizedBox(width: 8),
                         Text(
                           'KYC ${user.verificationStatus.name.toUpperCase()}',
                           style: GoogleFonts.plusJakartaSans(
@@ -336,13 +336,13 @@ class _DesktopProfileView extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: 24),
+        SizedBox(width: 24),
         Consumer(
           builder: (context, ref, _) => SizedBox(
             width: 160,
             child: ElevatedButton.icon(
               onPressed: () => _showEditProfileSheet(context, ref, user),
-              icon: const Icon(Icons.edit_outlined, size: 18),
+              icon: Icon(Icons.edit_outlined, size: 18),
               label: Text('Edit Profile',
                   style:
                       GoogleFonts.plusJakartaSans(fontWeight: FontWeight.w800)),
@@ -390,11 +390,11 @@ class _DesktopProfileView extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(Icons.keyboard_arrow_down_rounded,
+              Icon(Icons.keyboard_arrow_down_rounded,
                   color: AppColors.textSecondary, size: 24),
             ],
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Row(
             children: [
               Expanded(
@@ -404,7 +404,7 @@ class _DesktopProfileView extends StatelessWidget {
                       'DATE JOINED', Formatters.date(user.createdAt))),
             ],
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           Row(
             children: [
               Expanded(
@@ -413,9 +413,9 @@ class _DesktopProfileView extends StatelessWidget {
               Expanded(child: _buildSharedDataField('ID NUMBER', 'Not set')),
             ],
           ),
-          const SizedBox(height: 40),
-          const Divider(color: AppColors.border, height: 1),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
+          Divider(color: AppColors.border, height: 1),
+          SizedBox(height: 40),
           Text(
             'CONTACT DETAILS',
             style: GoogleFonts.plusJakartaSans(
@@ -425,7 +425,7 @@ class _DesktopProfileView extends StatelessWidget {
               letterSpacing: 1.5,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           Row(
             children: [
               Expanded(
@@ -461,7 +461,7 @@ class _DesktopProfileView extends StatelessWidget {
               letterSpacing: 1.5,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
@@ -476,10 +476,10 @@ class _DesktopProfileView extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: AppColors.primaryLight,
                       borderRadius: BorderRadius.circular(12)),
-                  child: const Icon(Icons.badge_outlined,
+                  child: Icon(Icons.badge_outlined,
                       color: AppColors.primary, size: 24),
                 ),
-                const SizedBox(width: 20),
+                SizedBox(width: 20),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -489,7 +489,7 @@ class _DesktopProfileView extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary)),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       Text(
                         user.verificationStatus == VerificationStatus.verified
                             ? 'Verified on ${Formatters.date(user.createdAt)}'
@@ -573,9 +573,9 @@ class _DesktopProfileView extends StatelessWidget {
                         _showAddBankAccountSheet(context, ref, user);
                       }
                     },
-                    icon: const Icon(Icons.add, size: 16),
-                    label: const Text('LINK NEW',
-                        style: TextStyle(
+                    icon: Icon(Icons.add, size: 16),
+                    label: Text('LINK NEW',
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 10, fontWeight: FontWeight.w900)),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primaryLight,
@@ -591,7 +591,7 @@ class _DesktopProfileView extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           if (user.bankAccounts.isEmpty)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 40),
@@ -629,10 +629,10 @@ class _DesktopProfileView extends StatelessWidget {
                   color: AppColors.white,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: AppColors.border)),
-              child: const Icon(Icons.account_balance_rounded,
+              child: Icon(Icons.account_balance_rounded,
                   color: AppColors.primary, size: 20),
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -643,7 +643,7 @@ class _DesktopProfileView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary),
                       overflow: TextOverflow.ellipsis),
-                  const SizedBox(height: 2),
+                  SizedBox(height: 2),
                   Text(
                     '**** ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber} • ${account.accountName}',
                     style: GoogleFonts.plusJakartaSans(
@@ -655,13 +655,13 @@ class _DesktopProfileView extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             _buildStatusBadge(account.verificationStatus),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             IconButton(
               onPressed: () =>
                   _showDeleteBankAccountDialog(context, ref, user, account),
-              icon: const Icon(Icons.delete_outline,
+              icon: Icon(Icons.delete_outline,
                   color: AppColors.error, size: 20),
               tooltip: 'Delete Account',
             ),
@@ -721,7 +721,7 @@ class _DesktopProfileView extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Text(
             'Our dedicated support team is available 24/7 for premium account holders.',
             style: GoogleFonts.plusJakartaSans(
@@ -730,7 +730,7 @@ class _DesktopProfileView extends StatelessWidget {
               height: 1.6,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -757,7 +757,7 @@ class _DesktopProfileView extends StatelessWidget {
     return Center(
       child: TextButton.icon(
         onPressed: onLogout,
-        icon: const Icon(Icons.logout, color: AppColors.error, size: 22),
+        icon: Icon(Icons.logout, color: AppColors.error, size: 22),
         label: Text(
           'SECURE LOG OUT',
           style: GoogleFonts.plusJakartaSans(
@@ -822,30 +822,30 @@ class _MobileProfileView extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24),
                       _sectionLabel('PERSONAL INFORMATION'),
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10),
                       _buildPersonalInfoCard(context),
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24),
                       _sectionLabel('CONTACT DETAILS'),
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10),
                       _buildContactCard(context),
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24),
                       _buildLinkedAccountsHeader(context, ref),
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10),
                       if (user.bankAccounts.isNotEmpty)
                         _buildBankAccountsCard(context),
-                      const SizedBox(height: 32),
+                      SizedBox(height: 32),
                       _buildLogoutButton(context),
-                      const SizedBox(height: 20),
-                      const Center(
+                      SizedBox(height: 20),
+                      Center(
                         child: Text(
                           '${AppStrings.appName} — Secured with 256-bit encryption',
                           style:
-                              TextStyle(fontSize: 11, color: Color(0xFFCBD5E1)),
+                              GoogleFonts.plusJakartaSans(fontSize: 11, color: Color(0xFFCBD5E1)),
                         ),
                       ),
-                      const SizedBox(height: 32),
+                      SizedBox(height: 32),
                     ],
                   ),
                 ),
@@ -880,7 +880,7 @@ class _MobileProfileView extends StatelessWidget {
                         user.fullName.isNotEmpty
                             ? user.fullName[0].toUpperCase()
                             : '?',
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 26,
                             fontWeight: FontWeight.w700,
                             color: Colors.white),
@@ -912,13 +912,13 @@ class _MobileProfileView extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: _kycStatusColor(user.verificationStatus),
                             shape: BoxShape.circle),
-                        child: const Icon(Icons.check,
+                        child: Icon(Icons.check,
                             size: 9, color: Colors.white),
                       ),
-                      const SizedBox(width: 5),
+                      SizedBox(width: 5),
                       Text(
                         'KYC ${user.verificationStatus.name.toUpperCase()}',
-                        style: const TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                             fontSize: 10,
                             fontWeight: FontWeight.w700,
                             color: AppColors.primaryDark,
@@ -930,31 +930,31 @@ class _MobileProfileView extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           Text(user.fullName,
-              style: const TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                   color: AppColors.primaryDark)),
-          const SizedBox(height: 4),
+          SizedBox(height: 4),
           Text(user.email,
-              style: const TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                   fontSize: 13, color: AppColors.textSecondary)),
-          const SizedBox(height: 18),
+          SizedBox(height: 18),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton.icon(
               onPressed: () => _showEditProfileSheet(context, ref, user),
-              icon: const Icon(Icons.edit_outlined,
+              icon: Icon(Icons.edit_outlined,
                   size: 16, color: Colors.white),
-              label: const Text('Edit Profile'),
+              label: Text('Edit Profile'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primaryDark,
                 foregroundColor: Colors.white,
                 elevation: 0,
                 padding: const EdgeInsets.symmetric(vertical: 14),
                 textStyle:
-                    const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                    GoogleFonts.plusJakartaSans(fontSize: 15, fontWeight: FontWeight.w600),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
               ),
@@ -987,7 +987,7 @@ class _MobileProfileView extends StatelessWidget {
               ],
             ),
           ),
-          const Divider(height: 0.5, color: AppColors.border),
+          Divider(height: 0.5, color: AppColors.border),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: Row(
@@ -997,7 +997,7 @@ class _MobileProfileView extends StatelessWidget {
               ],
             ),
           ),
-          const Divider(height: 0.5, color: AppColors.border),
+          Divider(height: 0.5, color: AppColors.border),
           InkWell(
             borderRadius:
                 const BorderRadius.vertical(bottom: Radius.circular(16)),
@@ -1022,16 +1022,16 @@ class _MobileProfileView extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: AppColors.primaryLight,
                         borderRadius: BorderRadius.circular(8)),
-                    child: const Icon(Icons.shield_outlined,
+                    child: Icon(Icons.shield_outlined,
                         color: AppColors.primary, size: 16),
                   ),
-                  const SizedBox(width: 12),
+                  SizedBox(width: 12),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('KYC Status',
-                            style: TextStyle(
+                        Text('KYC Status',
+                            style: GoogleFonts.plusJakartaSans(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
                                 color: AppColors.primaryDark)),
@@ -1044,7 +1044,7 @@ class _MobileProfileView extends StatelessWidget {
                                   : user.kycRejectionReason != null
                                       ? 'Declined: ${user.kycRejectionReason}'
                                       : 'Not verified — tap to start KYC',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 11,
                               fontWeight: FontWeight.w600,
                               color: user.kycRejectionReason != null
@@ -1054,7 +1054,7 @@ class _MobileProfileView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Icon(Icons.chevron_right,
+                  Icon(Icons.chevron_right,
                       color: AppColors.textSecondary, size: 18),
                 ],
               ),
@@ -1081,22 +1081,22 @@ class _MobileProfileView extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(Icons.phone_android_outlined,
+                Icon(Icons.phone_android_outlined,
                     size: 16, color: AppColors.textSecondary),
-                const SizedBox(width: 10),
+                SizedBox(width: 10),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('MOBILE NUMBER',
-                          style: TextStyle(
+                      Text('MOBILE NUMBER',
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 10,
                               fontWeight: FontWeight.w700,
                               color: AppColors.textHint,
                               letterSpacing: 0.8)),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       Text(user.phone.isEmpty ? 'Not set' : user.phone,
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: AppColors.primaryDark)),
@@ -1106,28 +1106,28 @@ class _MobileProfileView extends StatelessWidget {
               ],
             ),
           ),
-          const Divider(height: 0.5, color: AppColors.border),
+          Divider(height: 0.5, color: AppColors.border),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(Icons.location_on_outlined,
+                Icon(Icons.location_on_outlined,
                     size: 16, color: AppColors.textSecondary),
-                const SizedBox(width: 10),
+                SizedBox(width: 10),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('RESIDENTIAL ADDRESS',
-                          style: TextStyle(
+                      Text('RESIDENTIAL ADDRESS',
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 10,
                               fontWeight: FontWeight.w700,
                               color: AppColors.textHint,
                               letterSpacing: 0.8)),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       Text(address.isEmpty ? 'Not set' : address,
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: AppColors.primaryDark,
@@ -1167,7 +1167,7 @@ class _MobileProfileView extends StatelessWidget {
             decoration: BoxDecoration(
                 color: AppColors.primaryDark,
                 borderRadius: BorderRadius.circular(8)),
-            child: const Icon(Icons.add, color: Colors.white, size: 18),
+            child: Icon(Icons.add, color: Colors.white, size: 18),
           ),
         ),
       ],
@@ -1197,34 +1197,34 @@ class _MobileProfileView extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: AppColors.background,
                           borderRadius: BorderRadius.circular(10)),
-                      child: const Icon(Icons.account_balance_outlined,
+                      child: Icon(Icons.account_balance_outlined,
                           color: AppColors.primaryDark, size: 18),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(account.bankName,
-                              style: const TextStyle(
+                              style: GoogleFonts.plusJakartaSans(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                   color: AppColors.primaryDark)),
                           Text(
                               '**** ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber}',
-                              style: const TextStyle(
+                              style: GoogleFonts.plusJakartaSans(
                                   fontSize: 12,
                                   color: AppColors.textSecondary)),
                         ],
                       ),
                     ),
                     _mobileBankStatusBadge(account.verificationStatus),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8),
                     Consumer(
                       builder: (context, ref, _) => IconButton(
                         onPressed: () => _showDeleteBankAccountDialog(
                             context, ref, user, account),
-                        icon: const Icon(Icons.delete_outline,
+                        icon: Icon(Icons.delete_outline,
                             color: AppColors.error, size: 20),
                         padding: EdgeInsets.zero,
                         constraints: const BoxConstraints(),
@@ -1234,7 +1234,7 @@ class _MobileProfileView extends StatelessWidget {
                 ),
               ),
               if (!isLast)
-                const Divider(
+                Divider(
                     height: 0.5,
                     color: AppColors.border,
                     indent: 20,
@@ -1256,9 +1256,9 @@ class _MobileProfileView extends StatelessWidget {
       child: TextButton.icon(
         onPressed: onLogout,
         icon:
-            const Icon(Icons.logout_outlined, color: AppColors.error, size: 18),
-        label: const Text(' Log Out',
-            style: TextStyle(
+            Icon(Icons.logout_outlined, color: AppColors.error, size: 18),
+        label: Text(' Log Out',
+            style: GoogleFonts.plusJakartaSans(
                 color: AppColors.error,
                 fontWeight: FontWeight.w600,
                 fontSize: 15)),
@@ -1270,7 +1270,7 @@ class _MobileProfileView extends StatelessWidget {
 
   Widget _sectionLabel(String text) {
     return Text(text,
-        style: const TextStyle(
+        style: GoogleFonts.plusJakartaSans(
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textHint,
@@ -1282,14 +1282,14 @@ class _MobileProfileView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(label,
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 10,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textHint,
                 letterSpacing: 0.8)),
-        const SizedBox(height: 4),
+        SizedBox(height: 4),
         Text(value.isEmpty ? '—' : value,
-            style: const TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
                 color: AppColors.primaryDark),
@@ -1324,7 +1324,7 @@ class _MobileProfileView extends StatelessWidget {
         decoration:
             BoxDecoration(color: bg, borderRadius: BorderRadius.circular(6)),
         child: Text(label,
-            style: TextStyle(
+            style: GoogleFonts.plusJakartaSans(
                 fontSize: 10,
                 fontWeight: FontWeight.w700,
                 color: fg,
@@ -1386,7 +1386,7 @@ class _SidebarItem extends StatelessWidget {
                   color: color ??
                       (isActive ? AppColors.primary : AppColors.textSecondary),
                   size: 20),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Expanded(
                 child: Text(
                   label,
@@ -1431,7 +1431,7 @@ class _DrawerItem extends StatelessWidget {
               color ?? (isActive ? AppColors.primary : AppColors.textPrimary),
           size: 22),
       title: Text(label,
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
               fontSize: 15,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
               color: color ??
@@ -1466,26 +1466,26 @@ Widget _buildSharedDrawer(
                           user.fullName.isNotEmpty
                               ? user.fullName[0].toUpperCase()
                               : '?',
-                          style: const TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary),
                         )
                       : null,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 Text(user.fullName,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user.email,
                     style:
-                        const TextStyle(color: Colors.white60, fontSize: 13)),
+                        GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
               ],
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           _DrawerItem(
               icon: Icons.dashboard_outlined,
               label: 'Dashboard',
@@ -1529,13 +1529,13 @@ Widget _buildSharedDrawer(
                 Navigator.pop(context);
               }),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _DrawerItem(
               icon: Icons.logout,
               label: 'Log Out',
               color: AppColors.error,
               onTap: onLogout),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
         ],
       ),
     ),
@@ -1555,7 +1555,7 @@ Widget _buildSharedDataField(String label, String value) {
           letterSpacing: 1.2,
         ),
       ),
-      const SizedBox(height: 10),
+      SizedBox(height: 10),
       Text(
         value,
         style: GoogleFonts.plusJakartaSans(
@@ -1614,7 +1614,7 @@ void _showEditProfileSheet(
                         ),
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
                     Text(
                       'Edit Profile',
                       style: GoogleFonts.plusJakartaSans(
@@ -1623,7 +1623,7 @@ void _showEditProfileSheet(
                         color: AppColors.primaryDark,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8),
                     Text(
                       'Update your personal information below.',
                       style: GoogleFonts.plusJakartaSans(
@@ -1631,12 +1631,12 @@ void _showEditProfileSheet(
                         color: AppColors.textSecondary,
                       ),
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32),
                     CustomTextField(
                       label: 'Full Name',
                       hint: 'Enter your full name',
                       controller: nameController,
-                      prefixIcon: const Icon(Icons.person_outline),
+                      prefixIcon: Icon(Icons.person_outline),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Name is required';
@@ -1644,13 +1644,13 @@ void _showEditProfileSheet(
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     CustomTextField(
                       label: 'Phone Number',
                       hint: 'Enter phone number',
                       controller: phoneController,
                       keyboardType: TextInputType.phone,
-                      prefixIcon: const Icon(Icons.phone_outlined),
+                      prefixIcon: Icon(Icons.phone_outlined),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Phone is required';
@@ -1658,12 +1658,12 @@ void _showEditProfileSheet(
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     CustomTextField(
                       label: 'Street Address',
                       hint: 'Enter street address',
                       controller: addressController,
-                      prefixIcon: const Icon(Icons.location_on_outlined),
+                      prefixIcon: Icon(Icons.location_on_outlined),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Address is required';
@@ -1671,7 +1671,7 @@ void _showEditProfileSheet(
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     Row(
                       children: [
                         Expanded(
@@ -1687,7 +1687,7 @@ void _showEditProfileSheet(
                             },
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16),
                         Expanded(
                           child: CustomTextField(
                             label: 'State',
@@ -1703,7 +1703,7 @@ void _showEditProfileSheet(
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     CustomTextField(
                       label: 'Postal Code',
                       hint: 'Enter postal code',
@@ -1716,7 +1716,7 @@ void _showEditProfileSheet(
                         return null;
                       },
                     ),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -1797,7 +1797,7 @@ void _showEditProfileSheet(
                           elevation: 0,
                         ),
                         child: isLoading
-                            ? const SizedBox(
+                            ? SizedBox(
                                 height: 24,
                                 width: 24,
                                 child: CircularProgressIndicator(
@@ -1888,7 +1888,7 @@ void _showDeleteBankAccountDialog(
                       }
                     },
               child: isDeleting
-                  ? const SizedBox(
+                  ? SizedBox(
                       width: 20,
                       height: 20,
                       child: CircularProgressIndicator(
@@ -1950,7 +1950,7 @@ void _showAddBankAccountSheet(
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24),
                   Text(
                     'Add Bank Account',
                     style: GoogleFonts.plusJakartaSans(
@@ -1959,7 +1959,7 @@ void _showAddBankAccountSheet(
                       color: AppColors.primaryDark,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Text(
                     'Link your account to receive disbursements.',
                     style: GoogleFonts.plusJakartaSans(
@@ -1967,7 +1967,7 @@ void _showAddBankAccountSheet(
                       color: AppColors.textSecondary,
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32),
                   Text(
                     'Bank Name',
                     style: GoogleFonts.plusJakartaSans(
@@ -1976,7 +1976,7 @@ void _showAddBankAccountSheet(
                       color: AppColors.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   DropdownButtonFormField<String>(
                     initialValue: selectedBank.isEmpty ? null : selectedBank,
                     style: GoogleFonts.plusJakartaSans(
@@ -2014,13 +2014,13 @@ void _showAddBankAccountSheet(
                     validator: (value) =>
                         value == null ? 'Please select a bank' : null,
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   CustomTextField(
                     label: 'Account Number',
                     hint: 'Enter account number',
                     controller: accountNumberController,
                     keyboardType: TextInputType.number,
-                    prefixIcon: const Icon(Icons.credit_card_outlined),
+                    prefixIcon: Icon(Icons.credit_card_outlined),
                     enabled: !isSubmitting,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -2029,12 +2029,12 @@ void _showAddBankAccountSheet(
                       return null;
                     },
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   CustomTextField(
                     label: 'Account Name',
                     hint: 'Enter account name',
                     controller: accountNameController,
-                    prefixIcon: const Icon(Icons.person_outlined),
+                    prefixIcon: Icon(Icons.person_outlined),
                     enabled: !isSubmitting,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -2043,7 +2043,7 @@ void _showAddBankAccountSheet(
                       return null;
                     },
                   ),
-                  const SizedBox(height: 40),
+                  SizedBox(height: 40),
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -2105,7 +2105,7 @@ void _showAddBankAccountSheet(
                         elevation: 0,
                       ),
                       child: isSubmitting
-                          ? const SizedBox(
+                          ? SizedBox(
                               height: 20,
                               width: 20,
                               child: CircularProgressIndicator(

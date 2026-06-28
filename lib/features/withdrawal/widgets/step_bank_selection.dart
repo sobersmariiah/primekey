@@ -23,35 +23,35 @@ class StepBankSelection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 8),
-        const Text(
+        SizedBox(height: 8),
+        Text(
           'Select bank account',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 26,
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),
         ),
-        const SizedBox(height: 8),
-        const Text(
+        SizedBox(height: 8),
+        Text(
           'Select a linked account or connect a new one to complete your withdrawal security check.',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 14,
             color: AppColors.textSecondary,
             height: 1.6,
           ),
         ),
-        const SizedBox(height: 24),
-        const Text(
+        SizedBox(height: 24),
+        Text(
           'LINKED ACCOUNTS',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 10,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
             letterSpacing: 1.2,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         if (state.selectedAccount != null &&
             state.selectedAccount!.verificationStatus !=
                 BankVerificationStatus.verified)
@@ -62,7 +62,7 @@ class StepBankSelection extends ConsumerWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: const Color(0xFFFECACA)),
             ),
-            child: const Row(
+            child: Row(
               children: [
                 Icon(Icons.warning_amber_outlined,
                     color: Color(0xFFB91C1C), size: 16),
@@ -70,7 +70,7 @@ class StepBankSelection extends ConsumerWidget {
                 Expanded(
                   child: Text(
                     'The selected account is pending verification. Withdrawals to this account may be delayed until verification is complete.',
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 12,
                       color: Color(0xFFB91C1C),
                       height: 1.4,
@@ -80,7 +80,7 @@ class StepBankSelection extends ConsumerWidget {
               ],
             ),
           ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         Container(
           decoration: BoxDecoration(
             color: Colors.white,
@@ -113,17 +113,17 @@ class StepBankSelection extends ConsumerWidget {
                                 color: const Color(0xFFF1F5F9),
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: const Icon(Icons.account_balance_outlined,
+                              child: Icon(Icons.account_balance_outlined,
                                   color: AppColors.primary, size: 20),
                             ),
-                            const SizedBox(width: 12),
+                            SizedBox(width: 12),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     account.bankName,
-                                    style: const TextStyle(
+                                    style: GoogleFonts.plusJakartaSans(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
                                       color: AppColors.primary,
@@ -131,7 +131,7 @@ class StepBankSelection extends ConsumerWidget {
                                   ),
                                   Text(
                                     '•••• ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber}',
-                                    style: const TextStyle(
+                                    style: GoogleFonts.plusJakartaSans(
                                       fontSize: 12,
                                       color: AppColors.textSecondary,
                                     ),
@@ -145,12 +145,12 @@ class StepBankSelection extends ConsumerWidget {
                                       color: const Color(0xFFDCFCE7),
                                       borderRadius: BorderRadius.circular(3),
                                     ),
-                                    child: const Padding(
+                                    child: Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 11, vertical: 2),
                                       child: Text(
                                         'VERIFIED',
-                                        style: TextStyle(
+                                        style: GoogleFonts.plusJakartaSans(
                                           fontSize: 10,
                                           fontWeight: FontWeight.w700,
                                           color: AppColors.success,
@@ -163,11 +163,11 @@ class StepBankSelection extends ConsumerWidget {
                                       color: AppColors.errorLight,
                                       borderRadius: BorderRadius.circular(3),
                                     ),
-                                    child: const Padding(
+                                    child: Padding(
                                       padding: EdgeInsets.all(2.0),
                                       child: Text(
                                         'UNVERIFIED',
-                                        style: TextStyle(
+                                        style: GoogleFonts.plusJakartaSans(
                                           fontSize: 10,
                                           fontWeight: FontWeight.w700,
                                           color: AppColors.error,
@@ -175,7 +175,7 @@ class StepBankSelection extends ConsumerWidget {
                                       ),
                                     ),
                                   ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: 8),
                             if (isSelected)
                               Container(
                                 width: 24,
@@ -184,7 +184,7 @@ class StepBankSelection extends ConsumerWidget {
                                   color: AppColors.primary,
                                   shape: BoxShape.circle,
                                 ),
-                                child: const Icon(Icons.check,
+                                child: Icon(Icons.check,
                                     color: Colors.white, size: 14),
                               )
                             else
@@ -202,11 +202,11 @@ class StepBankSelection extends ConsumerWidget {
                       ),
                     ),
                     if (!isLast)
-                      const Divider(height: 0.5, color: Color(0xFFF1F5F9)),
+                      Divider(height: 0.5, color: Color(0xFFF1F5F9)),
                   ],
                 );
               }),
-              const Divider(height: 0.5, color: Color(0xFFF1F5F9)),
+              Divider(height: 0.5, color: Color(0xFFF1F5F9)),
               InkWell(
                 onTap: () {
                   if (currentUser!.bankAccounts.length >= 3) {
@@ -222,7 +222,7 @@ class StepBankSelection extends ConsumerWidget {
                 },
                 borderRadius:
                     const BorderRadius.vertical(bottom: Radius.circular(16)),
-                child: const Padding(
+                child: Padding(
                   padding: EdgeInsets.all(16),
                   child: Row(
                     children: [
@@ -232,7 +232,7 @@ class StepBankSelection extends ConsumerWidget {
                       Expanded(
                         child: Text(
                           'Link a new bank account',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: AppColors.primary,
@@ -247,7 +247,7 @@ class StepBankSelection extends ConsumerWidget {
             ],
           ),
         ),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
@@ -255,7 +255,7 @@ class StepBankSelection extends ConsumerWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: const Color(0xFFE2E8F0)),
           ),
-          child: const Row(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(Icons.info_outline, color: AppColors.textSecondary, size: 16),
@@ -263,7 +263,7 @@ class StepBankSelection extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'Verification ensures funds are transferred only to accounts owned by you. Deposits typically reflect within 2-5 business days.',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 12,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -322,7 +322,7 @@ class StepBankSelection extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24),
                   Text(
                     'Add Bank Account',
                     style: GoogleFonts.plusJakartaSans(
@@ -331,7 +331,7 @@ class StepBankSelection extends ConsumerWidget {
                       color: AppColors.primaryDark,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Text(
                     'Link your account to receive disbursements.',
                     style: GoogleFonts.plusJakartaSans(
@@ -339,7 +339,7 @@ class StepBankSelection extends ConsumerWidget {
                       color: AppColors.textSecondary,
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32),
                   Text(
                     'Bank Name',
                     style: GoogleFonts.plusJakartaSans(
@@ -348,7 +348,7 @@ class StepBankSelection extends ConsumerWidget {
                       color: AppColors.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   DropdownButtonFormField<String>(
                     initialValue: selectedBank.isEmpty ? null : selectedBank,
                     style: GoogleFonts.plusJakartaSans(
@@ -385,13 +385,13 @@ class StepBankSelection extends ConsumerWidget {
                     validator: (value) =>
                         value == null ? 'Please select a bank' : null,
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   CustomTextField(
                     label: 'Account Number',
                     hint: 'Enter account number',
                     controller: accountNumberController,
                     keyboardType: TextInputType.number,
-                    prefixIcon: const Icon(Icons.credit_card_outlined),
+                    prefixIcon: Icon(Icons.credit_card_outlined),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Account number is required';
@@ -399,12 +399,12 @@ class StepBankSelection extends ConsumerWidget {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   CustomTextField(
                     label: 'Account Name',
                     hint: 'Enter account name',
                     controller: accountNameController,
-                    prefixIcon: const Icon(Icons.person_outlined),
+                    prefixIcon: Icon(Icons.person_outlined),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Account name is required';
@@ -412,7 +412,7 @@ class StepBankSelection extends ConsumerWidget {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 40),
+                  SizedBox(height: 40),
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -469,7 +469,7 @@ class StepBankSelection extends ConsumerWidget {
                         elevation: 0,
                       ),
                       child: isSubmitting 
-                        ? const SizedBox(
+                        ? SizedBox(
                             height: 20,
                             width: 20,
                             child: CircularProgressIndicator(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../features/dashboard/providers/notification_provider.dart';
 import '../../data/models/notification_model.dart';
@@ -15,7 +16,7 @@ class NotificationBell extends ConsumerWidget {
     return Stack(
       children: [
         IconButton(
-          icon: const Icon(Icons.notifications_none_rounded, size: 28),
+          icon: Icon(Icons.notifications_none_rounded, size: 28),
           onPressed: () => _showNotificationSheet(context, ref),
         ),
         if (unreadCount > 0)
@@ -34,7 +35,7 @@ class NotificationBell extends ConsumerWidget {
               ),
               child: Text(
                 unreadCount > 9 ? '9+' : '$unreadCount',
-                style: const TextStyle(
+                style: GoogleFonts.plusJakartaSans(
                   color: Colors.white,
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
@@ -73,7 +74,7 @@ class NotificationSheet extends ConsumerWidget {
       child: Column(
         children: [
           _buildHeader(context, ref),
-          const Divider(height: 1),
+          Divider(height: 1),
           Expanded(
             child: notificationsAsync.when(
               data: (notifications) => notifications.isEmpty
@@ -81,12 +82,12 @@ class NotificationSheet extends ConsumerWidget {
                   : ListView.separated(
                       padding: const EdgeInsets.all(16),
                       itemCount: notifications.length,
-                      separatorBuilder: (_, __) => const SizedBox(height: 12),
+                      separatorBuilder: (_, __) => SizedBox(height: 12),
                       itemBuilder: (context, index) {
                         return NotificationTile(notification: notifications[index]);
                       },
                     ),
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (e, _) => Center(child: Text('Error: $e')),
             ),
           ),
@@ -101,13 +102,13 @@ class NotificationSheet extends ConsumerWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
+          Text(
             'Notifications',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: GoogleFonts.plusJakartaSans(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           TextButton(
             onPressed: () => ref.read(notificationNotifierProvider.notifier).markAllAsRead(),
-            child: const Text('Mark all as read'),
+            child: Text('Mark all as read'),
           ),
         ],
       ),
@@ -115,13 +116,13 @@ class NotificationSheet extends ConsumerWidget {
   }
 
   Widget _buildEmptyState() {
-    return const Center(
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(Icons.notifications_off_outlined, size: 64, color: Colors.grey),
           SizedBox(height: 16),
-          Text('No notifications yet', style: TextStyle(color: Colors.grey)),
+          Text('No notifications yet', style: GoogleFonts.plusJakartaSans(color: Colors.grey)),
         ],
       ),
     );
@@ -153,7 +154,7 @@ class NotificationTile extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildIcon(),
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,20 +164,20 @@ class NotificationTile extends ConsumerWidget {
                     children: [
                       Text(
                         notification.title,
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontWeight: notification.isRead ? FontWeight.w500 : FontWeight.bold,
                         ),
                       ),
                       Text(
                         DateFormat('MMM d, HH:mm').format(notification.createdAt),
-                        style: TextStyle(fontSize: 10, color: Colors.grey.shade600),
+                        style: GoogleFonts.plusJakartaSans(fontSize: 10, color: Colors.grey.shade600),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4),
                   Text(
                     notification.message,
-                    style: TextStyle(fontSize: 13, color: Colors.grey.shade800),
+                    style: GoogleFonts.plusJakartaSans(fontSize: 13, color: Colors.grey.shade800),
                   ),
                 ],
               ),

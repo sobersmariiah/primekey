@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:primekey_loan_app/core/theme/theme_extensions.dart';
@@ -68,13 +69,13 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       "Let's get started.",
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -83,37 +84,37 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
                     _buildStepDots(0),
                   ],
                 ),
-                const SizedBox(height: 8),
-                const Text(
+                SizedBox(height: 8),
+                Text(
                   'Tell us a bit about yourself to help us build your personalized loan offer.',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
                   ),
                 ),
-                const SizedBox(height: 52),
+                SizedBox(height: 52),
                 CustomTextField(
                   label: 'FULL NAME',
                   controller: _fullNameController,
                   hint: 'e.g. Julian Montgomery',
-                  prefixIcon: const Icon(Icons.person_outline, size: 20),
+                  prefixIcon: Icon(Icons.person_outline, size: 20),
                   onChanged: (v) => ref.read(loanFormProvider.notifier).updateFullName(v),
                   validator: (v) =>
                       v == null || v.isEmpty ? 'Full name is required' : null,
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 CustomTextField(
                   label: 'PHONE NUMBER',
                   controller: _phoneController,
                   hint: '+1 (555) 000-0000',
-                  prefixIcon: const Icon(Icons.phone_outlined, size: 20),
+                  prefixIcon: Icon(Icons.phone_outlined, size: 20),
                   keyboardType: TextInputType.phone,
                   onChanged: (v) => ref.read(loanFormProvider.notifier).updatePhone(v),
                   validator: (v) =>
                       v == null || v.isEmpty ? 'Phone number is required' : null,
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
                 _buildInfoBadge(context),
               ],
             ),
@@ -152,24 +153,24 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
       child: Row(
         children: [
           Icon(Icons.shield_outlined, color: customColors.infoIcon, size: 24),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'SECURE TRANSMISSION',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
                     color: customColors.infoIcon,
                     letterSpacing: 0.5,
                   ),
                 ),
-                const SizedBox(height: 2),
-                const Text(
+                SizedBox(height: 2),
+                Text(
                   'Your data is encrypted with bank-grade security.',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 12,
                     color: AppColors.textSecondary,
                   ),

@@ -1,4 +1,5 @@
 import 'package:file_picker/file_picker.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:primekey_loan_app/core/constants/app_colors.dart';
@@ -55,13 +56,13 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       'Bank & Docs',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -70,20 +71,20 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                     _buildStepDots(3),
                   ],
                 ),
-                const SizedBox(height: 8),
-                const Text(
+                SizedBox(height: 8),
+                Text(
                   'Finally, tell us where to send your funds and upload required documents.',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
 
                 if (widget.currentUser?.bankAccounts.isNotEmpty ?? false) ...[
                   _buildFieldLabel('SAVED ACCOUNTS'),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Column(
                     children: widget.currentUser!.bankAccounts.map((account) {
                       final isSelected = loanState.selectedBank == account.bankName && 
@@ -135,23 +136,23 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                                       size: 20,
                                     ),
                                   ),
-                                  const SizedBox(width: 16),
+                                  SizedBox(width: 16),
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           account.bankName,
-                                          style: TextStyle(
+                                          style: GoogleFonts.plusJakartaSans(
                                             fontWeight: FontWeight.w700,
                                             fontSize: 15,
                                             color: isSelected ? AppColors.primary : AppColors.textPrimary,
                                           ),
                                         ),
-                                        const SizedBox(height: 2),
+                                        SizedBox(height: 2),
                                         Text(
                                           account.accountNumber,
-                                          style: TextStyle(
+                                          style: GoogleFonts.plusJakartaSans(
                                             fontSize: 13,
                                             fontWeight: FontWeight.w500,
                                             color: isSelected 
@@ -163,9 +164,9 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                                     ),
                                   ),
                                   if (isSelected)
-                                    const Icon(Icons.check_circle, color: AppColors.primary, size: 24)
+                                    Icon(Icons.check_circle, color: AppColors.primary, size: 24)
                                   else
-                                    const Icon(Icons.radio_button_unchecked, color: AppColors.border, size: 24),
+                                    Icon(Icons.radio_button_unchecked, color: AppColors.border, size: 24),
                                 ],
                               ),
                             ),
@@ -174,33 +175,33 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                       );
                     }).toList(),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                 ],
 
                 _buildFieldLabel('ADD NEW ACCOUNT'),
-                const SizedBox(height: 15),
+                SizedBox(height: 15),
                 _buildFieldLabel('BANK NAME'),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 _buildDropdown(
                   value: loanState.selectedBank.isNotEmpty ? loanState.selectedBank : null,
                   hint: 'Select bank',
                   items: AppStrings.banksByCountry[widget.countryCode] ?? [],
                   onChanged: (v) => notifier.updateBank(v!),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
                 CustomTextField(
                   label: 'ACCOUNT NUMBER',
                   controller: _accountNumberController,
                   hint: '• • • • • • • • • • • •',
                   keyboardType: TextInputType.number,
-                  prefixIcon: const Icon(Icons.credit_card_outlined, size: 20),
+                  prefixIcon: Icon(Icons.credit_card_outlined, size: 20),
                   onChanged: (v) => notifier.updateAccountNumber(v),
                   validator: (v) => v == null || v.isEmpty ? 'Required' : null,
                 ),
 
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
                 _buildFieldLabel('REQUIRED DOCUMENTS'),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 _buildDocumentUpload(context, loanState.documents, notifier),
               ],
             ),
@@ -229,7 +230,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 style: BorderStyle.solid,
               ),
             ),
-            child: const Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.cloud_upload_outlined, color: AppColors.primary, size: 40),
@@ -237,7 +238,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 Text(
                   'Upload ID, Paystub or Utility Bill',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 16,
                     fontWeight: FontWeight.w700, 
                     color: AppColors.primary
@@ -247,7 +248,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 Text(
                   'You can upload multiple files (JPG, PNG, PDF)',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 13, 
                     fontWeight: FontWeight.w500,
                     color: AppColors.textSecondary
@@ -257,14 +258,14 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 Text(
                   'Maximum size: 5MB per file',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 11, color: AppColors.textHint),
+                  style: GoogleFonts.plusJakartaSans(fontSize: 11, color: AppColors.textHint),
                 ),
               ],
             ),
           ),
         ),
         if (documents.isNotEmpty) ...[
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           ...documents.asMap().entries.map((entry) {
             final index = entry.key;
             final file = entry.value;
@@ -278,19 +279,19 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.description_outlined, color: AppColors.primary, size: 20),
-                  const SizedBox(width: 12),
+                  Icon(Icons.description_outlined, color: AppColors.primary, size: 20),
+                  SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       file.name,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+                      style: GoogleFonts.plusJakartaSans(fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                   ),
                   GestureDetector(
                     onTap: () => notifier.removeDocument(index),
-                    child: const Icon(Icons.close, color: AppColors.textSecondary, size: 18),
+                    child: Icon(Icons.close, color: AppColors.textSecondary, size: 18),
                   ),
                 ],
               ),
@@ -304,7 +305,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label.toUpperCase(),
-      style: const TextStyle(
+      style: GoogleFonts.plusJakartaSans(
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,

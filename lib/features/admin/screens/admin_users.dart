@@ -51,7 +51,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           child: Column(
             children: List.generate(
                 8,
-                (index) => const Padding(
+                (index) => Padding(
                       padding: EdgeInsets.only(bottom: 16),
                       child: Skeleton(height: 80, borderRadius: 16),
                     )),
@@ -99,7 +99,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 32),
+                              SizedBox(height: 32),
                               // Search & Filters
                               Center(
                                 child: ConstrainedBox(
@@ -112,7 +112,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 32),
+                              SizedBox(height: 32),
                               // User List
                               Center(
                                 child: ConstrainedBox(
@@ -139,7 +139,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 40),
+                              SizedBox(height: 40),
                               // Footer
                               Center(
                                 child: ConstrainedBox(
@@ -217,7 +217,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
             onTap: () {},
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout_rounded,
             label: _isLoggingOut ? 'Logging Out...' : 'Log Out',
@@ -225,7 +225,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
             isLoading: _isLoggingOut,
             onTap: _handleLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -249,10 +249,10 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           if (showLogo) ...[
             IconButton(
               onPressed: () => context.go(AppRoutes.admin),
-              icon: const Icon(Icons.arrow_back_rounded,
+              icon: Icon(Icons.arrow_back_rounded,
                   color: AppColors.primaryDark),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             Text(
               'Admin Ledger',
               style: GoogleFonts.plusJakartaSans(
@@ -265,16 +265,16 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           ],
           const Spacer(),
           IconButton(
-            icon: const Icon(Icons.refresh, color: AppColors.primaryDark, size: 20),
+            icon: Icon(Icons.refresh, color: AppColors.primaryDark, size: 20),
             onPressed:
                 _isLoggingOut ? null : () => ref.invalidate(allUsersProvider),
           ),
           if (showLogo) ...[
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             IconButton(
               onPressed: _isLoggingOut ? null : _handleLogout,
               icon: _isLoggingOut
-                  ? const SizedBox(
+                  ? SizedBox(
                       width: 18,
                       height: 18,
                       child: CircularProgressIndicator(
@@ -283,7 +283,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                             AlwaysStoppedAnimation<Color>(AppColors.error),
                       ),
                     )
-                  : const Icon(Icons.logout_rounded,
+                  : Icon(Icons.logout_rounded,
                       color: AppColors.error, size: 20),
             ),
           ],
@@ -326,24 +326,24 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
               hintStyle: GoogleFonts.plusJakartaSans(
                   color: AppColors.textSecondary.withValues(alpha: 0.6),
                   fontSize: 14),
-              prefixIcon: const Icon(Icons.search_rounded,
+              prefixIcon: Icon(Icons.search_rounded,
                   color: AppColors.textSecondary, size: 22),
               border: InputBorder.none,
               contentPadding: const EdgeInsets.symmetric(vertical: 14),
             ),
           ),
         ),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               _buildFilterChip('All', null),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               _buildFilterChip('Verified', VerificationStatus.verified),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               _buildFilterChip('Pending', VerificationStatus.pending),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               _buildFilterChip('Unverified', VerificationStatus.unverified),
             ],
           ),
@@ -440,7 +440,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                                   user.fullName.isNotEmpty
                                       ? user.fullName[0].toUpperCase()
                                       : '?',
-                                  style: const TextStyle(
+                                  style: GoogleFonts.plusJakartaSans(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
                                       color: AppColors.primaryDark)))
@@ -458,13 +458,13 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.white, width: 2),
                           ),
-                          child: const Icon(Icons.check,
+                          child: Icon(Icons.check,
                               size: 10, color: AppColors.primaryDark),
                         ),
                       ),
                   ],
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -476,7 +476,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF191C1E)),
                       ),
-                      const SizedBox(height: 2),
+                      SizedBox(height: 2),
                       Container(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 2),
@@ -496,15 +496,15 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                     ],
                   ),
                 ),
-                const Icon(Icons.more_vert_rounded,
+                Icon(Icons.more_vert_rounded,
                     color: AppColors.textSecondary, size: 20),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Column(
               children: [
                 _buildInfoRow(Icons.mail_outline_rounded, user.email),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 _buildInfoRow(
                   user.verificationStatus == VerificationStatus.verified
                       ? Icons.schedule_rounded
@@ -525,7 +525,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
     return Row(
       children: [
         Icon(icon, size: 16, color: const Color(0xFF43474F)),
-        const SizedBox(width: 8),
+        SizedBox(width: 8),
         Expanded(
           child: Text(
             text,
@@ -556,7 +556,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                   color: AppColors.textSecondary,
                   letterSpacing: 2),
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(
               'Showing $current of $total users',
               style: GoogleFonts.plusJakartaSans(
@@ -601,7 +601,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
         children: [
           Icon(Icons.group_outlined,
               color: AppColors.primaryDark.withValues(alpha: 0.1), size: 64),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           Text(
             'No users found',
             style: GoogleFonts.plusJakartaSans(
@@ -609,7 +609,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
             'Refine your search or filter criteria',
             style: GoogleFonts.plusJakartaSans(
@@ -682,7 +682,7 @@ class _SidebarItem extends StatelessWidget {
                               : AppColors.textSecondary),
                       size: 20,
                     ),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Expanded(
                 child: Text(
                   label,

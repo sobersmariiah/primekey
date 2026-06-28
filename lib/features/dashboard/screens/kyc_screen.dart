@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:file_picker/file_picker.dart';
 import '../../../core/constants/app_colors.dart';
@@ -136,16 +137,16 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         //   elevation: 0,
         //   leading: _currentStep > 0
         //       ? IconButton(
-        //           icon: const Icon(Icons.arrow_back),
+        //           icon: Icon(Icons.arrow_back),
         //           onPressed: _previousStep,
         //         )
         //       : IconButton(
-        //           icon: const Icon(Icons.close),
+        //           icon: Icon(Icons.close),
         //           onPressed: () => context.go(AppRoutes.dashboard),
         //         ),
-        //   title: const Text(
+        //   title: Text(
         //     'Loan Application',
-        //     style: TextStyle(
+        //     style: GoogleFonts.plusJakartaSans(
         //       fontSize: 18,
         //       fontWeight: FontWeight.w600,
         //       color: AppColors.textPrimary,
@@ -184,12 +185,12 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         backgroundColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary),
+          icon: Icon(Icons.arrow_back, color: AppColors.textPrimary),
           onPressed: _previousStep,
         ),
-        title: const Text(
+        title: Text(
           'Verification',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -231,7 +232,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                       color: AppColors.success,
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.check,
                       color: Colors.white,
                       size: 32,
@@ -241,12 +242,12 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
 
             // Title
-            const Text(
+            Text(
               'Verification Submitted',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
@@ -254,13 +255,13 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               textAlign: TextAlign.center,
             ),
 
-            const SizedBox(height: 12),
+            SizedBox(height: 12),
 
             // Description with highlighted text
             RichText(
               textAlign: TextAlign.center,
               text: const TextSpan(
-                style: TextStyle(
+                style: GoogleFonts.plusJakartaSans(
                   fontSize: 14,
                   color: AppColors.textSecondary,
                   height: 1.6,
@@ -271,7 +272,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                           'Your documents are being reviewed. This process usually takes about '),
                   TextSpan(
                     text: '24 hours.',
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       color: AppColors.primary,
                       fontWeight: FontWeight.w600,
                     ),
@@ -281,7 +282,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
 
             // Status card
             Container(
@@ -301,16 +302,16 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                       color: AppColors.primaryLight,
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: const Icon(Icons.info_outline,
+                    child: Icon(Icons.info_outline,
                         color: AppColors.primary, size: 18),
                   ),
-                  const SizedBox(width: 12),
-                  const Column(
+                  SizedBox(width: 12),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Current Status',
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
                           color: AppColors.textPrimary,
@@ -319,7 +320,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                       SizedBox(height: 2),
                       Text(
                         'In Review - Pending Approval',
-                        style: TextStyle(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 12,
                           color: AppColors.textSecondary,
                         ),
@@ -345,9 +346,9 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                     borderRadius: BorderRadius.circular(14),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   'Go to Dashboard',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
@@ -356,7 +357,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 12),
+            SizedBox(height: 12),
 
             // Need Help button
             SizedBox(
@@ -371,9 +372,9 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                     borderRadius: BorderRadius.circular(14),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   'Need Help?',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: AppColors.textPrimary,
@@ -382,7 +383,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
           ],
         ),
       ),
@@ -427,12 +428,12 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         backgroundColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary),
+          icon: Icon(Icons.arrow_back, color: AppColors.textPrimary),
           onPressed: () => _previousStep(),
         ),
-        title: const Text(
+        title: Text(
           'Identity Verification',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -446,42 +447,42 @@ class _KycScreenState extends ConsumerState<KycScreen> {
           children: [
             // Progress
 
-            const SizedBox(height: 28),
+            SizedBox(height: 28),
 
             // Title
-            const Text(
+            Text(
               'Upload a selfie holding your ID',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
+            SizedBox(height: 8),
+            Text(
               'Please upload a clear photo of your face for identity verification. Ensure good lighting and that your face is fully visible.',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 height: 1.5,
               ),
             ),
 
-            const SizedBox(height: 28),
+            SizedBox(height: 28),
 
             // Document options
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // Upload area
             _buildUploadArea(_selfieFile),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // Requirements
             _buildRequirements2(),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
 
             // Continue button
             SizedBox(
@@ -516,7 +517,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 ),
                 child: Text(
                   'Continue',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: canContinue ? AppColors.white : AppColors.textHint,
@@ -525,14 +526,14 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
 
             // Privacy note
-            const Center(
+            Center(
               child: Text(
                 'Your data is encrypted and handled securely according\nto our privacy policy.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.plusJakartaSans(
                   fontSize: 11,
                   color: AppColors.textHint,
                   height: 1.5,
@@ -540,7 +541,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
           ],
         ),
       ),
@@ -555,12 +556,12 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         backgroundColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary),
+          icon: Icon(Icons.arrow_back, color: AppColors.textPrimary),
           onPressed: () => context.go(AppRoutes.profile),
         ),
-        title: const Text(
+        title: Text(
           'Identity Verification',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -574,43 +575,43 @@ class _KycScreenState extends ConsumerState<KycScreen> {
           children: [
             // Progress
 
-            const SizedBox(height: 28),
+            SizedBox(height: 28),
 
             // Title
-            const Text(
+            Text(
               'Upload your ID',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
+            SizedBox(height: 8),
+            Text(
               'Please select the document type and upload a clear photo of your government-issued identification.',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 height: 1.5,
               ),
             ),
 
-            const SizedBox(height: 28),
+            SizedBox(height: 28),
 
             // Document options
             ..._documents.map((doc) => _buildDocumentOption(doc)),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // Upload area
             _buildUploadArea(_idFile),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
 
             // Requirements
             _buildRequirements(),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
 
             // Continue button
             SizedBox(
@@ -632,7 +633,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 ),
                 child: Text(
                   'Continue',
-                  style: TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: canContinue ? AppColors.white : AppColors.textHint,
@@ -641,14 +642,14 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
 
             // Privacy note
-            const Center(
+            Center(
               child: Text(
                 'Your data is encrypted and handled securely according\nto our privacy policy.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.plusJakartaSans(
                   fontSize: 11,
                   color: AppColors.textHint,
                   height: 1.5,
@@ -656,7 +657,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
           ],
         ),
       ),
@@ -667,12 +668,12 @@ class _KycScreenState extends ConsumerState<KycScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               'STEP 2 OF 4',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primary,
@@ -681,14 +682,14 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             ),
             Text(
               '50% Complete',
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 12,
                 color: AppColors.textSecondary,
               ),
             ),
           ],
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: 8),
         ClipRRect(
           borderRadius: BorderRadius.circular(4),
           child: const LinearProgressIndicator(
@@ -744,7 +745,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                   : null,
             ),
 
-            const SizedBox(width: 14),
+            SizedBox(width: 14),
 
             // Icon
             Container(
@@ -763,7 +764,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               ),
             ),
 
-            const SizedBox(width: 14),
+            SizedBox(width: 14),
 
             // Text
             Expanded(
@@ -772,16 +773,16 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 children: [
                   Text(
                     doc.title,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: 2),
+                  SizedBox(height: 2),
                   Text(
                     doc.subtitle,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 12,
                       color: AppColors.textSecondary,
                     ),
@@ -813,32 +814,32 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         child: file != null
             ? Column(
                 children: [
-                  const Icon(Icons.check_circle_outline,
+                  Icon(Icons.check_circle_outline,
                       color: AppColors.success, size: 40),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Text(
                     file.name,
-                    style: const TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4),
                   TextButton(
                     onPressed: _pickFile,
-                    child: const Text('Change file'),
+                    child: Text('Change file'),
                   ),
                 ],
               )
-            : const Column(
+            : Column(
                 children: [
                   Icon(Icons.add_a_photo_outlined,
                       color: AppColors.primary, size: 36),
                   SizedBox(height: 12),
                   Text(
                     'Take a photo',
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
@@ -847,7 +848,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                   SizedBox(height: 4),
                   Text(
                     'or upload from your files',
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 13,
                       color: AppColors.textSecondary,
                     ),
@@ -868,27 +869,27 @@ class _KycScreenState extends ConsumerState<KycScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'PHOTO REQUIREMENTS',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
             letterSpacing: 1.2,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         ...requirements.map(
           (req) => Padding(
             padding: const EdgeInsets.only(bottom: 8),
             child: Row(
               children: [
-                const Icon(Icons.check_circle_outline,
+                Icon(Icons.check_circle_outline,
                     color: AppColors.success, size: 18),
-                const SizedBox(width: 10),
+                SizedBox(width: 10),
                 Text(
                   req,
-                  style: const TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 13,
                     color: AppColors.textPrimary,
                   ),
@@ -911,27 +912,27 @@ class _KycScreenState extends ConsumerState<KycScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'PHOTO REQUIREMENTS',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
             letterSpacing: 1.2,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         ...requirements.map(
           (req) => Padding(
             padding: const EdgeInsets.only(bottom: 8),
             child: Row(
               children: [
-                const Icon(Icons.check_circle_outline,
+                Icon(Icons.check_circle_outline,
                     color: AppColors.success, size: 18),
-                const SizedBox(width: 10),
+                SizedBox(width: 10),
                 Text(
                   req,
-                  style: const TextStyle(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 13,
                     color: AppColors.textPrimary,
                   ),

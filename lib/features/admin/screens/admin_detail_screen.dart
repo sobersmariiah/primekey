@@ -87,7 +87,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
               'Please provide a reason for rejecting this application. This will be visible to the user.',
               style: GoogleFonts.plusJakartaSans(fontSize: 14, color: AppColors.textSecondary),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             TextField(
               controller: _rejectionReasonController,
               maxLines: 4,
@@ -119,7 +119,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                     child: Text('Cancel', style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary, fontWeight: FontWeight.bold)),
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16),
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () async {
@@ -238,27 +238,27 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                                           child: Column(
                                             children: [
                                               _buildLoanDetailsCard(application, isDesktop),
-                                              const SizedBox(height: 32),
+                                              SizedBox(height: 32),
                                               _buildEmploymentCard(application, isDesktop),
-                                              const SizedBox(height: 32),
+                                              SizedBox(height: 32),
                                               _buildBankDetailsCard(application, isDesktop),
                                             ],
                                           ).animate().fadeIn(duration: 400.ms).slideY(begin: 0.05),
                                         ),
-                                        const SizedBox(width: 40),
+                                        SizedBox(width: 40),
                                         Expanded(
                                           flex: 2,
                                           child: Column(
                                             children: [
                                               _buildApplicantQuickInfo(context, applicant, isDesktop),
-                                              const SizedBox(height: 32),
+                                              SizedBox(height: 32),
                                               _buildDocumentsCard(context, application, isDesktop),
-                                              const SizedBox(height: 32),
+                                              SizedBox(height: 32),
                                               if (application.status == LoanStatus.pending)
                                                 _buildActionCard(context, application, applicant, isDesktop)
                                               else
                                                 _buildReviewDetailsCard(application, isDesktop),
-                                              const SizedBox(height: 32),
+                                              SizedBox(height: 32),
                                               _buildDangerZone(context, application, isDesktop),
                                             ],
                                           ).animate().fadeIn(duration: 400.ms, delay: 100.ms).slideY(begin: 0.05),
@@ -269,20 +269,20 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                                     Column(
                                       children: [
                                         _buildLoanDetailsCard(application, isDesktop),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildApplicantQuickInfo(context, applicant, isDesktop),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildEmploymentCard(application, isDesktop),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildBankDetailsCard(application, isDesktop),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildDocumentsCard(context, application, isDesktop),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         if (application.status == LoanStatus.pending)
                                           _buildActionCard(context, application, applicant, isDesktop)
                                         else
                                           _buildReviewDetailsCard(application, isDesktop),
-                                        const SizedBox(height: 24),
+                                        SizedBox(height: 24),
                                         _buildDangerZone(context, application, isDesktop),
                                       ],
                                     ).animate().fadeIn(duration: 400.ms).slideY(begin: 0.05),
@@ -351,7 +351,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             onTap: () => context.go(AppRoutes.adminUsers),
           ),
           const Spacer(),
-          const Divider(),
+          Divider(),
           _SidebarItem(
             icon: Icons.logout_rounded,
             label: _isLoggingOut ? 'Logging Out...' : 'Log Out',
@@ -359,7 +359,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             isLoading: _isLoggingOut,
             onTap: _handleLogout,
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -380,16 +380,16 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             if (isMobile) ...[
               IconButton(
                 onPressed: () => context.go(AppRoutes.admin),
-                icon: const Icon(Icons.arrow_back_rounded, color: AppColors.textPrimary),
+                icon: Icon(Icons.arrow_back_rounded, color: AppColors.textPrimary),
                 style: IconButton.styleFrom(
                   backgroundColor: AppColors.background,
                   padding: const EdgeInsets.all(12),
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
             ] else ...[
-              const Icon(Icons.description_outlined, color: AppColors.primary, size: 24),
-              const SizedBox(width: 16),
+              Icon(Icons.description_outlined, color: AppColors.primary, size: 24),
+              SizedBox(width: 16),
             ],
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -434,7 +434,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             letterSpacing: -2,
           ),
         ),
-        const SizedBox(height: 4),
+        SizedBox(height: 4),
         Text(
           'Loan for ${app.loanPurpose} • Requested by ${applicant?.fullName ?? '...'}',
           style: GoogleFonts.plusJakartaSans(
@@ -522,10 +522,10 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                     backgroundImage: user.selfieUrl != null && user.selfieUrl!.isNotEmpty
                         ? NetworkImage(user.selfieUrl!)
                         : null,
-                    child: user.selfieUrl == null ? const Icon(Icons.person, color: AppColors.primary) : null,
+                    child: user.selfieUrl == null ? Icon(Icons.person, color: AppColors.primary) : null,
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -550,14 +550,14 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: AppColors.primary),
+                  icon: Icon(Icons.arrow_forward_ios_rounded, size: 16, color: AppColors.primary),
                   onPressed: () => context.go('${AppRoutes.adminUserProfile}/${user.id}'),
                   tooltip: 'View Full Profile',
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24),
           _buildInfoRow('Phone', user.phone),
           _buildInfoRow('KYC Status', user.verificationStatus.name.toUpperCase()),
         ],
@@ -571,10 +571,10 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
       icon: Icons.file_present_rounded,
       isDesktop: isDesktop,
       child: app.documentUrls.isEmpty
-          ? const Center(
+          ? Center(
               child: Padding(
                 padding: EdgeInsets.all(32),
-                child: Text('No documents uploaded', style: TextStyle(color: AppColors.textSecondary)),
+                child: Text('No documents uploaded', style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary)),
               ),
             )
           : GridView.builder(
@@ -664,7 +664,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                       if (mounted) setState(() => _isApproving = false);
                     }
                   },
-                  icon: _isApproving ? const SizedBox.shrink() : const Icon(Icons.check_circle_outline_rounded, size: 20),
+                  icon: _isApproving ? const SizedBox.shrink() : Icon(Icons.check_circle_outline_rounded, size: 20),
                   label: _isApproving ? const _LoadingSpinner() : Text('APPROVE', style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.w800)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.success,
@@ -675,11 +675,11 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                   ),
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
               Expanded(
                 child: ElevatedButton.icon(
                   onPressed: _isActionLoading || applicant == null ? null : () => _showRejectionDialog(context, app, applicant),
-                  icon: _isRejecting ? const SizedBox.shrink() : const Icon(Icons.cancel_outlined, size: 20),
+                  icon: _isRejecting ? const SizedBox.shrink() : Icon(Icons.cancel_outlined, size: 20),
                   label: _isRejecting ? const _LoadingSpinner() : Text('REJECT', style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.w800)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.error,
@@ -707,7 +707,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
           _buildInfoRow('Decision', app.status.name.toUpperCase()),
           if (app.reviewedAt != null) _buildInfoRow('Decision Date', Formatters.date(app.reviewedAt!)),
           if (app.adminNote != null && app.adminNote!.isNotEmpty) ...[
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -728,7 +728,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                       letterSpacing: 0.5,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Text(
                     app.adminNote!,
                     style: GoogleFonts.plusJakartaSans(
@@ -779,7 +779,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             if (mounted) setState(() => _isDeleting = false);
           }
         },
-        icon: const Icon(Icons.delete_forever_rounded, size: 20),
+        icon: Icon(Icons.delete_forever_rounded, size: 20),
         label: Text(_isDeleting ? 'DELETING...' : 'DELETE APPLICATION', style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.w800)),
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColors.error,
@@ -826,7 +826,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
                 ),
                 child: Icon(icon, size: 20, color: AppColors.primary),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16),
               Text(
                 title,
                 style: GoogleFonts.plusJakartaSans(
@@ -839,7 +839,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
             ],
           ),
           SizedBox(height: isDesktop ? 32 : 24),
-          const Divider(height: 1),
+          Divider(height: 1),
           SizedBox(height: isDesktop ? 32 : 24),
           child,
         ],
@@ -862,7 +862,7 @@ class _AdminDetailScreenState extends ConsumerState<AdminDetailScreen> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          const SizedBox(width: 24),
+          SizedBox(width: 24),
           Expanded(
             child: Text(
               value,
@@ -939,7 +939,7 @@ class _SidebarItem extends StatelessWidget {
                               : AppColors.textSecondary),
                       size: 20,
                     ),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Expanded(
                 child: Text(
                   label,
@@ -966,7 +966,7 @@ class _LoadingSpinner extends StatelessWidget {
   const _LoadingSpinner();
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Colors.white)));
+    return SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Colors.white)));
   }
 }
 

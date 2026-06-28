@@ -1,4 +1,5 @@
 import 'package:primekey_loan_app/core/constants/app_assets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:primekey_loan_app/shared/widgets/custom_popup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -136,11 +137,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             AppAssets.logo,
                             height: 48,
                           ),
-                          const SizedBox(height: 16),
-                          const SizedBox(height: 4),
-                          const Text(
+                          SizedBox(height: 16),
+                          SizedBox(height: 4),
+                          Text(
                             AppStrings.tagline,
-                            style: TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               fontSize: 14,
                               color: AppColors.textSecondary,
                             ),
@@ -149,29 +150,29 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                     ),
 
-                    const SizedBox(height: 32),
-                    const Divider(),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32),
+                    Divider(),
+                    SizedBox(height: 32),
 
                     // Welcome text
-                    const Text(
+                    Text(
                       'Welcome back',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimary,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    const Text(
+                    SizedBox(height: 4),
+                    Text(
                       'Sign in to your account to continue',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 14,
                         color: AppColors.textSecondary,
                       ),
                     ),
 
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
 
                     // Error message
                     if (authState.error != null)
@@ -186,16 +187,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                         child: Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.error_outline,
                               color: AppColors.error,
                               size: 18,
                             ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: 8),
                             Expanded(
                               child: Text(
                                 authState.error!,
-                                style: const TextStyle(
+                                style: GoogleFonts.plusJakartaSans(
                                   color: AppColors.error,
                                   fontSize: 13,
                                 ),
@@ -211,7 +212,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       hint: 'Enter your email',
                       controller: _emailController,
                       keyboardType: TextInputType.emailAddress,
-                      prefixIcon: const Icon(Icons.email_outlined),
+                      prefixIcon: Icon(Icons.email_outlined),
                       onChanged: (_) =>
                           ref.read(authNotifierProvider.notifier).clearError(),
                       validator: (value) {
@@ -225,7 +226,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Password field
                     CustomTextField(
@@ -233,7 +234,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       hint: 'Enter your password',
                       controller: _passwordController,
                       obscureText: !_showPassword,
-                      prefixIcon: const Icon(Icons.lock_outlined),
+                      prefixIcon: Icon(Icons.lock_outlined),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _showPassword
@@ -260,7 +261,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       },
                     ),
 
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24),
 
                     // Login button
                     CustomButton(
@@ -269,24 +270,24 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       isLoading: authState.isLoading,
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Register link
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           "Don't have an account? ",
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             color: AppColors.textSecondary,
                             fontSize: 14,
                           ),
                         ),
                         GestureDetector(
                           onTap: () => context.go(AppRoutes.register),
-                          child: const Text(
+                          child: Text(
                             'Create one',
-                            style: TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               color: AppColors.primary,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -295,22 +296,22 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           "Don't remember your password? ",
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             color: AppColors.textSecondary,
                             fontSize: 14,
                           ),
                         ),
                         GestureDetector(
                           onTap: () => _resetPassword(),
-                          child: const Text(
+                          child: Text(
                             'Reset it',
-                            style: TextStyle(
+                            style: GoogleFonts.plusJakartaSans(
                               color: AppColors.primary,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,

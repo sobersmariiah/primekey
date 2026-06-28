@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -77,12 +78,12 @@ class _ApplicationSubmittedScreenState
         backgroundColor: AppColors.background,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary),
+          icon: Icon(Icons.arrow_back, color: AppColors.textPrimary),
           onPressed: () => context.go(AppRoutes.dashboard),
         ),
-        title: const Text(
+        title: Text(
           'Loan Application',
-          style: TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 17,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -102,7 +103,7 @@ class _ApplicationSubmittedScreenState
                     opacity: _fadeAnimation,
                     child: Column(
                       children: [
-                        const SizedBox(height: 32),
+                        SizedBox(height: 32),
 
                         // Success icon
                         ScaleTransition(
@@ -114,7 +115,7 @@ class _ApplicationSubmittedScreenState
                               color: AppColors.primaryDark,
                               shape: BoxShape.circle,
                             ),
-                            child: const Icon(
+                            child: Icon(
                               Icons.check_rounded,
                               color: Colors.white,
                               size: 44,
@@ -122,12 +123,12 @@ class _ApplicationSubmittedScreenState
                           ),
                         ),
 
-                        const SizedBox(height: 28),
+                        SizedBox(height: 28),
 
                         // Title
-                        const Text(
+                        Text(
                           'Application Submitted!',
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 28,
                             fontWeight: FontWeight.w800,
                             color: AppColors.primaryDark,
@@ -135,11 +136,11 @@ class _ApplicationSubmittedScreenState
                           textAlign: TextAlign.center,
                         ),
 
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12),
 
-                        const Text(
+                        Text(
                           "Your request is being processed. We'll notify you via email once we're done.",
-                          style: TextStyle(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 15,
                             color: AppColors.textSecondary,
                             height: 1.5,
@@ -147,7 +148,7 @@ class _ApplicationSubmittedScreenState
                           textAlign: TextAlign.center,
                         ),
 
-                        const SizedBox(height: 32),
+                        SizedBox(height: 32),
 
                         // Summary card
                         Container(
@@ -171,20 +172,20 @@ class _ApplicationSubmittedScreenState
                                     const EdgeInsets.fromLTRB(24, 28, 24, 20),
                                 child: Column(
                                   children: [
-                                    const Text(
+                                    Text(
                                       'MONTHLY REPAYMENT',
-                                      style: TextStyle(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.textSecondary,
                                         letterSpacing: 1.4,
                                       ),
                                     ),
-                                    const SizedBox(height: 8),
+                                    SizedBox(height: 8),
                                     Text(
                                       Formatters.currency(
                                           monthlyRepayment, countryCode),
-                                      style: const TextStyle(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 36,
                                         fontWeight: FontWeight.w800,
                                         color: AppColors.primaryDark,
@@ -194,7 +195,7 @@ class _ApplicationSubmittedScreenState
                                 ),
                               ),
 
-                              // const Divider(height: 1),
+                              // Divider(height: 1),
 
                               // Details grid
                               Padding(
@@ -222,7 +223,7 @@ class _ApplicationSubmittedScreenState
                                         ),
                                       ],
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Row(
                                       children: [
                                         Expanded(
@@ -246,7 +247,7 @@ class _ApplicationSubmittedScreenState
                           ),
                         ),
 
-                        const SizedBox(height: 40),
+                        SizedBox(height: 40),
                       ],
                     ),
                   ),
@@ -269,14 +270,14 @@ class _ApplicationSubmittedScreenState
                         // Receipt button
                         GestureDetector(
                           onTap: () {},
-                          child: const Row(
+                          child: Row(
                             children: [
                               Icon(Icons.receipt_long_outlined,
                                   color: AppColors.textSecondary, size: 18),
                               SizedBox(width: 6),
                               Text(
                                 'RECEIPT',
-                                style: TextStyle(
+                                style: GoogleFonts.plusJakartaSans(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.textSecondary,
@@ -303,12 +304,12 @@ class _ApplicationSubmittedScreenState
                             minimumSize: Size.zero,
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
-                          child: const Row(
+                          child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
                                 'CONTINUE',
-                                style: TextStyle(
+                                style: GoogleFonts.plusJakartaSans(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
                                   letterSpacing: 0.5,
@@ -322,12 +323,12 @@ class _ApplicationSubmittedScreenState
                       ],
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
 
                     // Support text
-                    const Text(
+                    Text(
                       'Need help? Contact our support team at 0-800-PRIMEKEY',
-                      style: TextStyle(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 12,
                         color: AppColors.textSecondary,
                       ),
@@ -349,17 +350,17 @@ class _ApplicationSubmittedScreenState
       children: [
         Text(
           label,
-          style: const TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 10,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
             letterSpacing: 1.2,
           ),
         ),
-        const SizedBox(height: 4),
+        SizedBox(height: 4),
         Text(
           value,
-          style: const TextStyle(
+          style: GoogleFonts.plusJakartaSans(
             fontSize: 16,
             fontWeight: FontWeight.w700,
             color: AppColors.textPrimary,
