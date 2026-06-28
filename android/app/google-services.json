@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "215566645667",
+    "project_id": "primekeyfinance-c95bc",
+    "storage_bucket": "primekeyfinance-c95bc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215566645667:android:033e10ae8b689ffc720216",
+        "android_client_info": {
+          "package_name": "primkey.android.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHQwsVs2L9gQ6zorzXxDQY6WHB27PA4ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

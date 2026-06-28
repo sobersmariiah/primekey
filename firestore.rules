@@ -1,0 +1,59 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper to get the user's role without causing recursion
+    function getUserRole() {
+      return exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        ? get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role
+        : 'user';
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && getUserRole() == 'admin';
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // --- User profiles ---
+    match /users/{userId} {
+      // CRITICAL: isOwner must come BEFORE isAdmin to break recursion
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isAuthenticated();
+      allow update: if isAdmin() || (
+        isOwner(userId) && 
+        (request.resource.data.role == resource.data.role || !('role' in request.resource.data))
+      );
+      allow delete: if isAdmin();
+
+      // Notifications Sub-collection
+      match /notifications/{notificationId} {
+        allow read, update: if isOwner(userId) || isAdmin();
+        allow create, delete: if isAdmin();
+      }
+    }
+
+    // --- Loan Applications ---
+    match /loan_applications/{applicationId} {
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // --- Withdrawals ---
+    match /withdrawals/{withdrawalId} {
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+  }
+}
