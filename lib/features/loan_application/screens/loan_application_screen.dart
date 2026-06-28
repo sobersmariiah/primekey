@@ -214,7 +214,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                 children: [
                   Text(
                     'STEP ${_currentStep + 1} OF $_totalSteps',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 11,
                       fontWeight: FontWeight.w700,
                       color: AppColors.primary,
@@ -223,7 +223,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                   ),
                   Text(
                     stepNames[_currentStep],
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
                       color: AppColors.textPrimary,
@@ -292,7 +292,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                 ),
                 title: Text(
                   'Loan Application',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
                     color: AppColors.textPrimary,
@@ -354,7 +354,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
               children: [
                 Text(
                   isLastStep ? 'SUBMIT APPLICATION' : 'CONTINUE',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                   ),
@@ -388,7 +388,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
               children: [
                 Text(
                   'Primekey Finance',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -396,7 +396,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
                 ),
                 Text(
                   'PRIMEKEY LOAN APP',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -464,7 +464,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
           SizedBox(width: 12),
           Text(
             'Apply for Loan',
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 16,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -517,7 +517,7 @@ class _SidebarItem extends StatelessWidget {
               SizedBox(width: 16),
               Text(
                 label,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 14,
                   fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
                   color: isActive ? activeColor : defaultColor,

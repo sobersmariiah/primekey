@@ -41,7 +41,7 @@ class CustomTextField extends StatelessWidget {
           style: theme.textTheme.titleSmall?.copyWith(
                 fontWeight: FontWeight.w500,
               ) ??
-              GoogleFonts.plusJakartaSans(
+              TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),

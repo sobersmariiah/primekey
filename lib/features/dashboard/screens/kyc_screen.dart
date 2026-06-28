@@ -146,7 +146,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         //         ),
         //   title: Text(
         //     'Loan Application',
-        //     style: GoogleFonts.plusJakartaSans(
+        //     style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
         //       fontSize: 18,
         //       fontWeight: FontWeight.w600,
         //       color: AppColors.textPrimary,
@@ -190,7 +190,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         ),
         title: Text(
           'Verification',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -247,7 +247,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             // Title
             Text(
               'Verification Submitted',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
@@ -261,7 +261,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 14,
                   color: AppColors.textSecondary,
                   height: 1.6,
@@ -272,7 +272,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                           'Your documents are being reviewed. This process usually takes about '),
                   TextSpan(
                     text: '24 hours.',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       color: AppColors.primary,
                       fontWeight: FontWeight.w600,
                     ),
@@ -311,7 +311,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                     children: [
                       Text(
                         'Current Status',
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
                           color: AppColors.textPrimary,
@@ -320,7 +320,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                       SizedBox(height: 2),
                       Text(
                         'In Review - Pending Approval',
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 12,
                           color: AppColors.textSecondary,
                         ),
@@ -348,7 +348,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 ),
                 child: Text(
                   'Go to Dashboard',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
@@ -374,7 +374,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 ),
                 child: Text(
                   'Need Help?',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: AppColors.textPrimary,
@@ -433,7 +433,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         ),
         title: Text(
           'Identity Verification',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -452,7 +452,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             // Title
             Text(
               'Upload a selfie holding your ID',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
@@ -461,7 +461,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             SizedBox(height: 8),
             Text(
               'Please upload a clear photo of your face for identity verification. Ensure good lighting and that your face is fully visible.',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 height: 1.5,
@@ -517,7 +517,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 ),
                 child: Text(
                   'Continue',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: canContinue ? AppColors.white : AppColors.textHint,
@@ -533,7 +533,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               child: Text(
                 'Your data is encrypted and handled securely according\nto our privacy policy.',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 11,
                   color: AppColors.textHint,
                   height: 1.5,
@@ -561,7 +561,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
         ),
         title: Text(
           'Identity Verification',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -580,7 +580,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             // Title
             Text(
               'Upload your ID',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
@@ -589,7 +589,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             SizedBox(height: 8),
             Text(
               'Please select the document type and upload a clear photo of your government-issued identification.',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 height: 1.5,
@@ -633,7 +633,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 ),
                 child: Text(
                   'Continue',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: canContinue ? AppColors.white : AppColors.textHint,
@@ -649,7 +649,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
               child: Text(
                 'Your data is encrypted and handled securely according\nto our privacy policy.',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 11,
                   color: AppColors.textHint,
                   height: 1.5,
@@ -673,7 +673,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
           children: [
             Text(
               'STEP 2 OF 4',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primary,
@@ -682,7 +682,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
             ),
             Text(
               '50% Complete',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 12,
                 color: AppColors.textSecondary,
               ),
@@ -773,7 +773,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 children: [
                   Text(
                     doc.title,
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
@@ -782,7 +782,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                   SizedBox(height: 2),
                   Text(
                     doc.subtitle,
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 12,
                       color: AppColors.textSecondary,
                     ),
@@ -819,7 +819,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                   SizedBox(height: 12),
                   Text(
                     file.name,
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
@@ -839,7 +839,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                   SizedBox(height: 12),
                   Text(
                     'Take a photo',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
@@ -848,7 +848,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                   SizedBox(height: 4),
                   Text(
                     'or upload from your files',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 13,
                       color: AppColors.textSecondary,
                     ),
@@ -871,7 +871,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
       children: [
         Text(
           'PHOTO REQUIREMENTS',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
@@ -889,7 +889,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 SizedBox(width: 10),
                 Text(
                   req,
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 13,
                     color: AppColors.textPrimary,
                   ),
@@ -914,7 +914,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
       children: [
         Text(
           'PHOTO REQUIREMENTS',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
@@ -932,7 +932,7 @@ class _KycScreenState extends ConsumerState<KycScreen> {
                 SizedBox(width: 10),
                 Text(
                   req,
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 13,
                     color: AppColors.textPrimary,
                   ),

@@ -75,7 +75,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
           children: [
             Text(
               'Please provide a reason for declining this KYC submission. This will help the user correct their documents.',
-              style: GoogleFonts.plusJakartaSans(fontSize: 14, color: AppColors.textSecondary),
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 14, color: AppColors.textSecondary),
             ),
             SizedBox(height: 16),
             TextField(
@@ -170,7 +170,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
           children: [
             Text(
               'KYC Approval',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: AppColors.textPrimary,
@@ -178,7 +178,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
             ),
             Text(
               'PRIMEKEY Finance Admin',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 11,
                 fontWeight: FontWeight.w400,
                 color: AppColors.textSecondary,
@@ -204,7 +204,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                   // USER INFORMATION label
                   Text(
                     'USER INFORMATION',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 11,
                       fontWeight: FontWeight.w700,
                       color: AppColors.textSecondary,
@@ -238,7 +238,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                       user.fullName.isNotEmpty
                                           ? user.fullName[0].toUpperCase()
                                           : '?',
-                                      style: GoogleFonts.plusJakartaSans(
+                                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                         fontSize: 22,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.primary,
@@ -252,7 +252,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                           children: [
                             Text(
                               user.fullName,
-                              style: GoogleFonts.plusJakartaSans(
+                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                 fontSize: 18,
                                 fontWeight: FontWeight.w700,
                                 color: AppColors.textPrimary,
@@ -261,7 +261,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                             SizedBox(height: 2),
                             Text(
                               'Full Name',
-                              style: GoogleFonts.plusJakartaSans(
+                              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                 fontSize: 12,
                                 color: AppColors.textSecondary,
                               ),
@@ -302,7 +302,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                       user.kycRejectionReason!.isNotEmpty) ...[
                     Text(
                       'PREVIOUS REJECTION REASON',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         color: AppColors.error,
@@ -321,7 +321,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                       ),
                       child: Text(
                         user.kycRejectionReason!,
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 14,
                           color: AppColors.error,
                           fontWeight: FontWeight.w500,
@@ -337,7 +337,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     children: [
                       Text(
                         'DOCUMENT PREVIEW',
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.textSecondary,
@@ -359,7 +359,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                         ),
                         child: Text(
                           user.verificationStatus.name.toUpperCase(),
-                          style: GoogleFonts.plusJakartaSans(
+                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             fontSize: 12,
                             fontWeight: FontWeight.w700,
                             color: user.verificationStatus ==
@@ -386,7 +386,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                 : _selectedDocIndex == 1
                                     ? 'SELFIE'
                                     : 'PASSPORT',
-                            style: GoogleFonts.plusJakartaSans(
+                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
                               color: AppColors.primary,
@@ -443,7 +443,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                         color: AppColors.textSecondary),
                                     SizedBox(height: 8),
                                     Text('Failed to load document',
-                                        style: GoogleFonts.plusJakartaSans(
+                                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                             color: AppColors.textSecondary)),
                                   ],
                                 ),
@@ -457,7 +457,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                                       size: 48, color: AppColors.textSecondary),
                                   SizedBox(height: 8),
                                   Text('No document uploaded',
-                                      style: GoogleFonts.plusJakartaSans(
+                                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                           color: AppColors.textSecondary)),
                                 ],
                               ),
@@ -530,7 +530,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     : Icon(Icons.close, size: 18, color: AppColors.error),
                 label: Text(
                   _isDeclining ? 'Declining...' : 'Decline',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontWeight: FontWeight.w600,
                     color: AppColors.error,
                   ),
@@ -584,7 +584,7 @@ class _KycApprovalContentState extends ConsumerState<_KycApprovalContent> {
                     : Icon(Icons.check_circle_outline, size: 18),
                 label: Text(
                   _isApproving ? 'Approving...' : 'Approve KYC',
-                  style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.w600),
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor:
@@ -653,7 +653,7 @@ class _InfoCard extends StatelessWidget {
           SizedBox(height: 10),
           Text(
             value,
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: AppColors.textPrimary,
@@ -662,7 +662,7 @@ class _InfoCard extends StatelessWidget {
           SizedBox(height: 2),
           Text(
             label,
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 11,
               color: AppColors.textSecondary,
             ),

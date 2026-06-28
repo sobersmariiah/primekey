@@ -141,7 +141,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           SizedBox(height: 4),
                           Text(
                             AppStrings.tagline,
-                            style: GoogleFonts.plusJakartaSans(
+                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                               fontSize: 14,
                               color: AppColors.textSecondary,
                             ),
@@ -157,7 +157,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     // Welcome text
                     Text(
                       'Welcome back',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimary,
@@ -166,7 +166,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     SizedBox(height: 4),
                     Text(
                       'Sign in to your account to continue',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 14,
                         color: AppColors.textSecondary,
                       ),
@@ -196,7 +196,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             Expanded(
                               child: Text(
                                 authState.error!,
-                                style: GoogleFonts.plusJakartaSans(
+                                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                   color: AppColors.error,
                                   fontSize: 13,
                                 ),
@@ -278,7 +278,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       children: [
                         Text(
                           "Don't have an account? ",
-                          style: GoogleFonts.plusJakartaSans(
+                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             color: AppColors.textSecondary,
                             fontSize: 14,
                           ),
@@ -287,7 +287,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           onTap: () => context.go(AppRoutes.register),
                           child: Text(
                             'Create one',
-                            style: GoogleFonts.plusJakartaSans(
+                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                               color: AppColors.primary,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -302,7 +302,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       children: [
                         Text(
                           "Don't remember your password? ",
-                          style: GoogleFonts.plusJakartaSans(
+                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             color: AppColors.textSecondary,
                             fontSize: 14,
                           ),
@@ -311,7 +311,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           onTap: () => _resetPassword(),
                           child: Text(
                             'Reset it',
-                            style: GoogleFonts.plusJakartaSans(
+                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                               color: AppColors.primary,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,

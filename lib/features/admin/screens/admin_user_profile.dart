@@ -159,7 +159,7 @@ class AdminUserProfile extends ConsumerWidget {
             children: [
               Text(
                 'User Profile',
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
                   color: AppColors.primaryDark,
@@ -167,7 +167,7 @@ class AdminUserProfile extends ConsumerWidget {
               ),
               Text(
                 user.fullName,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 12,
                   color: AppColors.textSecondary,
                   fontWeight: FontWeight.w500,
@@ -217,7 +217,7 @@ class AdminUserProfile extends ConsumerWidget {
                     user.fullName.isNotEmpty
                         ? user.fullName[0].toUpperCase()
                         : '?',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primary),
@@ -232,7 +232,7 @@ class AdminUserProfile extends ConsumerWidget {
             children: [
               Text(
                 user.fullName,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 28,
                   fontWeight: FontWeight.w800,
                   color: AppColors.primaryDark,
@@ -241,7 +241,7 @@ class AdminUserProfile extends ConsumerWidget {
               ),
               Text(
                 user.email,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 14,
                   color: AppColors.textSecondary,
                   fontWeight: FontWeight.w500,
@@ -311,7 +311,7 @@ class AdminUserProfile extends ConsumerWidget {
                     children: [
                       Text(
                         user.verificationStatus.name.toUpperCase(),
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontWeight: FontWeight.w800,
                           fontSize: 14,
                           color: statusColor,
@@ -319,7 +319,7 @@ class AdminUserProfile extends ConsumerWidget {
                       ),
                       Text(
                         'Identity verification is ${user.verificationStatus.name}',
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             fontSize: 12,
                             color: statusColor.withValues(alpha: 0.8)),
                       ),
@@ -351,7 +351,7 @@ class AdminUserProfile extends ConsumerWidget {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 20),
               child: Text('No bank accounts linked',
-                  style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary)),
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textSecondary)),
             )
           else
             ...user.bankAccounts.map((account) => Padding(
@@ -383,11 +383,11 @@ class AdminUserProfile extends ConsumerWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(account.bankName,
-                                    style: GoogleFonts.plusJakartaSans(
+                                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                         fontWeight: FontWeight.bold,
                                         fontSize: 13)),
                                 Text(account.accountNumber,
-                                    style: GoogleFonts.plusJakartaSans(
+                                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                         fontSize: 11,
                                         color: AppColors.textSecondary)),
                               ],
@@ -464,11 +464,11 @@ class AdminUserProfile extends ConsumerWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         Formatters.currency(app.loanAmount, app.countryCode),
-        style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold, fontSize: 15),
+        style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.bold, fontSize: 15),
       ),
       subtitle: Text(
         '${app.loanDuration} Months • ${Formatters.date(app.createdAt)}',
-        style: GoogleFonts.plusJakartaSans(fontSize: 12, color: AppColors.textSecondary),
+        style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 12, color: AppColors.textSecondary),
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
@@ -530,11 +530,11 @@ class AdminUserProfile extends ConsumerWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         Formatters.currency(withdrawal.amount, withdrawal.countryCode),
-        style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold, fontSize: 15),
+        style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.bold, fontSize: 15),
       ),
       subtitle: Text(
         'via ${withdrawal.bankName} • ${Formatters.date(withdrawal.createdAt)}',
-        style: GoogleFonts.plusJakartaSans(fontSize: 12, color: AppColors.textSecondary),
+        style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 12, color: AppColors.textSecondary),
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
@@ -635,12 +635,12 @@ class AdminUserProfile extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Update Withdrawal Status',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontWeight: FontWeight.w800, fontSize: 20)),
                   SizedBox(height: 8),
                   Text(
                     'Update status for ${Formatters.currency(withdrawal.amount, withdrawal.countryCode)} withdrawal',
-                    style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary),
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textSecondary),
                   ),
                   SizedBox(height: 24),
                   _detailRowItem('Bank Name', withdrawal.bankName),
@@ -708,7 +708,7 @@ class AdminUserProfile extends ConsumerWidget {
               SizedBox(width: 8),
               Text(
                 title,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 11,
                   fontWeight: FontWeight.w800,
                   color: AppColors.primary,
@@ -733,10 +733,10 @@ class AdminUserProfile extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(label,
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   color: AppColors.textSecondary, fontSize: 13)),
           Text(value,
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontWeight: FontWeight.w600,
                   fontSize: 13,
                   color: AppColors.primaryDark)),
@@ -754,7 +754,7 @@ class AdminUserProfile extends ConsumerWidget {
       ),
       child: Text(
         label.toUpperCase(),
-        style: GoogleFonts.plusJakartaSans(
+        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
           fontSize: 9,
           fontWeight: FontWeight.w800,
           color: color,
@@ -776,7 +776,7 @@ class AdminUserProfile extends ConsumerWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           side: const BorderSide(color: Color(0xFFE2E8F0)),
           foregroundColor: AppColors.primaryDark,
-          textStyle: GoogleFonts.plusJakartaSans(
+          textStyle: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontWeight: FontWeight.w700, fontSize: 13),
         ),
       ),
@@ -843,7 +843,7 @@ void _showBankVerificationSheet(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Bank Verification',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontWeight: FontWeight.w800, fontSize: 20)),
                 SizedBox(height: 24),
                 _detailRowItem('Bank Name', account.bankName),
@@ -954,12 +954,12 @@ Widget _detailRowItem(String label, String value) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(label,
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 11,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w700)),
         Text(value,
-            style: GoogleFonts.plusJakartaSans(fontSize: 15, fontWeight: FontWeight.w600)),
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 15, fontWeight: FontWeight.w600)),
       ],
     ),
   );
@@ -971,14 +971,14 @@ void _showAdminDeleteBankAccountDialog(
     context: context,
     builder: (context) => AlertDialog(
       title: Text('Delete Bank Account',
-          style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold)),
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontWeight: FontWeight.bold)),
       content: Text(
           'Are you sure you want to delete this bank account (${account.bankName} - ${account.accountNumber}) for user ${user.fullName}?'),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
           child: Text('CANCEL',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontWeight: FontWeight.bold, color: AppColors.textSecondary)),
         ),
         TextButton(
@@ -1019,7 +1019,7 @@ void _showAdminDeleteBankAccountDialog(
             }
           },
           child: Text('DELETE',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontWeight: FontWeight.bold, color: AppColors.error)),
         ),
       ],

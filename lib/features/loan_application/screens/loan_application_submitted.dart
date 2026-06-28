@@ -83,7 +83,7 @@ class _ApplicationSubmittedScreenState
         ),
         title: Text(
           'Loan Application',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 17,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -128,7 +128,7 @@ class _ApplicationSubmittedScreenState
                         // Title
                         Text(
                           'Application Submitted!',
-                          style: GoogleFonts.plusJakartaSans(
+                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             fontSize: 28,
                             fontWeight: FontWeight.w800,
                             color: AppColors.primaryDark,
@@ -140,7 +140,7 @@ class _ApplicationSubmittedScreenState
 
                         Text(
                           "Your request is being processed. We'll notify you via email once we're done.",
-                          style: GoogleFonts.plusJakartaSans(
+                          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             fontSize: 15,
                             color: AppColors.textSecondary,
                             height: 1.5,
@@ -174,7 +174,7 @@ class _ApplicationSubmittedScreenState
                                   children: [
                                     Text(
                                       'MONTHLY REPAYMENT',
-                                      style: GoogleFonts.plusJakartaSans(
+                                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.textSecondary,
@@ -185,7 +185,7 @@ class _ApplicationSubmittedScreenState
                                     Text(
                                       Formatters.currency(
                                           monthlyRepayment, countryCode),
-                                      style: GoogleFonts.plusJakartaSans(
+                                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                         fontSize: 36,
                                         fontWeight: FontWeight.w800,
                                         color: AppColors.primaryDark,
@@ -277,7 +277,7 @@ class _ApplicationSubmittedScreenState
                               SizedBox(width: 6),
                               Text(
                                 'RECEIPT',
-                                style: GoogleFonts.plusJakartaSans(
+                                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                   fontSize: 13,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.textSecondary,
@@ -309,7 +309,7 @@ class _ApplicationSubmittedScreenState
                             children: [
                               Text(
                                 'CONTINUE',
-                                style: GoogleFonts.plusJakartaSans(
+                                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
                                   letterSpacing: 0.5,
@@ -328,7 +328,7 @@ class _ApplicationSubmittedScreenState
                     // Support text
                     Text(
                       'Need help? Contact our support team at 0-800-PRIMEKEY',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 12,
                         color: AppColors.textSecondary,
                       ),
@@ -350,7 +350,7 @@ class _ApplicationSubmittedScreenState
       children: [
         Text(
           label,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 10,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
@@ -360,7 +360,7 @@ class _ApplicationSubmittedScreenState
         SizedBox(height: 4),
         Text(
           value,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 16,
             fontWeight: FontWeight.w700,
             color: AppColors.textPrimary,

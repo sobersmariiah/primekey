@@ -24,26 +24,26 @@ class AppTheme {
         surface: AppColors.surface,
       ),
       textTheme: GoogleFonts.plusJakartaSansTextTheme().copyWith(
-        displayLarge: GoogleFonts.plusJakartaSans(
+        displayLarge: TextStyle(fontFamily: 'Plus Jakarta Sans', 
           fontSize: 32,
           fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
-        displayMedium: GoogleFonts.plusJakartaSans(
+        displayMedium: TextStyle(fontFamily: 'Plus Jakarta Sans', 
           fontSize: 24,
           fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
-        titleLarge: GoogleFonts.plusJakartaSans(
+        titleLarge: TextStyle(fontFamily: 'Plus Jakarta Sans', 
           fontSize: 18,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
         ),
-        bodyLarge: GoogleFonts.plusJakartaSans(
+        bodyLarge: TextStyle(fontFamily: 'Plus Jakarta Sans', 
           fontSize: 16,
           color: AppColors.textPrimary,
         ),
-        bodyMedium: GoogleFonts.plusJakartaSans(
+        bodyMedium: TextStyle(fontFamily: 'Plus Jakarta Sans', 
           fontSize: 14,
           color: AppColors.textSecondary,
         ),
@@ -56,7 +56,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          textStyle: GoogleFonts.plusJakartaSans(
+          textStyle: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -70,7 +70,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          textStyle: GoogleFonts.plusJakartaSans(
+          textStyle: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -99,8 +99,8 @@ class AppTheme {
           borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(color: AppColors.error),
         ),
-        labelStyle: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary),
-        hintStyle: GoogleFonts.plusJakartaSans(color: AppColors.textHint),
+        labelStyle: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textSecondary),
+        hintStyle: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textHint),
       ),
       cardTheme: CardThemeData(
         color: AppColors.surface,

@@ -62,7 +62,7 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                   children: [
                     Text(
                       'Work & Income',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -74,7 +74,7 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                 SizedBox(height: 8),
                 Text(
                   'Your employment information helps us understand your ability to repay.',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -127,7 +127,7 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label,
-      style: GoogleFonts.plusJakartaSans(
+      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,

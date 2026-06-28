@@ -24,7 +24,7 @@ class StepConfirmation extends ConsumerWidget {
         SizedBox(height: 8),
         Text(
           'Confirm Withdrawal',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 26,
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
@@ -33,7 +33,7 @@ class StepConfirmation extends ConsumerWidget {
         SizedBox(height: 12),
         Text(
           'Review your withdrawal details and destination account carefully before confirming.',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 14,
             color: AppColors.textSecondary,
             height: 1.6,
@@ -64,7 +64,7 @@ class StepConfirmation extends ConsumerWidget {
                   children: [
                     Text(
                       'TOTAL WITHDRAWAL',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 10,
                         fontWeight: FontWeight.w700,
                         color: AppColors.textSecondary,
@@ -75,7 +75,7 @@ class StepConfirmation extends ConsumerWidget {
                     Text(
                       Formatters.currency(
                           application.loanAmount, application.countryCode),
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 32,
                         fontWeight: FontWeight.w800,
                         color: AppColors.primary,
@@ -122,7 +122,7 @@ class StepConfirmation extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'By confirming, you agree to the terms of the withdrawal agreement and acknowledge that funds will be sent to the selected account.',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 12,
                     color: Color(0xFFC2410C),
                     height: 1.5,
@@ -142,14 +142,14 @@ class StepConfirmation extends ConsumerWidget {
       children: [
         Text(
           label,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 13,
             color: AppColors.textSecondary,
           ),
         ),
         Text(
           value,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 13,
             fontWeight: FontWeight.w700,
             color: AppColors.primary,

@@ -66,7 +66,7 @@ class ApplicationsDesktop extends StatelessWidget {
                           SizedBox(height: 32),
                           Text(
                             'Recent Activities',
-                            style: GoogleFonts.plusJakartaSans(
+                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: AppColors.textPrimary,
@@ -118,7 +118,7 @@ class ApplicationsDesktop extends StatelessWidget {
           SizedBox(width: 12),
           Text(
             'Loan Applications',
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 16,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -146,7 +146,7 @@ class ApplicationsDesktop extends StatelessWidget {
                       currentUser?.fullName.isNotEmpty ?? false
                           ? currentUser!.fullName[0].toUpperCase()
                           : '?',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 14,
                           color: AppColors.primary,
                           fontWeight: FontWeight.bold),
@@ -173,7 +173,7 @@ class ApplicationsDesktop extends StatelessWidget {
               children: [
                 Text(
                   'Primekey Finance',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -181,7 +181,7 @@ class ApplicationsDesktop extends StatelessWidget {
                 ),
                 Text(
                   'PRIMEKEY LOAN APP',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -261,7 +261,7 @@ class ApplicationsDesktop extends StatelessWidget {
                             currentUser?.fullName.isNotEmpty ?? false
                                 ? currentUser!.fullName[0].toUpperCase()
                                 : '?',
-                            style: GoogleFonts.plusJakartaSans(
+                            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.primary),
@@ -270,13 +270,13 @@ class ApplicationsDesktop extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(currentUser?.fullName ?? '',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w700)),
                   Text(currentUser?.email ?? '',
                       style:
-                          GoogleFonts.plusJakartaSans(color: Colors.white60, fontSize: 13)),
+                          TextStyle(fontFamily: 'Plus Jakarta Sans', color: Colors.white60, fontSize: 13)),
                 ],
               ),
             ),
@@ -346,7 +346,7 @@ class ApplicationsDesktop extends StatelessWidget {
           children: [
             Text(
               'Loan Applications',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 28,
                 fontWeight: FontWeight.w900,
                 color: AppColors.primary,
@@ -355,7 +355,7 @@ class ApplicationsDesktop extends StatelessWidget {
             SizedBox(height: 4),
             Text(
               'Manage and review your credit requests.',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
               ),
@@ -427,7 +427,7 @@ class ApplicationsDesktop extends StatelessWidget {
         children: [
           Text(
             label,
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 11,
               color: color.withValues(alpha: 0.7),
               fontWeight: FontWeight.bold,
@@ -437,7 +437,7 @@ class ApplicationsDesktop extends StatelessWidget {
           SizedBox(height: 8),
           Text(
             value,
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 32,
               fontWeight: FontWeight.w900,
               color: color,
@@ -469,7 +469,7 @@ class ApplicationsDesktop extends StatelessWidget {
                     children: [
                       Text(
                         app.loanPurpose,
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: AppColors.textPrimary),
@@ -482,7 +482,7 @@ class ApplicationsDesktop extends StatelessWidget {
                   Text(
                     Formatters.currency(
                         app.loanAmount, currentUser?.countryCode ?? 'BZ'),
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 20,
                         fontWeight: FontWeight.w900,
                         color: AppColors.primaryDark),
@@ -490,7 +490,7 @@ class ApplicationsDesktop extends StatelessWidget {
                   SizedBox(height: 4),
                   Text(
                     'Applied ${Formatters.date(app.createdAt)}',
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 12, color: AppColors.textSecondary),
                   ),
                 ],
@@ -535,7 +535,7 @@ class ApplicationsDesktop extends StatelessWidget {
         ),
         child: Text(
           label,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 13,
             fontWeight: FontWeight.bold,
             color: isSelected ? Colors.white : AppColors.textSecondary,
@@ -557,7 +557,7 @@ class ApplicationsDesktop extends StatelessWidget {
       child: Center(
         child: Text(
           'No applications found',
-          style: GoogleFonts.plusJakartaSans(color: AppColors.textSecondary),
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', color: AppColors.textSecondary),
         ),
       ),
     );
@@ -603,7 +603,7 @@ class _SidebarItem extends StatelessWidget {
               SizedBox(width: 12),
               Text(
                 label,
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 14,
                   fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                   color: color ??
@@ -640,7 +640,7 @@ class _DrawerItem extends StatelessWidget {
               color ?? (isActive ? AppColors.primary : AppColors.textPrimary),
           size: 22),
       title: Text(label,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 15,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w500)),
       onTap: onTap,

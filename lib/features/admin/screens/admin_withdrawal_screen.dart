@@ -190,7 +190,7 @@ class _AdminWithdrawalsScreenState
               children: [
                 Text(
                   'Primekey Finance',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -198,7 +198,7 @@ class _AdminWithdrawalsScreenState
                 ),
                 Text(
                   'Withdrawal Management',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -263,7 +263,7 @@ class _AdminWithdrawalsScreenState
             const SizedBox(width: 8),
             Text(
               'Withdrawals',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark,
@@ -273,7 +273,7 @@ class _AdminWithdrawalsScreenState
           ] else ...[
             Text(
               'Architect Ledger',
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark,
@@ -331,7 +331,7 @@ class _AdminWithdrawalsScreenState
       children: [
         Text(
           'Withdrawals',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 32,
             fontWeight: FontWeight.w900,
             color: AppColors.primaryDark,
@@ -386,7 +386,7 @@ class _AdminWithdrawalsScreenState
             children: [
               Text(
                 label.toUpperCase(),
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                   fontSize: 10,
                   fontWeight: FontWeight.w800,
                   color: AppColors.textSecondary,
@@ -402,7 +402,7 @@ class _AdminWithdrawalsScreenState
           const Spacer(),
           Text(
             value,
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
               fontSize: 28,
               fontWeight: FontWeight.w900,
               color: AppColors.primaryDark,
@@ -441,7 +441,7 @@ class _AdminWithdrawalsScreenState
       children: [
         Text(
           'RECENT WITHDRAWALS',
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: AppColors.textSecondary,
@@ -473,7 +473,7 @@ class _AdminWithdrawalsScreenState
             const SizedBox(width: 6),
             Text(
               label.toUpperCase(),
-              style: GoogleFonts.plusJakartaSans(
+              style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 9,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryShade2,
@@ -554,14 +554,14 @@ class _AdminWithdrawalsScreenState
                   children: [
                     Text(
                       '${w.bankName} ...$last4',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           color: AppColors.primaryDark),
                     ),
                     Text(
                       w.userName,
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 12,
                           color: AppColors.textSecondary,
                           fontWeight: FontWeight.w600),
@@ -574,7 +574,7 @@ class _AdminWithdrawalsScreenState
                 children: [
                   Text(
                     Formatters.currency(w.amount, w.countryCode),
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 18,
                         fontWeight: FontWeight.w900,
                         color: AppColors.primaryDark,
@@ -582,7 +582,7 @@ class _AdminWithdrawalsScreenState
                   ),
                   Text(
                     w.countryCode.toUpperCase(),
-                    style: GoogleFonts.plusJakartaSans(
+                    style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textSecondary,
@@ -602,7 +602,7 @@ class _AdminWithdrawalsScreenState
               const SizedBox(width: 8),
               Text(
                 Formatters.date(w.createdAt),
-                style: GoogleFonts.plusJakartaSans(
+                style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                     fontWeight: FontWeight.w600),
@@ -644,7 +644,7 @@ class _AdminWithdrawalsScreenState
                       const SizedBox(width: 4),
                       Text(
                         'NO DOCUMENT',
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                             fontSize: 9,
                             fontWeight: FontWeight.w800,
                             color: AppColors.error,
@@ -664,7 +664,7 @@ class _AdminWithdrawalsScreenState
                 ),
                 child: Text(
                   statusLabel.toUpperCase(),
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 9,
                       fontWeight: FontWeight.w900,
                       color: statusText,
@@ -743,7 +743,7 @@ class _AdminWithdrawalsScreenState
                 )
               : Text(
                   label.toUpperCase(),
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                       fontSize: 10,
                       fontWeight: FontWeight.w900,
                       color: fg,
@@ -792,7 +792,7 @@ class _AdminWithdrawalsScreenState
           const SizedBox(height: 24),
           Text(
             'No withdrawals yet',
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark),
@@ -800,7 +800,7 @@ class _AdminWithdrawalsScreenState
           const SizedBox(height: 8),
           Text(
             'Requests will appear here once submitted',
-            style: GoogleFonts.plusJakartaSans(
+            style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w500),
@@ -874,7 +874,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??

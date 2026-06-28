@@ -71,7 +71,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
                   children: [
                     Text(
                       'Loan Details',
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -83,7 +83,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
                 SizedBox(height: 8),
                 Text(
                   'Customize your loan to fit your needs and budget.',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -182,7 +182,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
       children: [
         Text(
           label,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: isHighlighted ? 14 : 13,
             fontWeight: isHighlighted ? FontWeight.w600 : FontWeight.w500,
             color: isHighlighted ? AppColors.textPrimary : AppColors.textSecondary,
@@ -190,7 +190,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
         ),
         Text(
           value,
-          style: GoogleFonts.plusJakartaSans(
+          style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
             fontSize: isHighlighted ? 18 : 14,
             fontWeight: isHighlighted ? FontWeight.w800 : FontWeight.w600,
             color: isHighlighted ? AppColors.primary : AppColors.textPrimary,
@@ -203,7 +203,7 @@ class _LoanDetailsStepState extends ConsumerState<LoanDetailsStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label,
-      style: GoogleFonts.plusJakartaSans(
+      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,

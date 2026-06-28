@@ -33,7 +33,7 @@ class LoadingOverlay extends StatelessWidget {
                       SizedBox(height: 16),
                       Text(
                         'Please wait...',
-                        style: GoogleFonts.plusJakartaSans(
+                        style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                           fontSize: 14,
                           color: AppColors.textSecondary,
                         ),

@@ -75,7 +75,7 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
                   children: [
                     Text(
                       "Let's get started.",
-                      style: GoogleFonts.plusJakartaSans(
+                      style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -87,7 +87,7 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
                 SizedBox(height: 8),
                 Text(
                   'Tell us a bit about yourself to help us build your personalized loan offer.',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -160,7 +160,7 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
               children: [
                 Text(
                   'SECURE TRANSMISSION',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
                     color: customColors.infoIcon,
@@ -170,7 +170,7 @@ class _PersonalInfoStepState extends ConsumerState<PersonalInfoStep> {
                 SizedBox(height: 2),
                 Text(
                   'Your data is encrypted with bank-grade security.',
-                  style: GoogleFonts.plusJakartaSans(
+                  style: TextStyle(fontFamily: 'Plus Jakarta Sans', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                   ),
