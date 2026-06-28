@@ -190,7 +190,7 @@ class _AdminWithdrawalsScreenState
               children: [
                 Text(
                   'Primekey Finance',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -198,7 +198,7 @@ class _AdminWithdrawalsScreenState
                 ),
                 Text(
                   'Withdrawal Management',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -263,7 +263,7 @@ class _AdminWithdrawalsScreenState
             const SizedBox(width: 8),
             Text(
               'Withdrawals',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark,
@@ -273,7 +273,7 @@ class _AdminWithdrawalsScreenState
           ] else ...[
             Text(
               'Architect Ledger',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark,
@@ -331,7 +331,7 @@ class _AdminWithdrawalsScreenState
       children: [
         Text(
           'Withdrawals',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 32,
             fontWeight: FontWeight.w900,
             color: AppColors.primaryDark,
@@ -386,7 +386,7 @@ class _AdminWithdrawalsScreenState
             children: [
               Text(
                 label.toUpperCase(),
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 10,
                   fontWeight: FontWeight.w800,
                   color: AppColors.textSecondary,
@@ -402,7 +402,7 @@ class _AdminWithdrawalsScreenState
           const Spacer(),
           Text(
             value,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 28,
               fontWeight: FontWeight.w900,
               color: AppColors.primaryDark,
@@ -441,7 +441,7 @@ class _AdminWithdrawalsScreenState
       children: [
         Text(
           'RECENT WITHDRAWALS',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: AppColors.textSecondary,
@@ -473,7 +473,7 @@ class _AdminWithdrawalsScreenState
             const SizedBox(width: 6),
             Text(
               label.toUpperCase(),
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 9,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryShade2,
@@ -554,14 +554,14 @@ class _AdminWithdrawalsScreenState
                   children: [
                     Text(
                       '${w.bankName} ...$last4',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           color: AppColors.primaryDark),
                     ),
                     Text(
                       w.userName,
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                           fontSize: 12,
                           color: AppColors.textSecondary,
                           fontWeight: FontWeight.w600),
@@ -574,7 +574,7 @@ class _AdminWithdrawalsScreenState
                 children: [
                   Text(
                     Formatters.currency(w.amount, w.countryCode),
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 18,
                         fontWeight: FontWeight.w900,
                         color: AppColors.primaryDark,
@@ -582,7 +582,7 @@ class _AdminWithdrawalsScreenState
                   ),
                   Text(
                     w.countryCode.toUpperCase(),
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textSecondary,
@@ -602,7 +602,7 @@ class _AdminWithdrawalsScreenState
               const SizedBox(width: 8),
               Text(
                 Formatters.date(w.createdAt),
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                     fontWeight: FontWeight.w600),
@@ -644,7 +644,7 @@ class _AdminWithdrawalsScreenState
                       const SizedBox(width: 4),
                       Text(
                         'NO DOCUMENT',
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 9,
                             fontWeight: FontWeight.w800,
                             color: AppColors.error,
@@ -664,7 +664,7 @@ class _AdminWithdrawalsScreenState
                 ),
                 child: Text(
                   statusLabel.toUpperCase(),
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 9,
                       fontWeight: FontWeight.w900,
                       color: statusText,
@@ -743,7 +743,7 @@ class _AdminWithdrawalsScreenState
                 )
               : Text(
                   label.toUpperCase(),
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 10,
                       fontWeight: FontWeight.w900,
                       color: fg,
@@ -792,7 +792,7 @@ class _AdminWithdrawalsScreenState
           const SizedBox(height: 24),
           Text(
             'No withdrawals yet',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark),
@@ -800,7 +800,7 @@ class _AdminWithdrawalsScreenState
           const SizedBox(height: 8),
           Text(
             'Requests will appear here once submitted',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w500),
@@ -874,7 +874,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??

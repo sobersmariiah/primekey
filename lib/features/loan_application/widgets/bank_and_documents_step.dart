@@ -62,7 +62,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                   children: [
                     Text(
                       'Bank & Docs',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textPrimary,
@@ -74,7 +74,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 SizedBox(height: 8),
                 Text(
                   'Finally, tell us where to send your funds and upload required documents.',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 15,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -143,7 +143,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                                       children: [
                                         Text(
                                           account.bankName,
-                                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                          style: TextStyle(fontFamily: 'Ubuntu', 
                                             fontWeight: FontWeight.w700,
                                             fontSize: 15,
                                             color: isSelected ? AppColors.primary : AppColors.textPrimary,
@@ -152,7 +152,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                                         SizedBox(height: 2),
                                         Text(
                                           account.accountNumber,
-                                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                          style: TextStyle(fontFamily: 'Ubuntu', 
                                             fontSize: 13,
                                             fontWeight: FontWeight.w500,
                                             color: isSelected 
@@ -238,7 +238,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 Text(
                   'Upload ID, Paystub or Utility Bill',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 16,
                     fontWeight: FontWeight.w700, 
                     color: AppColors.primary
@@ -248,7 +248,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 Text(
                   'You can upload multiple files (JPG, PNG, PDF)',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 13, 
                     fontWeight: FontWeight.w500,
                     color: AppColors.textSecondary
@@ -258,7 +258,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                 Text(
                   'Maximum size: 5MB per file',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 11, color: AppColors.textHint),
+                  style: TextStyle(fontFamily: 'Ubuntu', fontSize: 11, color: AppColors.textHint),
                 ),
               ],
             ),
@@ -286,7 +286,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
                       file.name,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 13, fontWeight: FontWeight.w500),
+                      style: TextStyle(fontFamily: 'Ubuntu', fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                   ),
                   GestureDetector(
@@ -305,7 +305,7 @@ class _BankAndDocumentsStepState extends ConsumerState<BankAndDocumentsStep> {
   Widget _buildFieldLabel(String label) {
     return Text(
       label.toUpperCase(),
-      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+      style: TextStyle(fontFamily: 'Ubuntu', 
         fontSize: 11,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,

@@ -182,7 +182,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
               children: [
                 Text(
                   'Loan Portal',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -190,7 +190,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                 ),
                 Text(
                   'ADMIN CONSOLE',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -255,7 +255,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
             SizedBox(width: 8),
             Text(
               'Admin Ledger',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark,
@@ -298,7 +298,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
       children: [
         Text(
           'Registered Users',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 28,
             fontWeight: FontWeight.w800,
             color: AppColors.primaryDark,
@@ -319,11 +319,11 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           ),
           child: TextField(
             onChanged: (v) => setState(() => _searchQuery = v),
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 14, fontWeight: FontWeight.w500),
             decoration: InputDecoration(
               hintText: 'Search by name or email...',
-              hintStyle: TextStyle(fontFamily: 'PlusJakartaSans', 
+              hintStyle: TextStyle(fontFamily: 'Ubuntu', 
                   color: AppColors.textSecondary.withValues(alpha: 0.6),
                   fontSize: 14),
               prefixIcon: Icon(Icons.search_rounded,
@@ -366,7 +366,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
         ),
         child: Text(
           label.toUpperCase(),
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 10,
             fontWeight: FontWeight.w800,
             color: isSelected ? Colors.white : AppColors.textSecondary,
@@ -440,7 +440,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                                   user.fullName.isNotEmpty
                                       ? user.fullName[0].toUpperCase()
                                       : '?',
-                                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                  style: TextStyle(fontFamily: 'Ubuntu', 
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
                                       color: AppColors.primaryDark)))
@@ -471,7 +471,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                     children: [
                       Text(
                         user.fullName,
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF191C1E)),
@@ -486,7 +486,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
                         ),
                         child: Text(
                           statusLabel.toUpperCase(),
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                               fontSize: 9,
                               fontWeight: FontWeight.w800,
                               color: statusText,
@@ -529,7 +529,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
         Expanded(
           child: Text(
             text,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
                 color: const Color(0xFF43474F)),
@@ -550,7 +550,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           children: [
             Text(
               'ARCHITECTURE',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 9,
                   fontWeight: FontWeight.w800,
                   color: AppColors.textSecondary,
@@ -559,7 +559,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
             SizedBox(height: 4),
             Text(
               'Showing $current of $total users',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
                   color: const Color(0xFF43474F)),
@@ -579,7 +579,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
               elevation: 0,
             ),
             child: Text('Load More',
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 13, fontWeight: FontWeight.w700)),
           ),
         ),
@@ -604,7 +604,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           SizedBox(height: 24),
           Text(
             'No users found',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primaryDark),
@@ -612,7 +612,7 @@ class _AdminUsersScreenState extends ConsumerState<AdminUsersScreen> {
           SizedBox(height: 8),
           Text(
             'Refine your search or filter criteria',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 14,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w500),
@@ -686,7 +686,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??

@@ -26,7 +26,7 @@ class StepBankSelection extends ConsumerWidget {
         SizedBox(height: 8),
         Text(
           'Select bank account',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 26,
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
@@ -35,7 +35,7 @@ class StepBankSelection extends ConsumerWidget {
         SizedBox(height: 8),
         Text(
           'Select a linked account or connect a new one to complete your withdrawal security check.',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 14,
             color: AppColors.textSecondary,
             height: 1.6,
@@ -44,7 +44,7 @@ class StepBankSelection extends ConsumerWidget {
         SizedBox(height: 24),
         Text(
           'LINKED ACCOUNTS',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 10,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
@@ -70,7 +70,7 @@ class StepBankSelection extends ConsumerWidget {
                 Expanded(
                   child: Text(
                     'The selected account is pending verification. Withdrawals to this account may be delayed until verification is complete.',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 12,
                       color: Color(0xFFB91C1C),
                       height: 1.4,
@@ -123,7 +123,7 @@ class StepBankSelection extends ConsumerWidget {
                                 children: [
                                   Text(
                                     account.bankName,
-                                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                    style: TextStyle(fontFamily: 'Ubuntu', 
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
                                       color: AppColors.primary,
@@ -131,7 +131,7 @@ class StepBankSelection extends ConsumerWidget {
                                   ),
                                   Text(
                                     '•••• ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber}',
-                                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                    style: TextStyle(fontFamily: 'Ubuntu', 
                                       fontSize: 12,
                                       color: AppColors.textSecondary,
                                     ),
@@ -150,7 +150,7 @@ class StepBankSelection extends ConsumerWidget {
                                           horizontal: 11, vertical: 2),
                                       child: Text(
                                         'VERIFIED',
-                                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                        style: TextStyle(fontFamily: 'Ubuntu', 
                                           fontSize: 10,
                                           fontWeight: FontWeight.w700,
                                           color: AppColors.success,
@@ -167,7 +167,7 @@ class StepBankSelection extends ConsumerWidget {
                                       padding: EdgeInsets.all(2.0),
                                       child: Text(
                                         'UNVERIFIED',
-                                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                        style: TextStyle(fontFamily: 'Ubuntu', 
                                           fontSize: 10,
                                           fontWeight: FontWeight.w700,
                                           color: AppColors.error,
@@ -232,7 +232,7 @@ class StepBankSelection extends ConsumerWidget {
                       Expanded(
                         child: Text(
                           'Link a new bank account',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: AppColors.primary,
@@ -263,7 +263,7 @@ class StepBankSelection extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'Verification ensures funds are transferred only to accounts owned by you. Deposits typically reflect within 2-5 business days.',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                     height: 1.5,
@@ -325,7 +325,7 @@ class StepBankSelection extends ConsumerWidget {
                   SizedBox(height: 24),
                   Text(
                     'Add Bank Account',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primaryDark,
@@ -334,7 +334,7 @@ class StepBankSelection extends ConsumerWidget {
                   SizedBox(height: 8),
                   Text(
                     'Link your account to receive disbursements.',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 14,
                       color: AppColors.textSecondary,
                     ),
@@ -342,7 +342,7 @@ class StepBankSelection extends ConsumerWidget {
                   SizedBox(height: 32),
                   Text(
                     'Bank Name',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
@@ -351,7 +351,7 @@ class StepBankSelection extends ConsumerWidget {
                   SizedBox(height: 8),
                   DropdownButtonFormField<String>(
                     initialValue: selectedBank.isEmpty ? null : selectedBank,
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       color: AppColors.textPrimary,
                       fontSize: 15,
                     ),
@@ -377,7 +377,7 @@ class StepBankSelection extends ConsumerWidget {
                         .map((bank) => DropdownMenuItem(
                               value: bank,
                               child: Text(bank,
-                                  style: TextStyle(fontFamily: 'PlusJakartaSans', )),
+                                  style: TextStyle(fontFamily: 'Ubuntu', )),
                             ))
                         .toList(),
                     onChanged: (value) =>
@@ -479,7 +479,7 @@ class StepBankSelection extends ConsumerWidget {
                           )
                         : Text(
                             'LINK ACCOUNT',
-                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                            style: TextStyle(fontFamily: 'Ubuntu', 
                               fontWeight: FontWeight.w900,
                               letterSpacing: 1.2,
                             ),

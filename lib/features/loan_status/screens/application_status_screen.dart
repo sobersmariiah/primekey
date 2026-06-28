@@ -101,7 +101,7 @@ class _ApplicationStatusScreenState
         appBar: AppBar(title: Text('Application not found')),
         body: Center(
           child: Text('Application not found',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.textSecondary)),
+              style: TextStyle(fontFamily: 'Ubuntu', color: AppColors.textSecondary)),
         ),
       );
     }
@@ -405,7 +405,7 @@ class _DesktopStatusView extends StatelessWidget {
               children: [
                 Text(
                   'Loan Portal',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -478,7 +478,7 @@ class _DesktopStatusView extends StatelessWidget {
             SizedBox(width: 8),
             Text(
               'Application Status',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primary,
@@ -533,7 +533,7 @@ class _DesktopStatusView extends StatelessWidget {
                   ),
                   child: Text(
                     'LOAN APPLICATION',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
                       color: AppColors.primary,
@@ -544,7 +544,7 @@ class _DesktopStatusView extends StatelessWidget {
                 SizedBox(width: 12),
                 Text(
                   '#${application.id.substring(0, 8).toUpperCase()}',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
                     color: AppColors.textSecondary,
@@ -555,7 +555,7 @@ class _DesktopStatusView extends StatelessWidget {
             SizedBox(height: 16),
             Text(
               'Loan Status',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 48,
                 fontWeight: FontWeight.w900,
                 color: AppColors.primary,
@@ -565,7 +565,7 @@ class _DesktopStatusView extends StatelessWidget {
             SizedBox(height: 8),
             Text(
               'Your application is currently under internal review.',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 16,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w500,
@@ -604,7 +604,7 @@ class _DesktopStatusView extends StatelessWidget {
                 children: [
                   Text(
                     'CURRENT PHASE',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 9,
                       fontWeight: FontWeight.w800,
                       color: AppColors.textHint,
@@ -613,7 +613,7 @@ class _DesktopStatusView extends StatelessWidget {
                   ),
                   Text(
                     statusTitle,
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
                       color: AppColors.primary,
@@ -644,7 +644,7 @@ class _DesktopStatusView extends StatelessWidget {
             children: [
               Text(
                 'LOAN DETAILS',
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 12,
                   fontWeight: FontWeight.w800,
                   color: AppColors.primary,
@@ -655,7 +655,7 @@ class _DesktopStatusView extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'Edit Details',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary,
@@ -689,7 +689,7 @@ class _DesktopStatusView extends StatelessWidget {
                   children: [
                     Text(
                       'EMPLOYMENT INFORMATION',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textHint,
@@ -715,7 +715,7 @@ class _DesktopStatusView extends StatelessWidget {
                             children: [
                               Text(
                                 application.employer,
-                                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                style: TextStyle(fontFamily: 'Ubuntu', 
                                   fontSize: 18,
                                   fontWeight: FontWeight.w800,
                                   color: AppColors.primary,
@@ -723,7 +723,7 @@ class _DesktopStatusView extends StatelessWidget {
                               ),
                               Text(
                                 application.employmentStatus,
-                                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                style: TextStyle(fontFamily: 'Ubuntu', 
                                   fontSize: 14,
                                   color: AppColors.textSecondary,
                                   fontWeight: FontWeight.w500,
@@ -744,7 +744,7 @@ class _DesktopStatusView extends StatelessWidget {
                   children: [
                     Text(
                       'FINANCIAL INSTITUTION',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
                         color: AppColors.textHint,
@@ -770,7 +770,7 @@ class _DesktopStatusView extends StatelessWidget {
                             children: [
                               Text(
                                 application.bankName,
-                                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                style: TextStyle(fontFamily: 'Ubuntu', 
                                   fontSize: 18,
                                   fontWeight: FontWeight.w800,
                                   color: AppColors.primary,
@@ -778,7 +778,7 @@ class _DesktopStatusView extends StatelessWidget {
                               ),
                               Text(
                                 'Account ending in •••• ${application.accountNumber.length >= 4 ? application.accountNumber.substring(application.accountNumber.length - 4) : application.accountNumber}',
-                                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                style: TextStyle(fontFamily: 'Ubuntu', 
                                   fontSize: 14,
                                   color: AppColors.textSecondary,
                                   fontWeight: FontWeight.w500,
@@ -805,7 +805,7 @@ class _DesktopStatusView extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 10,
             fontWeight: FontWeight.w800,
             color: AppColors.textHint,
@@ -815,7 +815,7 @@ class _DesktopStatusView extends StatelessWidget {
         SizedBox(height: 12),
         Text(
           value,
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 32,
             fontWeight: FontWeight.w900,
             color: AppColors.primary,
@@ -839,7 +839,7 @@ class _DesktopStatusView extends StatelessWidget {
         children: [
           Text(
             'REVIEWER FEEDBACK',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 12,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
@@ -870,7 +870,7 @@ class _DesktopStatusView extends StatelessWidget {
             SizedBox(height: 32),
             Text(
               'OFFICIAL NOTE',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 10,
                 fontWeight: FontWeight.w800,
                 color: AppColors.textHint,
@@ -880,7 +880,7 @@ class _DesktopStatusView extends StatelessWidget {
             SizedBox(height: 16),
             Text(
               application.adminNote!,
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 16,
                 color: AppColors.textPrimary,
                 height: 1.6,
@@ -906,7 +906,7 @@ class _DesktopStatusView extends StatelessWidget {
         children: [
           Text(
             'SUBMITTED DOCUMENTS',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 12,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
@@ -917,7 +917,7 @@ class _DesktopStatusView extends StatelessWidget {
           if (application.documentUrls.isEmpty)
             Text('No documents submitted',
                 style:
-                    TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.textSecondary))
+                    TextStyle(fontFamily: 'Ubuntu', color: AppColors.textSecondary))
           else
             Wrap(
               spacing: 24,
@@ -958,7 +958,7 @@ class _DesktopStatusView extends StatelessWidget {
               children: [
                 Text(
                   'Document_${index + 1}.pdf',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
@@ -967,7 +967,7 @@ class _DesktopStatusView extends StatelessWidget {
                 ),
                 Text(
                   'VIEW DOCUMENT',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 10,
                     fontWeight: FontWeight.w800,
                     color: AppColors.textHint,
@@ -1009,7 +1009,7 @@ class _DesktopStatusView extends StatelessWidget {
         children: [
           Text(
             'APPLICATION ROADMAP',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 11,
               fontWeight: FontWeight.w800,
               color: AppColors.textHint,
@@ -1092,7 +1092,7 @@ class _DesktopStatusView extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 14,
                     fontWeight: isCompleted || isActive
                         ? FontWeight.w800
@@ -1104,7 +1104,7 @@ class _DesktopStatusView extends StatelessWidget {
                 ),
                 Text(
                   subtitle,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 12,
                     color: AppColors.textSecondary,
                   ),
@@ -1174,7 +1174,7 @@ class _DesktopStatusView extends StatelessWidget {
           elevation: 0,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: TextStyle(fontFamily: 'PlusJakartaSans', 
+          textStyle: TextStyle(fontFamily: 'Ubuntu', 
               fontWeight: FontWeight.w800, fontSize: 13, letterSpacing: 1),
         ),
       ),
@@ -1197,12 +1197,12 @@ class _DesktopStatusView extends StatelessWidget {
           Expanded(
             child: RichText(
               text: TextSpan(
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 13, color: AppColors.textSecondary, height: 1.5),
                 children: [
                   TextSpan(
                       text: 'Pro Tip: ',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                           fontWeight: FontWeight.w800,
                           color: AppColors.primary)),
                   const TextSpan(
@@ -1253,7 +1253,7 @@ class _MobileStatusView extends StatelessWidget {
         ),
         title: Text(
           'Loan Status',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 18,
             fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
@@ -1356,7 +1356,7 @@ class _MobileStatusView extends StatelessWidget {
         children: [
           Text(
             'APPLICATION REFERENCE: #${application.id.substring(0, 8).toUpperCase()}',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 11,
                 color: Colors.white54,
                 letterSpacing: 1.2,
@@ -1364,7 +1364,7 @@ class _MobileStatusView extends StatelessWidget {
           ),
           SizedBox(height: 8),
           Text(statusTitle,
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 26,
                   fontWeight: FontWeight.w800,
                   color: Colors.white)),
@@ -1380,7 +1380,7 @@ class _MobileStatusView extends StatelessWidget {
                 SizedBox(width: 12),
                 Expanded(
                     child: Text(statusMessage,
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 13, color: Colors.white, height: 1.5))),
               ],
             ),
@@ -1392,7 +1392,7 @@ class _MobileStatusView extends StatelessWidget {
 
   Widget _buildSectionLabel(String label) {
     return Text(label,
-        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+        style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.textSecondary,
@@ -1449,10 +1449,10 @@ class _MobileStatusView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(application.employer,
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 15, fontWeight: FontWeight.w700)),
                     Text(application.employmentStatus,
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 13, color: AppColors.textSecondary)),
                   ],
                 ),
@@ -1463,7 +1463,7 @@ class _MobileStatusView extends StatelessWidget {
           Divider(),
           SizedBox(height: 16),
           Text('MONTHLY INCOME',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 10,
                   fontWeight: FontWeight.w700,
                   color: AppColors.textSecondary,
@@ -1471,7 +1471,7 @@ class _MobileStatusView extends StatelessWidget {
           SizedBox(height: 4),
           Text(Formatters.currency(application.monthlyIncome, countryCode),
               style:
-                  TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 15, fontWeight: FontWeight.w700)),
+                  TextStyle(fontFamily: 'Ubuntu', fontSize: 15, fontWeight: FontWeight.w700)),
         ],
       ),
     );
@@ -1492,11 +1492,11 @@ class _MobileStatusView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(application.bankName,
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 15, fontWeight: FontWeight.w700)),
                 Text(
                     'Ending in •••• ${application.accountNumber.length >= 4 ? application.accountNumber.substring(application.accountNumber.length - 4) : application.accountNumber}',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 13, color: AppColors.textSecondary)),
               ],
             ),
@@ -1527,7 +1527,7 @@ class _MobileStatusView extends StatelessWidget {
                 leading: Icon(Icons.insert_drive_file_outlined,
                     color: AppColors.primary, size: 18),
                 title: Text('Document ${entry.key + 1}.pdf',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 14, fontWeight: FontWeight.w500)),
                 trailing: Icon(Icons.download_outlined,
                     color: AppColors.textSecondary, size: 20),
@@ -1573,9 +1573,9 @@ class _MobileStatusView extends StatelessWidget {
       children: [
         Text(label,
             style:
-                TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 14, color: AppColors.textSecondary)),
+                TextStyle(fontFamily: 'Ubuntu', fontSize: 14, color: AppColors.textSecondary)),
         Text(value,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 14,
                 fontWeight: isBold ? FontWeight.w700 : FontWeight.w500,
                 color: AppColors.textPrimary)),
@@ -1606,7 +1606,7 @@ class _MobileStatusView extends StatelessWidget {
           foregroundColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: TextStyle(fontFamily: 'PlusJakartaSans', fontSize: 15, fontWeight: FontWeight.w600),
+          textStyle: TextStyle(fontFamily: 'Ubuntu', fontSize: 15, fontWeight: FontWeight.w600),
         ),
       ),
     );
@@ -1667,7 +1667,7 @@ class _SidebarItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 14,
                     fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                     color: color ??
@@ -1708,7 +1708,7 @@ class _DrawerItem extends StatelessWidget {
               color ?? (isActive ? AppColors.primary : AppColors.textPrimary),
           size: 22),
       title: Text(label,
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 15,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
               color: color ??
@@ -1743,7 +1743,7 @@ Widget _buildSharedDrawer(
                           user?.fullName.isNotEmpty ?? false
                               ? user!.fullName[0].toUpperCase()
                               : '?',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary))
@@ -1751,13 +1751,13 @@ Widget _buildSharedDrawer(
                 ),
                 SizedBox(height: 12),
                 Text(user?.fullName ?? '',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text(user?.email ?? '',
                     style:
-                        TextStyle(fontFamily: 'PlusJakartaSans', color: Colors.white60, fontSize: 13)),
+                        TextStyle(fontFamily: 'Ubuntu', color: Colors.white60, fontSize: 13)),
               ],
             ),
           ),
@@ -1824,7 +1824,7 @@ Widget _buildSharedDataField(String label, String value) {
     children: [
       Text(
         label,
-        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+        style: TextStyle(fontFamily: 'Ubuntu', 
           fontSize: 10,
           fontWeight: FontWeight.w800,
           color: AppColors.textSecondary,
@@ -1834,7 +1834,7 @@ Widget _buildSharedDataField(String label, String value) {
       SizedBox(height: 10),
       Text(
         value,
-        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+        style: TextStyle(fontFamily: 'Ubuntu', 
           fontSize: 16,
           fontWeight: FontWeight.w700,
           color: AppColors.primary,

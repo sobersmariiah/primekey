@@ -66,7 +66,7 @@ class _WithdrawalSuccessScreenState
         elevation: 0,
         title: Text(
           'Transaction',
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 17,
             fontWeight: FontWeight.w700,
             color: AppColors.primary,
@@ -127,7 +127,7 @@ class _WithdrawalSuccessScreenState
                         // ── Title ─────────────────────────
                         Text(
                           'Withdrawal Requested',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 30,
                             fontWeight: FontWeight.w800,
                             color: AppColors.primary,
@@ -139,7 +139,7 @@ class _WithdrawalSuccessScreenState
 
                         Text(
                           'Your withdrawal request has been successfully submitted and is now pending review. This process typically takes 1–2 business days.',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 14,
                             color: AppColors.textSecondary,
                             height: 1.6,
@@ -173,7 +173,7 @@ class _WithdrawalSuccessScreenState
                                   children: [
                                     Text(
                                       'AMOUNT REQUESTED',
-                                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                      style: TextStyle(fontFamily: 'Ubuntu', 
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.textSecondary,
@@ -184,7 +184,7 @@ class _WithdrawalSuccessScreenState
                                     Text(
                                       Formatters.currency(
                                           w.amount, countryCode),
-                                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                      style: TextStyle(fontFamily: 'Ubuntu', 
                                         fontSize: 42,
                                         fontWeight: FontWeight.w800,
                                         color: AppColors.primary,
@@ -256,7 +256,7 @@ class _WithdrawalSuccessScreenState
                           children: [
                             Text(
                               'Back to Dashboard',
-                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                              style: TextStyle(fontFamily: 'Ubuntu', 
                                 fontSize: 15,
                                 fontWeight: FontWeight.w700,
                               ),
@@ -275,7 +275,7 @@ class _WithdrawalSuccessScreenState
                       onTap: () => context.go(AppRoutes.withdrawals),
                       child: Text(
                         'View Withdrawals',
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
                           color: AppColors.primary,
@@ -304,7 +304,7 @@ class _WithdrawalSuccessScreenState
       children: [
         Text(
           label,
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 13,
             fontWeight: FontWeight.w600,
             color: AppColors.textSecondary,
@@ -328,7 +328,7 @@ class _WithdrawalSuccessScreenState
                   SizedBox(width: 6),
                   Text(
                     value,
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                       color: AppColors.primary,
@@ -340,7 +340,7 @@ class _WithdrawalSuccessScreenState
             else
               Text(
                 value,
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: AppColors.primary,
@@ -350,7 +350,7 @@ class _WithdrawalSuccessScreenState
               SizedBox(height: 2),
               Text(
                 subtitle,
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 12,
                   color: AppColors.textSecondary,
                 ),

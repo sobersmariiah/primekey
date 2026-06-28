@@ -108,7 +108,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                           SizedBox(height: 4),
                           Text(
                             AppStrings.tagline,
-                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                            style: TextStyle(fontFamily: 'Ubuntu', 
                               fontSize: 14,
                               color: AppColors.textSecondary,
                             ),
@@ -124,7 +124,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     // Heading
                     Text(
                       'Create your account',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimary,
@@ -133,7 +133,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     SizedBox(height: 4),
                     Text(
                       'Fill in your details to get started',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                      style: TextStyle(fontFamily: 'Ubuntu', 
                         fontSize: 14,
                         color: AppColors.textSecondary,
                       ),
@@ -163,7 +163,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                             Expanded(
                               child: Text(
                                 authState.error!,
-                                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                                style: TextStyle(fontFamily: 'Ubuntu', 
                                   color: AppColors.error,
                                   fontSize: 13,
                                 ),
@@ -294,7 +294,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       children: [
                         Text(
                           'Country',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                             color: AppColors.textPrimary,
@@ -417,7 +417,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       children: [
                         Text(
                           'Already have an account? ',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             color: AppColors.textSecondary,
                             fontSize: 14,
                           ),
@@ -426,7 +426,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                           onTap: () => context.go(AppRoutes.login),
                           child: Text(
                             'Sign in',
-                            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                            style: TextStyle(fontFamily: 'Ubuntu', 
                               color: AppColors.primary,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,

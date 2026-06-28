@@ -76,7 +76,7 @@ class KycStatusScreen extends ConsumerWidget {
             ),
             title: Text(
               'KYC Status',
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
               ),
@@ -105,7 +105,7 @@ class KycStatusScreen extends ConsumerWidget {
                         SizedBox(height: 12),
                         Text(
                           statusLabel,
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 22,
                             fontWeight: FontWeight.w700,
                             color: circleColor,
@@ -120,7 +120,7 @@ class KycStatusScreen extends ConsumerWidget {
                   // User name
                   Text(
                     user.fullName,
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: AppColors.textPrimary,
@@ -132,7 +132,7 @@ class KycStatusScreen extends ConsumerWidget {
                   Text(
                     statusMessage,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontSize: 14,
                       color: AppColors.textSecondary,
                       height: 1.5,
@@ -149,7 +149,7 @@ class KycStatusScreen extends ConsumerWidget {
                     onPressed: () => context.go(AppRoutes.admin),
                     child: Text(
                       'Back to Dashboard',
-                      style: TextStyle(fontFamily: 'PlusJakartaSans', color: AppColors.textSecondary),
+                      style: TextStyle(fontFamily: 'Ubuntu', color: AppColors.textSecondary),
                     ),
                   ),
 

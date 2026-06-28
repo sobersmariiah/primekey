@@ -33,7 +33,7 @@ class LoadingOverlay extends StatelessWidget {
                       SizedBox(height: 16),
                       Text(
                         'Please wait...',
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                           fontSize: 14,
                           color: AppColors.textSecondary,
                         ),

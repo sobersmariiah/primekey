@@ -51,7 +51,7 @@ class _TopNavBar extends StatelessWidget {
         children: [
           Text(
             'PRIMEKEY FINANCE',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 20,
               fontWeight: FontWeight.w800,
               letterSpacing: -0.5,
@@ -64,7 +64,7 @@ class _TopNavBar extends StatelessWidget {
                 onPressed: () => context.go(AppRoutes.login),
                 child: Text(
                   'Log In',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontWeight: FontWeight.w600,
                     color: AppColors.textSecondary,
                   ),
@@ -86,7 +86,7 @@ class _TopNavBar extends StatelessWidget {
                   ),
                   child: Text(
                     'Get Started',
-                    style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                    style: TextStyle(fontFamily: 'Ubuntu', 
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -102,7 +102,7 @@ class _TopNavBar extends StatelessWidget {
   Widget _NavButton(String label) {
     return Text(
       label,
-      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+      style: TextStyle(fontFamily: 'Ubuntu', 
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: AppColors.textSecondary,
@@ -146,7 +146,7 @@ class _HeroSection extends StatelessWidget {
                       const SizedBox(width: 8),
                       Text(
                         'NEXT-GEN LENDING ARCHITECTURE',
-                        style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                        style: TextStyle(fontFamily: 'Ubuntu', 
                           fontSize: 10,
                           fontWeight: FontWeight.w800,
                           letterSpacing: 1.5,
@@ -162,7 +162,7 @@ class _HeroSection extends StatelessWidget {
                 const SizedBox(height: 32),
                 Text(
                   'Easy Online Loans\nfor Your Future',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 72,
                     fontWeight: FontWeight.w800,
                     height: 1.05,
@@ -176,7 +176,7 @@ class _HeroSection extends StatelessWidget {
                 const SizedBox(height: 32),
                 Text(
                   'Primekey Finance provides a clinical approach to digital credit. Minimal friction, Maximum transparency. Designed for the architectural precision of your financial life.',
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 20,
                     color: AppColors.textSecondary,
                     height: 1.6,
@@ -203,7 +203,7 @@ class _HeroSection extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          textStyle: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          textStyle: TextStyle(fontFamily: 'Ubuntu', 
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
@@ -223,7 +223,7 @@ class _HeroSection extends StatelessWidget {
                             ),
                             elevation: 0,
                           ),
-                          textStyle: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          textStyle: TextStyle(fontFamily: 'Ubuntu', 
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
@@ -283,7 +283,7 @@ class _HeroSection extends StatelessWidget {
                           children: [
                             Text(
                               'CURRENT RATE',
-                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                              style: TextStyle(fontFamily: 'Ubuntu', 
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.primary,
@@ -293,7 +293,7 @@ class _HeroSection extends StatelessWidget {
                             const SizedBox(width: 40),
                             Text(
                               '+0.02%',
-                              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                              style: TextStyle(fontFamily: 'Ubuntu', 
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
                                 color: const Color(0xFF3A5F94),
@@ -304,7 +304,7 @@ class _HeroSection extends StatelessWidget {
                         const SizedBox(height: 8),
                         Text(
                           '4.25% APR',
-                          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                          style: TextStyle(fontFamily: 'Ubuntu', 
                             fontSize: 32,
                             fontWeight: FontWeight.w800,
                             color: AppColors.primary,
@@ -339,7 +339,7 @@ class _WhyChooseSection extends StatelessWidget {
         children: [
           Text(
             'Why Choose Primekey Finance?',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 40,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
@@ -440,7 +440,7 @@ class _FeatureCardLarge extends StatelessWidget {
           const SizedBox(height: 32),
           Text(
             title,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -449,7 +449,7 @@ class _FeatureCardLarge extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             description,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 16,
               color: AppColors.textSecondary,
               fontWeight: FontWeight.w500,
@@ -461,7 +461,7 @@ class _FeatureCardLarge extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: Text(
               number,
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 80,
                 fontWeight: FontWeight.w900,
                 color: AppColors.primary.withValues(alpha: 0.05),
@@ -504,7 +504,7 @@ class _FeatureCardDark extends StatelessWidget {
           const SizedBox(height: 32),
           Text(
             title,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -513,7 +513,7 @@ class _FeatureCardDark extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             description,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 16,
               color: Colors.white.withValues(alpha: 0.7),
               fontWeight: FontWeight.w500,
@@ -525,7 +525,7 @@ class _FeatureCardDark extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: Text(
               number,
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 80,
                 fontWeight: FontWeight.w900,
                 color: Colors.white.withValues(alpha: 0.05),
@@ -572,7 +572,7 @@ class _FeatureCardFull extends StatelessWidget {
                 const SizedBox(height: 32),
                 Text(
                   title,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
@@ -581,7 +581,7 @@ class _FeatureCardFull extends StatelessWidget {
                 const SizedBox(height: 16),
                 Text(
                   description,
-                  style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                  style: TextStyle(fontFamily: 'Ubuntu', 
                     fontSize: 16,
                     color: AppColors.textSecondary,
                     fontWeight: FontWeight.w500,
@@ -623,7 +623,7 @@ class _HowItWorksSection extends StatelessWidget {
         children: [
           Text(
             'How It Works',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 40,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
@@ -633,7 +633,7 @@ class _HowItWorksSection extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             'Three steps to redefine your financial horizon.',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 18,
               color: AppColors.textSecondary,
               fontWeight: FontWeight.w500,
@@ -723,7 +723,7 @@ class _StepItem extends StatelessWidget {
           child: Center(
             child: Text(
               number,
-              style: TextStyle(fontFamily: 'PlusJakartaSans', 
+              style: TextStyle(fontFamily: 'Ubuntu', 
                 fontSize: 24,
                 fontWeight: FontWeight.w800,
                 color: isHighlighted ? Colors.white : AppColors.primary,
@@ -734,7 +734,7 @@ class _StepItem extends StatelessWidget {
         const SizedBox(height: 32),
         Text(
           title,
-          style: TextStyle(fontFamily: 'PlusJakartaSans', 
+          style: TextStyle(fontFamily: 'Ubuntu', 
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: AppColors.primary,
@@ -746,7 +746,7 @@ class _StepItem extends StatelessWidget {
           child: Text(
             description,
             textAlign: TextAlign.center,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 14,
               color: AppColors.textSecondary,
               fontWeight: FontWeight.w500,
@@ -774,7 +774,7 @@ class _FinalCTASection extends StatelessWidget {
           Text(
             'Ready to redefine your financial horizon?',
             textAlign: TextAlign.center,
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 48,
               fontWeight: FontWeight.w800,
               color: Colors.white,
@@ -784,7 +784,7 @@ class _FinalCTASection extends StatelessWidget {
           const SizedBox(height: 32),
           Text(
             'Join thousands of architects of their own future. Experience lending as it should be.',
-            style: TextStyle(fontFamily: 'PlusJakartaSans', 
+            style: TextStyle(fontFamily: 'Ubuntu', 
               fontSize: 20,
               color: Colors.white.withValues(alpha: 0.7),
               fontWeight: FontWeight.w500,
@@ -805,7 +805,7 @@ class _FinalCTASection extends StatelessWidget {
               ),
               child: Text(
                 'Create My Account',
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
                 ),
@@ -837,7 +837,7 @@ class _Footer extends StatelessWidget {
             children: [
               Text(
                 'PRIMEKEY FINANCE',
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
                   color: AppColors.primary,
@@ -856,7 +856,7 @@ class _Footer extends StatelessWidget {
               ),
               Text(
                 '© 2024 Primekey Finance. All rights reserved.',
-                style: TextStyle(fontFamily: 'PlusJakartaSans', 
+                style: TextStyle(fontFamily: 'Ubuntu', 
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
                   color: AppColors.textSecondary,
@@ -873,7 +873,7 @@ class _Footer extends StatelessWidget {
   Widget _FooterLink(String label) {
     return Text(
       label.toUpperCase(),
-      style: TextStyle(fontFamily: 'PlusJakartaSans', 
+      style: TextStyle(fontFamily: 'Ubuntu', 
         fontSize: 10,
         fontWeight: FontWeight.w700,
         color: AppColors.textSecondary,
