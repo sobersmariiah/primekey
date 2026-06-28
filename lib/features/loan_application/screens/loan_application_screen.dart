@@ -36,6 +36,8 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
   final _step2Key = GlobalKey<FormState>();
   final _step3Key = GlobalKey<FormState>();
   final _step4Key = GlobalKey<FormState>();
+  
+  final _bodyKey = GlobalKey();
 
   @override
   void initState() {
@@ -201,9 +203,11 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
       'Bank & Docs'
     ];
 
-    final bodyContent = Column(
-      children: [
-        // Progress Header
+    final bodyContent = KeyedSubtree(
+      key: _bodyKey,
+      child: Column(
+        children: [
+          // Progress Header
         Container(
           color: AppColors.white,
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
@@ -272,6 +276,7 @@ class _LoanApplicationScreenState extends ConsumerState<LoanApplicationScreen> {
         // Navigation
         _buildBottomNav(),
       ],
+    ),
     );
 
     return LoadingOverlay(
