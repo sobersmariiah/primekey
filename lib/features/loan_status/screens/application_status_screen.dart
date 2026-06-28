@@ -363,8 +363,6 @@ class _DesktopStatusView extends StatelessWidget {
                                   flex: 2,
                                   child: Column(
                                     children: [
-                                      _buildAssistanceCard(context),
-                                      const SizedBox(height: 32),
                                       _buildRoadmapCard(context),
                                       if (canVerify ||
                                           application.status ==
@@ -996,90 +994,7 @@ class _DesktopStatusView extends StatelessWidget {
     );
   }
 
-  Widget _buildAssistanceCard(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(32),
-      decoration: BoxDecoration(
-        color: AppColors.primaryDark,
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.primaryDark.withValues(alpha: 0.2),
-            blurRadius: 30,
-            offset: const Offset(0, 15),
-          )
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Need assistance?',
-            style: GoogleFonts.plusJakartaSans(
-              fontSize: 24,
-              fontWeight: FontWeight.w900,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(height: 16),
-          Text(
-            'Your dedicated loan officer can help clarify terms or assist with additional documentation requirements.',
-            style: GoogleFonts.plusJakartaSans(
-              fontSize: 14,
-              color: Colors.white.withValues(alpha: 0.7),
-              height: 1.6,
-            ),
-          ),
-          const SizedBox(height: 32),
-          ElevatedButton.icon(
-            onPressed: () {},
-            icon: const Icon(Icons.headset_mic_outlined, size: 18),
-            label: const Text('Speak with a Loan Officer'),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              foregroundColor: AppColors.primaryDark,
-              minimumSize: const Size(double.infinity, 64),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
-              textStyle: GoogleFonts.plusJakartaSans(
-                  fontWeight: FontWeight.w800, fontSize: 15),
-            ),
-          ),
-          const SizedBox(height: 32),
-          Row(
-            children: [
-              const CircleAvatar(
-                radius: 20,
-                backgroundColor: Colors.white24,
-                child: Icon(Icons.person, color: Colors.white, size: 20),
-              ),
-              const SizedBox(width: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sarah Henderson',
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Text(
-                    'Senior Underwriting Liaison',
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize: 11,
-                      color: Colors.white.withValues(alpha: 0.5),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+
 
   Widget _buildRoadmapCard(BuildContext context) {
     return Container(
