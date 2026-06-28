@@ -6,6 +6,14 @@ class AppStrings {
   // Supported Countries
   static const List<Map<String, String>> supportedCountries = [
     {
+      'name': 'Belize',
+      'code': 'BZ',
+      'currency': 'BZD',
+      'symbol': 'BZ\$',
+      'flag': '🇧🇿',
+      'area': '+501',
+    },
+    {
       'name': 'Bahamas',
       'code': 'BS',
       'currency': 'BSD',
@@ -73,6 +81,12 @@ class AppStrings {
 
   // Banks per Country
   static const Map<String, List<String>> banksByCountry = {
+    'BZ': [
+      'Belize Bank Limited',
+      'Heritage Bank Limited',
+      'National Bank of Belize Limited',
+      'Atlantic Bank Limited',
+    ],
     'BS': [
       'Commonwealth Bank Limited',
       'Bank of The Bahamas Limited',
