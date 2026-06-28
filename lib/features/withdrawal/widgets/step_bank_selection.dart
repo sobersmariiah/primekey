@@ -29,7 +29,7 @@ class StepBankSelection extends ConsumerWidget {
           style: TextStyle(
             fontSize: 26,
             fontWeight: FontWeight.w800,
-            color: Color(0xFF0D1B3E),
+            color: AppColors.primary,
           ),
         ),
         const SizedBox(height: 8),
@@ -37,7 +37,7 @@ class StepBankSelection extends ConsumerWidget {
           'Select a linked account or connect a new one to complete your withdrawal security check.',
           style: TextStyle(
             fontSize: 14,
-            color: Color(0xFF64748B),
+            color: AppColors.textSecondary,
             height: 1.6,
           ),
         ),
@@ -47,7 +47,7 @@ class StepBankSelection extends ConsumerWidget {
           style: TextStyle(
             fontSize: 10,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF94A3B8),
+            color: AppColors.textSecondary,
             letterSpacing: 1.2,
           ),
         ),
@@ -114,7 +114,7 @@ class StepBankSelection extends ConsumerWidget {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: const Icon(Icons.account_balance_outlined,
-                                  color: Color(0xFF0D1B3E), size: 20),
+                                  color: AppColors.primary, size: 20),
                             ),
                             const SizedBox(width: 12),
                             Expanded(
@@ -126,14 +126,14 @@ class StepBankSelection extends ConsumerWidget {
                                     style: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFF0D1B3E),
+                                      color: AppColors.primary,
                                     ),
                                   ),
                                   Text(
                                     '•••• ${account.accountNumber.length >= 4 ? account.accountNumber.substring(account.accountNumber.length - 4) : account.accountNumber}',
                                     style: const TextStyle(
                                       fontSize: 12,
-                                      color: Color(0xFF94A3B8),
+                                      color: AppColors.textSecondary,
                                     ),
                                   ),
                                 ],
@@ -181,7 +181,7 @@ class StepBankSelection extends ConsumerWidget {
                                 width: 24,
                                 height: 24,
                                 decoration: const BoxDecoration(
-                                  color: Color(0xFF0D1B3E),
+                                  color: AppColors.primary,
                                   shape: BoxShape.circle,
                                 ),
                                 child: const Icon(Icons.check,
@@ -227,7 +227,7 @@ class StepBankSelection extends ConsumerWidget {
                   child: Row(
                     children: [
                       Icon(Icons.add_circle_outline,
-                          color: Color(0xFF0D1B3E), size: 20),
+                          color: AppColors.primary, size: 20),
                       SizedBox(width: 12),
                       Expanded(
                         child: Text(
@@ -235,11 +235,11 @@ class StepBankSelection extends ConsumerWidget {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF0D1B3E),
+                            color: AppColors.primary,
                           ),
                         ),
                       ),
-                      Icon(Icons.chevron_right, color: Color(0xFF94A3B8)),
+                      Icon(Icons.chevron_right, color: AppColors.textSecondary),
                     ],
                   ),
                 ),
@@ -251,21 +251,21 @@ class StepBankSelection extends ConsumerWidget {
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: const Color(0xFFF8FAFC),
+            color: AppColors.background,
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: const Color(0xFFE2E8F0)),
           ),
           child: const Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.info_outline, color: Color(0xFF64748B), size: 16),
+              Icon(Icons.info_outline, color: AppColors.textSecondary, size: 16),
               SizedBox(width: 10),
               Expanded(
                 child: Text(
                   'Verification ensures funds are transferred only to accounts owned by you. Deposits typically reflect within 2-5 business days.',
                   style: TextStyle(
                     fontSize: 12,
-                    color: Color(0xFF64748B),
+                    color: AppColors.textSecondary,
                     height: 1.5,
                   ),
                 ),

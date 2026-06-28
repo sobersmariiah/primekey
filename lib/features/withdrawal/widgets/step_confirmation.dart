@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/withdrawal_provider.dart';
 import '../../../core/utils/formatters.dart';
@@ -25,7 +26,7 @@ class StepConfirmation extends ConsumerWidget {
           style: TextStyle(
             fontSize: 26,
             fontWeight: FontWeight.w800,
-            color: Color(0xFF0D1B3E),
+            color: AppColors.primary,
           ),
         ),
         const SizedBox(height: 12),
@@ -33,7 +34,7 @@ class StepConfirmation extends ConsumerWidget {
           'Review your withdrawal details and destination account carefully before confirming.',
           style: TextStyle(
             fontSize: 14,
-            color: Color(0xFF64748B),
+            color: AppColors.textSecondary,
             height: 1.6,
           ),
         ),
@@ -65,7 +66,7 @@ class StepConfirmation extends ConsumerWidget {
                       style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF94A3B8),
+                        color: AppColors.textSecondary,
                         letterSpacing: 1.2,
                       ),
                     ),
@@ -76,7 +77,7 @@ class StepConfirmation extends ConsumerWidget {
                       style: const TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.w800,
-                        color: Color(0xFF0D1B3E),
+                        color: AppColors.primary,
                       ),
                     ),
                   ],
@@ -142,7 +143,7 @@ class StepConfirmation extends ConsumerWidget {
           label,
           style: const TextStyle(
             fontSize: 13,
-            color: Color(0xFF64748B),
+            color: AppColors.textSecondary,
           ),
         ),
         Text(
@@ -150,7 +151,7 @@ class StepConfirmation extends ConsumerWidget {
           style: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF0D1B3E),
+            color: AppColors.primary,
           ),
         ),
       ],

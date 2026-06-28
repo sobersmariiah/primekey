@@ -59,7 +59,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF0D1B3E)),
+          icon: const Icon(Icons.arrow_back, color: AppColors.primary),
           onPressed: () {
             if (state.currentStep > 0) {
               notifier.setStep(state.currentStep - 1);
@@ -73,7 +73,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF0D1B3E),
+            color: AppColors.primary,
           ),
         ),
         centerTitle: true,
@@ -190,7 +190,7 @@ class _WithdrawalScreenState extends ConsumerState<WithdrawalScreen> {
                       }
                     },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF0D1B3E),
+                backgroundColor: AppColors.primary,
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 18),
                 shape: RoundedRectangleBorder(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primekey_loan_app/core/constants/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:primekey_loan_app/core/utils/formatters.dart';
@@ -67,13 +68,13 @@ class _WithdrawalSuccessScreenState
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.w700,
-            color: Color(0xFF0D1B3E),
+            color: AppColors.primary,
           ),
         ),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.more_vert, color: Color(0xFF0D1B3E)),
+            icon: const Icon(Icons.more_vert, color: AppColors.primary),
             onPressed: () {},
           ),
         ],
@@ -107,7 +108,7 @@ class _WithdrawalSuccessScreenState
                                 width: 64,
                                 height: 64,
                                 decoration: const BoxDecoration(
-                                  color: Color(0xFF0D1B3E),
+                                  color: AppColors.primary,
                                   shape: BoxShape.circle,
                                 ),
                                 child: const Icon(
@@ -128,7 +129,7 @@ class _WithdrawalSuccessScreenState
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.w800,
-                            color: Color(0xFF0D1B3E),
+                            color: AppColors.primary,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -139,7 +140,7 @@ class _WithdrawalSuccessScreenState
                           'Your withdrawal request has been successfully submitted and is now pending review. This process typically takes 1–2 business days.',
                           style: TextStyle(
                             fontSize: 14,
-                            color: Color(0xFF64748B),
+                            color: AppColors.textSecondary,
                             height: 1.6,
                           ),
                           textAlign: TextAlign.center,
@@ -174,7 +175,7 @@ class _WithdrawalSuccessScreenState
                                       style: TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
-                                        color: Color(0xFF94A3B8),
+                                        color: AppColors.textSecondary,
                                         letterSpacing: 1.4,
                                       ),
                                     ),
@@ -185,7 +186,7 @@ class _WithdrawalSuccessScreenState
                                       style: const TextStyle(
                                         fontSize: 42,
                                         fontWeight: FontWeight.w800,
-                                        color: Color(0xFF0D1B3E),
+                                        color: AppColors.primary,
                                       ),
                                     ),
                                   ],
@@ -240,7 +241,7 @@ class _WithdrawalSuccessScreenState
                       child: ElevatedButton(
                         onPressed: () => context.go(AppRoutes.dashboard),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF0D1B3E),
+                          backgroundColor: AppColors.primary,
                           foregroundColor: Colors.white,
                           padding: const EdgeInsets.symmetric(vertical: 18),
                           shape: RoundedRectangleBorder(
@@ -276,7 +277,7 @@ class _WithdrawalSuccessScreenState
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF0D1B3E),
+                          color: AppColors.primary,
                         ),
                       ),
                     ),
@@ -305,7 +306,7 @@ class _WithdrawalSuccessScreenState
           style: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF94A3B8),
+            color: AppColors.textSecondary,
             letterSpacing: 0.5,
           ),
         ),
@@ -319,7 +320,7 @@ class _WithdrawalSuccessScreenState
                     width: 8,
                     height: 8,
                     decoration: const BoxDecoration(
-                      color: Color(0xFF4F46E5),
+                      color: AppColors.primary,
                       shape: BoxShape.circle,
                     ),
                   ),
@@ -329,7 +330,7 @@ class _WithdrawalSuccessScreenState
                     style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
-                      color: Color(0xFF0D1B3E),
+                      color: AppColors.primary,
                       letterSpacing: 0.3,
                     ),
                   ),
@@ -341,7 +342,7 @@ class _WithdrawalSuccessScreenState
                 style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF0D1B3E),
+                  color: AppColors.primary,
                 ),
               ),
             if (subtitle != null) ...[
@@ -350,7 +351,7 @@ class _WithdrawalSuccessScreenState
                 subtitle,
                 style: const TextStyle(
                   fontSize: 12,
-                  color: Color(0xFF94A3B8),
+                  color: AppColors.textSecondary,
                 ),
               ),
             ],

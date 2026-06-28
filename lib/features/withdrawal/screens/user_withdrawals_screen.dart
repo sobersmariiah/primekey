@@ -411,8 +411,8 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
         label = 'PENDING';
         break;
       case WithdrawalStatus.processing:
-        bg = const Color(0xFFEEF2FF);
-        fg = const Color(0xFF4F46E5);
+        bg = AppColors.primaryLight;
+        fg = AppColors.primary;
         label = 'PROCESSING';
         break;
       case WithdrawalStatus.completed:
@@ -450,7 +450,7 @@ class _WithdrawalsScreenState extends ConsumerState<WithdrawalsScreen>
       case WithdrawalStatus.pending:
         return AppColors.pending;
       case WithdrawalStatus.processing:
-        return const Color(0xFF4F46E5);
+        return AppColors.primary;
       case WithdrawalStatus.completed:
         return AppColors.success;
       case WithdrawalStatus.failed:

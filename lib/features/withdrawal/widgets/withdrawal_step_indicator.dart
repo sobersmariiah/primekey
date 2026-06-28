@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/constants/app_colors.dart';
 
 class WithdrawalStepIndicator extends StatelessWidget {
   final int currentStep;
@@ -32,7 +33,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
                           height: 32,
                           decoration: BoxDecoration(
                             color: isComplete || isActive
-                                ? const Color(0xFF0D1B3E)
+                                ? AppColors.primary
                                 : const Color(0xFFE2E8F0),
                             shape: BoxShape.circle,
                           ),
@@ -47,7 +48,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
                                       fontWeight: FontWeight.w700,
                                       color: isActive
                                           ? Colors.white
-                                          : const Color(0xFF94A3B8),
+                                          : AppColors.textSecondary,
                                     ),
                                   ),
                           ),
@@ -59,8 +60,8 @@ class WithdrawalStepIndicator extends StatelessWidget {
                             fontSize: 9,
                             fontWeight: FontWeight.w700,
                             color: isActive || isComplete
-                                ? const Color(0xFF0D1B3E)
-                                : const Color(0xFF94A3B8),
+                                ? AppColors.primary
+                                : AppColors.textSecondary,
                             letterSpacing: 0.5,
                           ),
                         ),
@@ -80,7 +81,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
                           height: 2,
                           margin: const EdgeInsets.only(bottom: 20),
                           color: i < currentStep
-                              ? const Color(0xFF0D1B3E)
+                              ? AppColors.primary
                               : const Color(0xFFE2E8F0),
                         ),
                       ),
@@ -99,7 +100,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
             style: const TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w700,
-              color: Color(0xFF94A3B8),
+              color: AppColors.textSecondary,
               letterSpacing: 1.2,
             ),
           ),
@@ -109,7 +110,7 @@ class WithdrawalStepIndicator extends StatelessWidget {
             child: LinearProgressIndicator(
               value: (currentStep + 1) / 3,
               backgroundColor: const Color(0xFFE2E8F0),
-              color: const Color(0xFF0D1B3E),
+              color: AppColors.primary,
               minHeight: 3,
             ),
           ),
