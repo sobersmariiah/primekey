@@ -88,7 +88,14 @@ Please log in to your dashboard to re-upload clear documents.
 Best regards,
 Primekey Finance Team
 ''';
-    return _send(toEmail: toEmail, subject: subject, content: content);
+    return _send(
+      toEmail: toEmail, 
+      subject: subject, 
+      content: content,
+      status: 'kyc_rejected',
+      fullName: toName,
+      reason: reason,
+    );
   }
 
   static Future<bool> sendKycApprovalEmail({

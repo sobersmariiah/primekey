@@ -3,7 +3,8 @@ import '../constants/app_strings.dart';
 
 class Formatters {
   // Get currency symbol by country code
-  static String getCurrencySymbol(String countryCode) {
+  static String getCurrencySymbol(String? countryCode) {
+    if (countryCode == null || countryCode.trim().isEmpty) countryCode = 'BZ';
     final country = AppStrings.supportedCountries.firstWhere(
       (c) => c['code'] == countryCode,
       orElse: () => {'symbol': '\$'},
@@ -12,7 +13,8 @@ class Formatters {
   }
 
   // Get currency code by country code
-  static String getCurrencyCode(String countryCode) {
+  static String getCurrencyCode(String? countryCode) {
+    if (countryCode == null || countryCode.trim().isEmpty) countryCode = 'BZ';
     final country = AppStrings.supportedCountries.firstWhere(
       (c) => c['code'] == countryCode,
       orElse: () => {'currency': 'USD'},
@@ -21,7 +23,8 @@ class Formatters {
   }
 
   // Format currency based on country
-  static String currency(double amount, String countryCode) {
+  static String currency(double amount, String? countryCode) {
+    if (countryCode == null || countryCode.trim().isEmpty) countryCode = 'BZ';
     final symbol = getCurrencySymbol(countryCode);
 
     try {
