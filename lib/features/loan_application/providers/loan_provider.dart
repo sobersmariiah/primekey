@@ -1,7 +1,10 @@
 import 'dart:developer' as developer;
+import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:uuid/uuid.dart';
+import 'package:primekey_loan_app/core/constants/app_strings.dart';
+import 'package:primekey_loan_app/core/utils/formatters.dart';
 import '../../../../data/models/loan_application_model.dart';
 import '../../../../data/providers/service_providers.dart';
 import '../../../../data/services/firestore_service.dart';
@@ -119,8 +122,10 @@ class LoanNotifier extends StateNotifier<LoanState> {
         await EmailService.sendSubmittedEmail(
           toEmail: email,
           toName: fullName,
-          loanAmount: '\$${loanAmount.toStringAsFixed(2)}',
+          loanAmount: Formatters.currency(application.loanAmount, application.countryCode),
           referenceNo: applicationId,
+          repayment: Formatters.currency(_calculateMonthlyRepayment(application), application.countryCode),
+          duration: application.loanDuration,
         );
       } catch (e) {
         print('LoanNotifier: Email notification failed: $e');
@@ -139,6 +144,17 @@ class LoanNotifier extends StateNotifier<LoanState> {
       return null;
     }
   }
+
+double _calculateMonthlyRepayment(LoanApplicationModel application) {
+  final double principal = application.loanAmount;
+  final double annualRate =
+      AppStrings.getLoanRates(application.countryCode)[application.loanDuration] ?? 0;
+  final int months = application.loanDuration;
+  if (annualRate == 0) return principal / months;
+  final double r = annualRate / 12 / 100;
+  final double factor = pow(1 + r, months).toDouble();
+  return principal * (r * factor) / (factor - 1);
+}
 
   // Fetch user applications
   Future<void> fetchApplications() async {

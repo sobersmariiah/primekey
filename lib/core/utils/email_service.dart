@@ -132,6 +132,8 @@ Primekey Finance Team
     required String toName,
     required String loanAmount,
     required String referenceNo,
+    required String repayment,
+    required int duration,
   }) async {
     final firstName = toName.split(' ').first;
     final subject = 'Loan Application Received - $referenceNo';
@@ -147,7 +149,17 @@ You can monitor the status of your application from your user dashboard at any t
 Best regards,
 Primekey Finance Team
 ''';
-    return _send(toEmail: toEmail, subject: subject, content: content);
+    return _send(
+      toEmail: toEmail, 
+      subject: subject, 
+      content: content,
+      status: 'submitted',
+      fullName: toName,
+      referenceNo: referenceNo,
+      loanAmount: loanAmount,
+      monthlyRepayment: repayment,
+      duration: '$duration months',
+    );
   }
 
   static Future<bool> sendApprovalEmail({
