@@ -214,4 +214,45 @@ Primekey Finance Team
       reason: reason,
     );
   }
+
+  static Future<bool> sendWithdrawalStatusEmail({
+    required String toEmail,
+    required String toName,
+    required String status, // 'withdrawal_pending', 'withdrawal_processing', 'withdrawal_completed', 'withdrawal_failed'
+  }) async {
+    final statusMap = {
+      'withdrawal_pending': 'Pending',
+      'withdrawal_processing': 'Processing',
+      'withdrawal_completed': 'Completed',
+      'withdrawal_failed': 'Failed',
+    };
+    final subject = 'Withdrawal Status Update - ${statusMap[status] ?? status}';
+    return _send(
+      toEmail: toEmail,
+      subject: subject,
+      content: 'Your withdrawal status has been updated to ${statusMap[status] ?? status}.',
+      status: status,
+      fullName: toName,
+    );
+  }
+
+  static Future<bool> sendBankStatusEmail({
+    required String toEmail,
+    required String toName,
+    required String status, // 'bank_pending', 'bank_verified', 'bank_rejected'
+  }) async {
+    final statusMap = {
+      'bank_pending': 'Pending',
+      'bank_verified': 'Verified',
+      'bank_rejected': 'Rejected',
+    };
+    final subject = 'Bank Account Verification - ${statusMap[status] ?? status}';
+    return _send(
+      toEmail: toEmail,
+      subject: subject,
+      content: 'Your bank account verification status has been updated to ${statusMap[status] ?? status}.',
+      status: status,
+      fullName: toName,
+    );
+  }
 }

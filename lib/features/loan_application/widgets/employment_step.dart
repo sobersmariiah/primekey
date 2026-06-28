@@ -113,7 +113,7 @@ class _EmploymentStepState extends ConsumerState<EmploymentStep> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          Formatters.getCurrencyCode(widget.currencyCode),
+                          widget.currencyCode,
                           style: TextStyle(
                             fontFamily: 'Ubuntu',
                             fontWeight: FontWeight.bold,
