@@ -104,7 +104,10 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       child: Column(
                         children: [
                           const SizedBox(height: 16),
-                          Image.asset(AppAssets.logo),
+                          Image.asset(
+                            AppAssets.logo,
+                            height: 48,
+                          ),
                           const SizedBox(height: 16),
                           const SizedBox(height: 4),
                           const Text(
