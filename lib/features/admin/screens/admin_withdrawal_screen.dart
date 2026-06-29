@@ -9,6 +9,7 @@ import '../../../data/models/withdrawal_model.dart';
 import '../../../data/providers/service_providers.dart';
 import '../../../app/router.dart';
 import '../../auth/providers/auth_provider.dart';
+import '../providers/admin_provider.dart';
 import '../../../shared/widgets/skeleton.dart';
 import 'package:primekey_loan_app/core/utils/stub_web.dart'
     if (dart.library.js_interop) 'package:primekey_loan_app/core/utils/platform_web.dart'
@@ -684,7 +685,7 @@ class _AdminWithdrawalsScreenState
                         'Process',
                         AppColors.primaryShade2,
                         AppColors.primaryLight,
-                        () => _updateStatus(w.id, WithdrawalStatus.processing),
+                            () => _updateStatus(w, WithdrawalStatus.processing),
                         isLoading: isCardUpdating &&
                             _updatingStatus == WithdrawalStatus.processing,
                         isDisabled: disableActionButtons),
@@ -696,7 +697,7 @@ class _AdminWithdrawalsScreenState
                       'Complete',
                       const Color(0xFF16A34A),
                       const Color(0xFFDCFCE7),
-                      () => _updateStatus(w.id, WithdrawalStatus.completed),
+                      () => _updateStatus(w, WithdrawalStatus.completed),
                       isLoading: isCardUpdating &&
                           _updatingStatus == WithdrawalStatus.completed,
                       isDisabled: disableActionButtons),
@@ -707,7 +708,7 @@ class _AdminWithdrawalsScreenState
                       'Reject',
                       AppColors.error,
                       AppColors.errorLight,
-                      () => _updateStatus(w.id, WithdrawalStatus.failed),
+                      () => _updateStatus(w, WithdrawalStatus.failed),
                       isLoading: isCardUpdating &&
                           _updatingStatus == WithdrawalStatus.failed,
                       isDisabled: disableActionButtons),
@@ -754,16 +755,17 @@ class _AdminWithdrawalsScreenState
     );
   }
 
-  Future<void> _updateStatus(String id, WithdrawalStatus status) async {
+  Future<void> _updateStatus(WithdrawalModel w, WithdrawalStatus status) async {
     if (_updatingWithdrawalId != null) return;
     setState(() {
-      _updatingWithdrawalId = id;
+      _updatingWithdrawalId = w.id;
       _updatingStatus = status;
     });
     try {
-      await ref
-          .read(firestoreServiceProvider)
-          .updateWithdrawalStatus(id, status);
+      await ref.read(adminNotifierProvider.notifier).updateWithdrawalStatus(
+            withdrawal: w,
+            status: status,
+          );
       ref.invalidate(adminWithdrawalsProvider);
     } finally {
       if (mounted) {

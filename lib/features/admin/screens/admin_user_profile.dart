@@ -568,7 +568,7 @@ class AdminUserProfile extends ConsumerWidget {
                 await ref
                     .read(adminNotifierProvider.notifier)
                     .updateWithdrawalStatus(
-                      withdrawalId: withdrawal.id,
+                      withdrawal: withdrawal,
                       status: status,
                     );
                 ref.invalidate(userWithdrawalsProvider(withdrawal.userId));

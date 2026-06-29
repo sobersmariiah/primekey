@@ -1,4 +1,6 @@
+import 'package:primekey_loan_app/data/models/user_model.dart';
 import 'package:primekey_loan_app/data/models/withdrawal_model.dart';
+import 'package:primekey_loan_app/core/utils/email_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../data/models/loan_application_model.dart';
 import '../../../../data/providers/service_providers.dart';
@@ -60,20 +62,48 @@ class AdminNotifier extends StateNotifier<AdminState> {
     required String bankAccountId,
     required BankVerificationStatus status,
   }) async {
-    await _firestoreService.updateBankVerificationStatus(
-      userId: userId,
-      bankAccountId: bankAccountId,
-      status: status,
-    );
+    state = state.copyWith(isLoading: true);
+    try {
+      await _firestoreService.updateBankVerificationStatus(
+        userId: userId,
+        bankAccountId: bankAccountId,
+        status: status,
+      );
+      
+      final user = await _firestoreService.getUser(userId);
+      if (user != null) {
+        await EmailService.sendBankStatusEmail(
+          toEmail: user.email,
+          toName: user.fullName,
+          status: 'bank_${status.name}',
+        );
+      }
+    } catch (e) {
+      state = state.copyWith(error: e.toString());
+    } finally {
+      state = state.copyWith(isLoading: false);
+    }
   }
 
   Future<void> updateWithdrawalStatus({
-    required String withdrawalId,
+    required WithdrawalModel withdrawal,
     required WithdrawalStatus status,
   }) async {
     state = state.copyWith(isLoading: true);
     try {
-      await _firestoreService.updateWithdrawalStatus(withdrawalId, status);
+      await _firestoreService.updateWithdrawalStatus(withdrawal.id, status);
+      
+      final user = await _firestoreService.getUser(withdrawal.userId);
+      if (user != null) {
+        await EmailService.sendWithdrawalStatusEmail(
+          toEmail: user.email,
+          toName: user.fullName,
+          status: 'withdrawal_${status.name}',
+          amount: '\$${withdrawal.amount.toStringAsFixed(2)}',
+          bankName: withdrawal.bankName,
+          accountNumber: withdrawal.accountNumber,
+        );
+      }
     } catch (e) {
       state = state.copyWith(error: e.toString());
     } finally {

@@ -15,6 +15,8 @@ class EmailService {
     String? monthlyRepayment,
     String? duration,
     String? reason,
+    String? bankName,
+    String? accountNumber,
   }) async {
     try {
       final idToken = await FirebaseAuth.instance.currentUser?.getIdToken();
@@ -35,6 +37,8 @@ class EmailService {
           if (monthlyRepayment != null) 'monthly_repayment': monthlyRepayment,
           if (duration != null) 'duration': duration,
           if (reason != null) 'reason': reason,
+          if (bankName != null) 'bank_name': bankName,
+          if (accountNumber != null) 'account_number': accountNumber,
         }),
       );
       if (response.statusCode != 200) {
@@ -219,6 +223,9 @@ Primekey Finance Team
     required String toEmail,
     required String toName,
     required String status, // 'withdrawal_pending', 'withdrawal_processing', 'withdrawal_completed', 'withdrawal_failed'
+    required String amount,
+    required String bankName,
+    required String accountNumber,
   }) async {
     final statusMap = {
       'withdrawal_pending': 'Pending',
@@ -233,6 +240,9 @@ Primekey Finance Team
       content: 'Your withdrawal status has been updated to ${statusMap[status] ?? status}.',
       status: status,
       fullName: toName,
+      loanAmount: amount,
+      bankName: bankName,
+      accountNumber: accountNumber,
     );
   }
 
