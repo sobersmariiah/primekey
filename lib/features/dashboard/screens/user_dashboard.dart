@@ -193,7 +193,8 @@ class _DesktopDashboard extends StatelessWidget {
               children: [
                 Text(
                   'Primekey Finance',
-                  style: TextStyle(fontFamily: 'Ubuntu', 
+                  style: TextStyle(
+                    fontFamily: 'Ubuntu',
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primary,
@@ -201,7 +202,8 @@ class _DesktopDashboard extends StatelessWidget {
                 ),
                 Text(
                   'WELCOME BACK',
-                  style: TextStyle(fontFamily: 'Ubuntu', 
+                  style: TextStyle(
+                    fontFamily: 'Ubuntu',
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary.withValues(alpha: 0.7),
@@ -271,7 +273,8 @@ class _DesktopDashboard extends StatelessWidget {
             SizedBox(width: 12),
             Text(
               'Primekey Dashboard',
-              style: TextStyle(fontFamily: 'Ubuntu', 
+              style: TextStyle(
+                fontFamily: 'Ubuntu',
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primary,
@@ -303,7 +306,8 @@ class _DesktopDashboard extends StatelessWidget {
             children: [
               Text(
                 'Welcome back, ${currentUser?.fullName.split(' ').first ?? ''}!',
-                style: TextStyle(fontFamily: 'Ubuntu', 
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
                   fontSize: 32,
                   fontWeight: FontWeight.w600,
                   color: AppColors.primary,
@@ -313,7 +317,8 @@ class _DesktopDashboard extends StatelessWidget {
               SizedBox(height: 4),
               Text(
                 'Review your application status and manage your financial profile.',
-                style: TextStyle(fontFamily: 'Ubuntu', 
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
                   fontSize: 16,
                   color: AppColors.textSecondary,
                   fontWeight: FontWeight.w500,
@@ -406,7 +411,8 @@ class _DesktopDashboard extends StatelessWidget {
             children: [
               Text(
                 'Your Applications',
-                style: TextStyle(fontFamily: 'Ubuntu', 
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: AppColors.primary,
@@ -477,7 +483,8 @@ class _DesktopDashboard extends StatelessWidget {
           SizedBox(height: 16),
           Text(
             'No applications yet',
-            style: TextStyle(fontFamily: 'Ubuntu', 
+            style: TextStyle(
+              fontFamily: 'Ubuntu',
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -486,7 +493,8 @@ class _DesktopDashboard extends StatelessWidget {
           SizedBox(height: 8),
           Text(
             'Apply for your first loan to get started',
-            style: TextStyle(fontFamily: 'Ubuntu', color: AppColors.textSecondary),
+            style:
+                TextStyle(fontFamily: 'Ubuntu', color: AppColors.textSecondary),
           ),
           SizedBox(height: 24),
           CustomButton(
@@ -569,7 +577,8 @@ class _MobileDashboard extends StatelessWidget {
                                 currentUser?.fullName.isNotEmpty ?? false
                                     ? currentUser!.fullName[0].toUpperCase()
                                     : '?',
-                                style: TextStyle(fontFamily: 'Ubuntu', 
+                                style: TextStyle(
+                                    fontFamily: 'Ubuntu',
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.primary),
@@ -578,13 +587,16 @@ class _MobileDashboard extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(currentUser?.fullName ?? '',
-                          style: TextStyle(fontFamily: 'Ubuntu', 
+                          style: TextStyle(
+                              fontFamily: 'Ubuntu',
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w700)),
                       Text(currentUser?.email ?? '',
-                          style: TextStyle(fontFamily: 'Ubuntu', 
-                              color: Colors.white60, fontSize: 13)),
+                          style: TextStyle(
+                              fontFamily: 'Ubuntu',
+                              color: Colors.white60,
+                              fontSize: 13)),
                     ],
                   ),
                 ),
@@ -661,6 +673,7 @@ class _MobileDashboard extends StatelessWidget {
                                 .textTheme
                                 .headlineMedium
                                 ?.copyWith(
+                                    fontFamily: 'Ubuntu',
                                     color: AppColors.textPrimary,
                                     fontWeight: FontWeight.bold)),
                         SizedBox(height: 4),
@@ -698,7 +711,8 @@ class _MobileDashboard extends StatelessWidget {
                         ),
                         SizedBox(height: 30),
                         Text('Your Applications',
-                            style: TextStyle(fontFamily: 'Ubuntu', 
+                            style: TextStyle(
+                                fontFamily: 'Ubuntu',
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.textPrimary)),
@@ -774,7 +788,8 @@ class _MobileDashboard extends StatelessWidget {
                         onPressed: () => Scaffold.of(context).openDrawer())),
                 SizedBox(width: 8),
                 Text('Dashboard',
-                    style: TextStyle(fontFamily: 'Ubuntu', 
+                    style: TextStyle(
+                        fontFamily: 'Ubuntu',
                         color: AppColors.textPrimary,
                         fontWeight: FontWeight.bold)),
               ],
@@ -805,11 +820,17 @@ class _MobileDashboard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(label,
-              style: TextStyle(fontFamily: 'Ubuntu', 
-                  fontSize: 13, color: color, fontWeight: FontWeight.w500)),
+              style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 13,
+                  color: color,
+                  fontWeight: FontWeight.w500)),
           Text(value,
-              style: TextStyle(fontFamily: 'Ubuntu', 
-                  fontSize: 45, fontWeight: FontWeight.bold, color: color)),
+              style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  color: color)),
         ],
       ),
     );
@@ -828,12 +849,7 @@ class _MobileDashboard extends StatelessWidget {
             border: Border.all(color: AppColors.border)),
         child: Row(
           children: [
-            Container(
-                width: 4,
-                height: 60,
-                decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(4))),
+            // Colored strip removed
             SizedBox(width: 16),
             Expanded(
               child: Column(
@@ -841,7 +857,8 @@ class _MobileDashboard extends StatelessWidget {
                 children: [
                   Row(children: [
                     Text(application.loanPurpose,
-                        style: TextStyle(fontFamily: 'Ubuntu', 
+                        style: TextStyle(
+                            fontFamily: 'Ubuntu',
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
                             color: AppColors.textPrimary)),
@@ -850,14 +867,17 @@ class _MobileDashboard extends StatelessWidget {
                   ]),
                   SizedBox(height: 4),
                   Text(Formatters.currency(application.loanAmount, countryCode),
-                      style: TextStyle(fontFamily: 'Ubuntu', 
+                      style: TextStyle(
+                          fontFamily: 'Ubuntu',
                           fontSize: 22,
                           fontWeight: FontWeight.w600,
                           color: AppColors.primaryDark)),
                   SizedBox(height: 2),
                   Text('Applied ${Formatters.date(application.createdAt)}',
-                      style: TextStyle(fontFamily: 'Ubuntu', 
-                          fontSize: 12, color: AppColors.textHint)),
+                      style: TextStyle(
+                          fontFamily: 'Ubuntu',
+                          fontSize: 12,
+                          color: AppColors.textHint)),
                 ],
               ),
             ),
@@ -921,7 +941,8 @@ class _MobileDashboard extends StatelessWidget {
                 color:
                     isSelected ? AppColors.primary : AppColors.textSecondary)),
         child: Text(label,
-            style: TextStyle(fontFamily: 'Ubuntu', 
+            style: TextStyle(
+                fontFamily: 'Ubuntu',
                 fontSize: 13,
                 fontWeight: FontWeight.w700,
                 color: isSelected ? AppColors.white : AppColors.primaryDark)),
@@ -949,13 +970,17 @@ class _MobileDashboard extends StatelessWidget {
                   color: AppColors.primary, size: 32)),
           SizedBox(height: 16),
           Text('No applications yet',
-              style: TextStyle(fontFamily: 'Ubuntu', 
+              style: TextStyle(
+                  fontFamily: 'Ubuntu',
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                   color: AppColors.textPrimary)),
           SizedBox(height: 8),
           Text('Apply for your first loan to get started',
-              style: TextStyle(fontFamily: 'Ubuntu', fontSize: 14, color: AppColors.textSecondary)),
+              style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 14,
+                  color: AppColors.textSecondary)),
           SizedBox(height: 24),
           CustomButton(
               label: 'Apply for a Loan',
@@ -1003,7 +1028,8 @@ class _SidebarItem extends StatelessWidget {
                   size: 20),
               SizedBox(width: 12),
               Text(label,
-                  style: TextStyle(fontFamily: 'Ubuntu', 
+                  style: TextStyle(
+                      fontFamily: 'Ubuntu',
                       fontSize: 14,
                       fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
                       color: color ??
@@ -1035,7 +1061,8 @@ class _DrawerItem extends StatelessWidget {
     return ListTile(
       leading: Icon(icon, color: color ?? AppColors.textPrimary, size: 22),
       title: Text(label,
-          style: TextStyle(fontFamily: 'Ubuntu', 
+          style: TextStyle(
+              fontFamily: 'Ubuntu',
               fontSize: 15,
               fontWeight: FontWeight.w500,
               color: color ?? AppColors.textPrimary)),
@@ -1070,7 +1097,8 @@ class _HeaderButton extends StatelessWidget {
         minimumSize: const Size(0, 48), // Use a flexible minimum width
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 0,
-        textStyle: TextStyle(fontFamily: 'Ubuntu', 
+        textStyle: TextStyle(
+          fontFamily: 'Ubuntu',
           fontSize: 12,
           fontWeight: FontWeight.bold,
           letterSpacing: 1,
@@ -1113,7 +1141,8 @@ class _StatCard extends StatelessWidget {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Text(label.toUpperCase(),
-                style: TextStyle(fontFamily: 'Ubuntu', 
+                style: TextStyle(
+                    fontFamily: 'Ubuntu',
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textSecondary,
@@ -1125,7 +1154,8 @@ class _StatCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(value,
-                  style: TextStyle(fontFamily: 'Ubuntu', 
+                  style: TextStyle(
+                      fontFamily: 'Ubuntu',
                       fontSize: 32,
                       fontWeight: FontWeight.w600,
                       color: AppColors.primary)),
@@ -1137,7 +1167,8 @@ class _StatCard extends StatelessWidget {
                         color: AppColors.primary.withValues(alpha: 0.05),
                         borderRadius: BorderRadius.circular(8)),
                     child: Text(trend!,
-                        style: TextStyle(fontFamily: 'Ubuntu', 
+                        style: TextStyle(
+                            fontFamily: 'Ubuntu',
                             fontSize: 10,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primary))),
@@ -1176,7 +1207,8 @@ class _FilterTab extends StatelessWidget {
                   ]
                 : null),
         child: Text(label.toUpperCase(),
-            style: TextStyle(fontFamily: 'Ubuntu', 
+            style: TextStyle(
+                fontFamily: 'Ubuntu',
                 fontSize: 10,
                 fontWeight: FontWeight.bold,
                 color: isSelected ? AppColors.primary : AppColors.textSecondary,
@@ -1205,10 +1237,7 @@ class _ApplicationListItem extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            border: Border(
-                left: BorderSide(
-                    color: _getStatusColor(application.status), width: 4))),
+            borderRadius: BorderRadius.circular(16)),
         child: Row(
           children: [
             Container(
@@ -1224,19 +1253,23 @@ class _ApplicationListItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(application.loanPurpose,
-                      style: TextStyle(fontFamily: 'Ubuntu', 
+                      style: TextStyle(
+                          fontFamily: 'Ubuntu',
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary)),
                   Text('Applied ${Formatters.date(application.createdAt)}',
-                      style: TextStyle(fontFamily: 'Ubuntu', 
-                          fontSize: 12, color: AppColors.textSecondary)),
+                      style: TextStyle(
+                          fontFamily: 'Ubuntu',
+                          fontSize: 12,
+                          color: AppColors.textSecondary)),
                 ],
               ),
             ),
             Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
               Text(Formatters.currency(application.loanAmount, countryCode),
-                  style: TextStyle(fontFamily: 'Ubuntu', 
+                  style: TextStyle(
+                      fontFamily: 'Ubuntu',
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: AppColors.primary)),

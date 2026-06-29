@@ -584,16 +584,7 @@ class _AdminDashboardState extends ConsumerState<AdminDashboard>
         ),
         child: Row(
           children: [
-            // if (app.status == LoanStatus.pending)
-            Container(
-              width: 4,
-              height: 100,
-              margin: const EdgeInsets.only(right: 16),
-              decoration: BoxDecoration(
-                color: AppColors.primaryDark,
-                borderRadius: BorderRadius.circular(8),
-              ),
-            ),
+            // Remove colored strip as requested
             Expanded(
               child: Column(
                 children: [
